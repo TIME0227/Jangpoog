@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Jangpung.sln"
+    "dotnet.defaultSolution": "Jangpoog.sln"
 }
