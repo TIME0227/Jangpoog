@@ -15,6 +15,8 @@ public class MonsterSlime : MonsterBase
 
     [SerializeField] private float waitTime = 2f; // 대기 시간
     [SerializeField] private int moveDirection = 0; // 이동 방향(x)
+    [SerializeField] private float moveTime_min = 1f; //이동 시간(최소)
+    [SerializeField] private float moveTime_max = 2f; //이동 시간(최대)
 
 
     private void Awake()
@@ -59,7 +61,7 @@ public class MonsterSlime : MonsterBase
     {
         Debug.Log("걷는 중");
         float time = 0;
-        float moveTime = Random.Range(1f, 2f);
+        float moveTime = Random.Range(moveTime_min, moveTime_max);
         Debug.Log(moveTime);
 
         animator.SetBool("IsWalk", true);
