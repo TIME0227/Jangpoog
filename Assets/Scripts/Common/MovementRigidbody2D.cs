@@ -24,7 +24,7 @@ public class MovementRigidbody2D : MonoBehaviour
     [SerializeField]
     private float highGravityScale = 3.5f; // 일반적으로 적용되는 중력 (낮은 점프)
 
-    private float moveSpeed; // 이동 속도
+    [SerializeField] private float moveSpeed; // 이동 속도
 
     // 바닥에 착지 직전 조금 빨리 점프 키를 눌렀을 때 바닥에 착지하면 바로 점프가 되도록
     private float jumpBufferTime = 0.1f; // 공중에 떠있을 때 점프 키 + 0.1초 안에 착지하면 자동 점프
@@ -43,9 +43,9 @@ public class MovementRigidbody2D : MonoBehaviour
 
     public bool IsLongJump { set; get; } = false; // 낮은 점프, 높은 점프 체크
     public bool IsGrounded { private set; get; } = false; // 바닥 체크 (바닥에 닿아있을 때 true)
-   public Collider2D HitAboveObject { private set; get; } // 머리에 충돌한 오브젝트 정보
-   // 머리의 오브젝트 충돌 여부를 MovementRigidbody2D에서 검사하기 때문에 set은 현재 클래스에서만 할 수 있도록 private으로 설정
-   public Collider2D HitBelowObject { private set; get; }  // 발에 충돌한 오브젝트 정보
+    public Collider2D HitAboveObject { private set; get; } // 머리에 충돌한 오브젝트 정보
+                                                           // 머리의 오브젝트 충돌 여부를 MovementRigidbody2D에서 검사하기 때문에 set은 현재 클래스에서만 할 수 있도록 private으로 설정
+    public Collider2D HitBelowObject { private set; get; }  // 발에 충돌한 오브젝트 정보
 
     public Vector2 Velocity => rigid2D.velocity; // rigid2D.velocity를 반환하는 GET만 가능한 프로퍼티 Velocity 정의
 
@@ -68,10 +68,10 @@ public class MovementRigidbody2D : MonoBehaviour
     public void MoveTo(float x)
     {
         // x의 절대값이 0.5이면 걷기(walkSpeed), 1이면 뛰기(runSpeed)
-        moveSpeed = Mathf.Abs(x) != 1 ? walkSpeed : runSpeed;
+        // moveSpeed = Mathf.Abs(x) != 1 ? walkSpeed : runSpeed; //도현 : 뛰기 없으므로 x가 1일때 모두 walkspeed로 처리. 이를 위해 코드 주석 처리(0704)
 
         // x가 -0.5, 0.5의 값을 가질 때 x를 -1, 1로 변경
-        if (x != 0) x = Mathf.Sign(x);
+        //if (x != 0) x = Mathf.Sign(x); //도현 : 뛰기 없으므로 x가 1일때 모두 walkspeed로 처리. 이를 위해 코드 주석 처리(0704)
 
         // x축 방향 속력을 x * moveSpeed로 설정
         rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
@@ -140,7 +140,7 @@ public class MovementRigidbody2D : MonoBehaviour
         // 바닥 착지 직전 조금 빨리 점프 키를 눌렀을 때 바닥에 착지하면 바로 점프하도록 설정
         if (jumpBufferCounter > 0) jumpBufferCounter -= Time.deltaTime;
 
-        if(jumpBufferCounter > 0 && hangCounter > 0)
+        if (jumpBufferCounter > 0 && hangCounter > 0)
         {
             // 점프 힘(jumpForce)만큼 y축 방향 속력으로 설정
             rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpForce);
@@ -154,4 +154,4 @@ public class MovementRigidbody2D : MonoBehaviour
         rigid2D.velocity = new Vector2(rigid2D.velocity.x, 0);
     }
 }
-   
+
