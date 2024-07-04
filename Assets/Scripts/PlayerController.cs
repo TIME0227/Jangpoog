@@ -4,16 +4,29 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private KeyCode jumpKeyCode = KeyCode.W;
-
+    [SerializeField]
+    private KeyCode slideKeyCode = KeyCode.S;
+    [SerializeField]
+    private float slideDistance = 3.0f;
+    [SerializeField]
+    private float slideSpeed = 10.0f;
 
     private MovementRigidbody2D movement;
     private PlayerAnimator playerAnimator;
-
+    private CapsuleCollider2D capsuleCollider;
+    private Rigidbody2D rb;
+    private bool isSliding = false;
+    private Vector2 slideDirection;
+    private float slideRemainingDistance;
+    private Quaternion originalRotation;
 
     private void Awake()
     {
         movement = GetComponent<MovementRigidbody2D>();
         playerAnimator = GetComponentInChildren<PlayerAnimator>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
+        originalRotation = capsuleCollider.transform.rotation;
     }
 
     private void Update()
@@ -30,25 +43,20 @@ public class PlayerController : MonoBehaviour
         UpdateMove(x);
         // 플레이어의 점프 제어
         UpdateJump();
+        // 플레이어의 슬라이드 제어
+        UpdateSlide();
         // 플레이어 애니메이션 제어
         playerAnimator.UpdateAnimation(x);
-/*        // 머리/발에 충돌한 오브젝트 처리
-        UpdateAboveCollision();
-        UpdateBelowCollision();
-        // 원거리 공격 제어
-        UpdateRangeAttack();
-        // 플레이어가 낭떠러지로 추락했는지 검사
-        IsUnderGround();*/
     }
 
     private void UpdateMove(float x)
     {
-        // 플레이어의 물리적 이동 (좌/우)
-        movement.MoveTo(x);
-
-/*        // 플레이어의 x축 이동 한계치 설정 (PlayerLimitMinX ~ PlayerLimitMaxX)
-        float xPosition = Mathf.Clamp(transform.position.x, stageData.PlayerLimitMinX, stageData.PlayerLimitMaxX);
-        transform.position = new Vector2(xPosition, transform.position.y);*/
+        // 슬라이딩 중에는 이동을 막음
+        if (!isSliding)
+        {
+            // 플레이어의 물리적 이동 (좌/우)
+            movement.MoveTo(x);
+        }
     }
 
     private void UpdateJump()
@@ -68,64 +76,46 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-/*    private void UpdateAboveCollision()
+    private void UpdateSlide()
     {
-        if (movement.Velocity.y >= 0 && movement.HitAboveObject != null)
+        if (Input.GetKeyDown(slideKeyCode))
         {
-            // 플레이어의 머리와 오브젝트가 충돌했기 때문에 y축 속력을 0으로 설정
-            movement.ResetVelocityY();
-
-            // 플레이어의 머리와 충돌한 오브젝트가 Tile일 때 Tile의 속성에 따라 충돌 처리
-            if (movement.HitAboveObject.TryGetComponent<TileBase>(out var tile) && !tile.IsHit)
+            if (!isSliding)
             {
-                tile.UpdateCollision();
+                isSliding = true;
+                slideRemainingDistance = slideDistance;
+                slideDirection = new Vector2(transform.localScale.x, 0).normalized; // 플레이어의 현재 바라보는 방향
+                Debug.Log("슬라이딩!");
+                // capsuleCollider 회전
+                capsuleCollider.transform.rotation = Quaternion.Euler(0, 0, 90);
+                // 슬라이딩 애니메이션 시작
+                playerAnimator.StartSliding();
             }
         }
-    }*/
 
-   /* private void UpdateBelowCollision()
-    {
-        if (movement.HitBelowObject != null)
+        if (isSliding)
         {
-            // Platform_03_Oneway
-            if (Input.GetKeyDown(KeyCode.DownArrow) && movement.HitBelowObject.TryGetComponent<PlatformEffectorExtension>(out var p))
+            float moveStep = slideSpeed * Time.deltaTime;
+            if (moveStep > slideRemainingDistance)
             {
-                p.OnDownWay();
+                moveStep = slideRemainingDistance;
             }
 
-            if (movement.HitBelowObject.TryGetComponent<PlatformBase>(out var platform))
+            // 슬라이딩 중에는 Rigidbody2D의 속도를 설정해 물리적으로 이동
+            rb.velocity = new Vector2(slideDirection.x * slideSpeed, rb.velocity.y);
+            slideRemainingDistance -= moveStep;
+
+            if (slideRemainingDistance <= 0)
             {
-                platform.UpdateCollision(gameObject);
+                isSliding = false;
+                Debug.Log("슬라이딩 끝");
+                // capsuleCollider 회전 복구
+                capsuleCollider.transform.rotation = originalRotation;
+                // 슬라이딩 애니메이션 종료
+                playerAnimator.StopSliding();
+                // 슬라이딩 종료 시 속도 초기화
+                rb.velocity = Vector2.zero;
             }
         }
-    }*/
-
-/*    private void UpdateRangeAttack()
-    {
-        if (Input.GetKeyDown(fireKeyCode) && playerData.CurrentProjectile > 0)
-        {
-            playerData.CurrentProjectile--;
-
-            weapon.StartFire(lastDirectionX);
-        }
-    }*/
-
-/*    private void IsUnderGround()
-    {
-        if (transform.position.y < stageData.MapLimitMinY)
-        {
-            OnDie();
-        }
-    }*/
-
-/*    public void OnDie()
-    {
-        gameController.LevelFailed();
-    }*/
-
-/*    public void LevelComplete()
-    {
-        gameController.LevelComplete();
-    }*/
+    }
 }
-
