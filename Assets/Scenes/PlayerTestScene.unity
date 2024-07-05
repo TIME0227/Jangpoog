@@ -286,6 +286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpKeyCode: 119
+  slideKeyCode: 115
+  slideDistance: 3
+  slideSpeed: 10
 --- !u!114 &584510113
 MonoBehaviour:
   m_ObjectHideFlags: 0

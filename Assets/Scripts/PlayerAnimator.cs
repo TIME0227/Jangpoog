@@ -44,6 +44,17 @@ public class PlayerAnimator : MonoBehaviour
 	{
 		transform.parent.localScale = new Vector3((x < 0 ? -1 : 1), 1, 1);
 	}
+
+	// player 슬라이딩 애니메이션
+	public void StartSliding()
+	{
+		Debug.Log("슬라이딩 애니메이션 시작");
+	}
+
+    public void StopSliding()
+    {
+        Debug.Log("슬라이딩 애니메이션 종료");
+    }
 }
 
 
