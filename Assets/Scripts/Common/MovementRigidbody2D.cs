@@ -4,50 +4,50 @@ public class MovementRigidbody2D : MonoBehaviour
 {
     [Header("LayerMask")]
     [SerializeField]
-    private LayerMask groundCheckLayer; // ¹Ù´Ú Ã¼Å©¸¦ À§ÇÑ Ãæµ¹ ·¹ÀÌ¾î
+    private LayerMask groundCheckLayer; // ë°”ë‹¥ ì²´í¬ë¥¼ ìœ„í•œ ì¶©ëŒ ë ˆì´ì–´
     [SerializeField]
-    private LayerMask aboveColiisionLayer; // ¸Ó¸® Ãæµ¹ Ã¼Å©¸¦ À§ÇÑ ·¹ÀÌ¾î
+    private LayerMask aboveColiisionLayer; // ë¨¸ë¦¬ ì¶©ëŒ ì²´í¬ë¥¼ ìœ„í•œ ë ˆì´ì–´
     [SerializeField]
-    private LayerMask belowColiisionLayer; // ¹ß Ãæµ¹ Ã¼Å©¸¦ À§ÇÑ ·¹ÀÌ¾î
+    private LayerMask belowColiisionLayer; // ë°œ ì¶©ëŒ ì²´í¬ë¥¼ ìœ„í•œ ë ˆì´ì–´
 
     [Header("Move")]
     [SerializeField]
-    private float walkSpeed = 5; // °È´Â ¼Óµµ
+    private float walkSpeed = 5; // ê±·ëŠ” ì†ë„
     [SerializeField]
-    private float runSpeed = 8; // ¶Ù´Â ¼Óµµ
+    private float runSpeed = 8; // ë›°ëŠ” ì†ë„
 
     [Header("Jump")]
     [SerializeField]
-    private float jumpForce = 13; // Á¡ÇÁ Èû
+    private float jumpForce = 13; // ì í”„ í˜
     [SerializeField]
-    private float lowGravityScale = 2; // Á¡ÇÁ Å°¸¦ ¿À·¡ ´©¸£°í ÀÖÀ» ¶§ Àû¿ëµÇ´Â Áß·Â (³ôÀº Á¡ÇÁ)
+    private float lowGravityScale = 2; // ì í”„ í‚¤ë¥¼ ì˜¤ë˜ ëˆ„ë¥´ê³  ìˆì„ ë•Œ ì ìš©ë˜ëŠ” ì¤‘ë ¥ (ë†’ì€ ì í”„)
     [SerializeField]
-    private float highGravityScale = 3.5f; // ÀÏ¹İÀûÀ¸·Î Àû¿ëµÇ´Â Áß·Â (³·Àº Á¡ÇÁ)
+    private float highGravityScale = 3.5f; // ì¼ë°˜ì ìœ¼ë¡œ ì ìš©ë˜ëŠ” ì¤‘ë ¥ (ë‚®ì€ ì í”„)
 
-    [SerializeField] private float moveSpeed; // ÀÌµ¿ ¼Óµµ
+    [SerializeField] private float moveSpeed; // ì´ë™ ì†ë„
 
-    // ¹Ù´Ú¿¡ ÂøÁö Á÷Àü Á¶±İ »¡¸® Á¡ÇÁ Å°¸¦ ´­·¶À» ¶§ ¹Ù´Ú¿¡ ÂøÁöÇÏ¸é ¹Ù·Î Á¡ÇÁ°¡ µÇµµ·Ï
-    private float jumpBufferTime = 0.1f; // °øÁß¿¡ ¶°ÀÖÀ» ¶§ Á¡ÇÁ Å° + 0.1ÃÊ ¾È¿¡ ÂøÁöÇÏ¸é ÀÚµ¿ Á¡ÇÁ
+    // ë°”ë‹¥ì— ì°©ì§€ ì§ì „ ì¡°ê¸ˆ ë¹¨ë¦¬ ì í”„ í‚¤ë¥¼ ëˆŒë €ì„ ë•Œ ë°”ë‹¥ì— ì°©ì§€í•˜ë©´ ë°”ë¡œ ì í”„ê°€ ë˜ë„ë¡
+    private float jumpBufferTime = 0.1f; // ê³µì¤‘ì— ë– ìˆì„ ë•Œ ì í”„ í‚¤ + 0.1ì´ˆ ì•ˆì— ì°©ì§€í•˜ë©´ ìë™ ì í”„
     private float jumpBufferCounter;
 
-    // ³¶¶°·¯Áö¿¡¼­ ¶³¾îÁú ¶§ ¾ÆÁÖ Àá½Ã µ¿¾È Á¡ÇÁ°¡ °¡´ÉÇÏµµ·Ï ¼³Á¤ÇÏ±â À§ÇÑ º¯¼ö
-    private float hangTime = 0.3f; // Á¡ÇÁ°¡ °¡´ÉÇÑ ÇÑ°è ½Ã°£ (¹Ù´Ú¿¡¼­ ¹ßÀÌ ¶³¾îÁö°í 0.3ÃÊ ³»¿¡ Á¡ÇÁ °¡´É)
-    private float hangCounter; // ½Ã°£ °è»êÀ» À§ÇÑ º¯¼ö
+    // ë‚­ë– ëŸ¬ì§€ì—ì„œ ë–¨ì–´ì§ˆ ë•Œ ì•„ì£¼ ì ì‹œ ë™ì•ˆ ì í”„ê°€ ê°€ëŠ¥í•˜ë„ë¡ ì„¤ì •í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+    private float hangTime = 0.3f; // ì í”„ê°€ ê°€ëŠ¥í•œ í•œê³„ ì‹œê°„ (ë°”ë‹¥ì—ì„œ ë°œì´ ë–¨ì–´ì§€ê³  0.3ì´ˆ ë‚´ì— ì í”„ ê°€ëŠ¥)
+    private float hangCounter; // ì‹œê°„ ê³„ì‚°ì„ ìœ„í•œ ë³€ìˆ˜
 
-    private Vector2 collisionSize; // ¸Ó¸®, ¹ß À§Ä¡¿¡ »ı¼ºÇÏ´Â Ãæµ¹ ¹Ú½º Å©±â
-    private Vector2 footPosition; // ¹ß À§Ä¡
-    private Vector2 headPosition; // ¸Ó¸® À§Ä¡
+    private Vector2 collisionSize; // ë¨¸ë¦¬, ë°œ ìœ„ì¹˜ì— ìƒì„±í•˜ëŠ” ì¶©ëŒ ë°•ìŠ¤ í¬ê¸°
+    private Vector2 footPosition; // ë°œ ìœ„ì¹˜
+    private Vector2 headPosition; // ë¨¸ë¦¬ ìœ„ì¹˜
 
-    private Rigidbody2D rigid2D; // ¹°¸®¸¦ Á¦¾îÇÏ´Â ÄÄÆ÷³ÍÆ®
-    private Collider2D collider2D; // ÇöÀç ¿ÀºêÁ§Æ®ÀÇ Ãæµ¹ ¹üÀ§
+    private Rigidbody2D rigid2D; // ë¬¼ë¦¬ë¥¼ ì œì–´í•˜ëŠ” ì»´í¬ë„ŒíŠ¸
+    private Collider2D collider2D; // í˜„ì¬ ì˜¤ë¸Œì íŠ¸ì˜ ì¶©ëŒ ë²”ìœ„
 
-    public bool IsLongJump { set; get; } = false; // ³·Àº Á¡ÇÁ, ³ôÀº Á¡ÇÁ Ã¼Å©
-    public bool IsGrounded { private set; get; } = false; // ¹Ù´Ú Ã¼Å© (¹Ù´Ú¿¡ ´ê¾ÆÀÖÀ» ¶§ true)
-    public Collider2D HitAboveObject { private set; get; } // ¸Ó¸®¿¡ Ãæµ¹ÇÑ ¿ÀºêÁ§Æ® Á¤º¸
-                                                           // ¸Ó¸®ÀÇ ¿ÀºêÁ§Æ® Ãæµ¹ ¿©ºÎ¸¦ MovementRigidbody2D¿¡¼­ °Ë»çÇÏ±â ¶§¹®¿¡ setÀº ÇöÀç Å¬·¡½º¿¡¼­¸¸ ÇÒ ¼ö ÀÖµµ·Ï privateÀ¸·Î ¼³Á¤
-    public Collider2D HitBelowObject { private set; get; }  // ¹ß¿¡ Ãæµ¹ÇÑ ¿ÀºêÁ§Æ® Á¤º¸
+    public bool IsLongJump { set; get; } = false; // ë‚®ì€ ì í”„, ë†’ì€ ì í”„ ì²´í¬
+    public bool IsGrounded { private set; get; } = false; // ë°”ë‹¥ ì²´í¬ (ë°”ë‹¥ì— ë‹¿ì•„ìˆì„ ë•Œ true)
+    public Collider2D HitAboveObject { private set; get; } // ë¨¸ë¦¬ì— ì¶©ëŒí•œ ì˜¤ë¸Œì íŠ¸ ì •ë³´
+                                                           // ë¨¸ë¦¬ì˜ ì˜¤ë¸Œì íŠ¸ ì¶©ëŒ ì—¬ë¶€ë¥¼ MovementRigidbody2Dì—ì„œ ê²€ì‚¬í•˜ê¸° ë•Œë¬¸ì— setì€ í˜„ì¬ í´ë˜ìŠ¤ì—ì„œë§Œ í•  ìˆ˜ ìˆë„ë¡ privateìœ¼ë¡œ ì„¤ì •
+    public Collider2D HitBelowObject { private set; get; }  // ë°œì— ì¶©ëŒí•œ ì˜¤ë¸Œì íŠ¸ ì •ë³´
 
-    public Vector2 Velocity => rigid2D.velocity; // rigid2D.velocity¸¦ ¹İÈ¯ÇÏ´Â GET¸¸ °¡´ÉÇÑ ÇÁ·ÎÆÛÆ¼ Velocity Á¤ÀÇ
+    public Vector2 Velocity => rigid2D.velocity; // rigid2D.velocityë¥¼ ë°˜í™˜í•˜ëŠ” GETë§Œ ê°€ëŠ¥í•œ í”„ë¡œí¼í‹° Velocity ì •ì˜
 
     private void Awake()
     {
@@ -55,6 +55,7 @@ public class MovementRigidbody2D : MonoBehaviour
 
         rigid2D = GetComponent<Rigidbody2D>();
         collider2D = GetComponent<Collider2D>();
+        if (collider2D == null) collider2D = GetComponentInChildren<Collider2D>(); 
     }
 
     private void Update()
@@ -64,44 +65,44 @@ public class MovementRigidbody2D : MonoBehaviour
         JumpAdditive();
     }
 
-    // xÃà ¼Ó·Â(velocity) ¼³Á¤, ¿ÜºÎ Å¬·¡½º¿¡¼­ È£Ãâ
+    // xì¶• ì†ë ¥(velocity) ì„¤ì •, ì™¸ë¶€ í´ë˜ìŠ¤ì—ì„œ í˜¸ì¶œ
     public void MoveTo(float x)
     {
-        // xÀÇ Àı´ë°ªÀÌ 0.5ÀÌ¸é °È±â(walkSpeed), 1ÀÌ¸é ¶Ù±â(runSpeed)
-        // moveSpeed = Mathf.Abs(x) != 1 ? walkSpeed : runSpeed; //µµÇö : ¶Ù±â ¾øÀ¸¹Ç·Î x°¡ 1ÀÏ¶§ ¸ğµÎ walkspeed·Î Ã³¸®. ÀÌ¸¦ À§ÇØ ÄÚµå ÁÖ¼® Ã³¸®(0704)
+        // xì˜ ì ˆëŒ€ê°’ì´ 0.5ì´ë©´ ê±·ê¸°(walkSpeed), 1ì´ë©´ ë›°ê¸°(runSpeed)
+        // moveSpeed = Mathf.Abs(x) != 1 ? walkSpeed : runSpeed; //ë„í˜„ : ë›°ê¸° ì—†ìœ¼ë¯€ë¡œ xê°€ 1ì¼ë•Œ ëª¨ë‘ walkspeedë¡œ ì²˜ë¦¬. ì´ë¥¼ ìœ„í•´ ì½”ë“œ ì£¼ì„ ì²˜ë¦¬(0704)
 
-        // x°¡ -0.5, 0.5ÀÇ °ªÀ» °¡Áú ¶§ x¸¦ -1, 1·Î º¯°æ
-        //if (x != 0) x = Mathf.Sign(x); //µµÇö : ¶Ù±â ¾øÀ¸¹Ç·Î x°¡ 1ÀÏ¶§ ¸ğµÎ walkspeed·Î Ã³¸®. ÀÌ¸¦ À§ÇØ ÄÚµå ÁÖ¼® Ã³¸®(0704)
+        // xê°€ -0.5, 0.5ì˜ ê°’ì„ ê°€ì§ˆ ë•Œ xë¥¼ -1, 1ë¡œ ë³€ê²½
+        //if (x != 0) x = Mathf.Sign(x); //ë„í˜„ : ë›°ê¸° ì—†ìœ¼ë¯€ë¡œ xê°€ 1ì¼ë•Œ ëª¨ë‘ walkspeedë¡œ ì²˜ë¦¬. ì´ë¥¼ ìœ„í•´ ì½”ë“œ ì£¼ì„ ì²˜ë¦¬(0704)
 
-        // xÃà ¹æÇâ ¼Ó·ÂÀ» x * moveSpeed·Î ¼³Á¤
+        // xì¶• ë°©í–¥ ì†ë ¥ì„ x * moveSpeedë¡œ ì„¤ì •
         rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
     }
 
     private void UpdateCollision()
     {
-        // ÇÃ·¹ÀÌ¾î ¿ÀºêÁ§Æ®ÀÇ Collider2D min, center, max À§Ä¡ Á¤º¸
+        // í”Œë ˆì´ì–´ ì˜¤ë¸Œì íŠ¸ì˜ Collider2D min, center, max ìœ„ì¹˜ ì •ë³´
         Bounds bounds = collider2D.bounds;
 
-        // ÇÃ·¹ÀÌ¾î ¹ß¿¡ »ı¼ºÇÏ´Â Ãæµ¹ ¹üÀ§
+        // í”Œë ˆì´ì–´ ë°œì— ìƒì„±í•˜ëŠ” ì¶©ëŒ ë²”ìœ„
         collisionSize = new Vector2((bounds.max.x - bounds.min.x) * 0.5f, 0.1f);
 
-        // ÇÃ·¹ÀÌ¾îÀÇ ¸Ó¸®/¹ß À§Ä¡
+        // í”Œë ˆì´ì–´ì˜ ë¨¸ë¦¬/ë°œ ìœ„ì¹˜
         headPosition = new Vector2(bounds.center.x, bounds.max.y);
         footPosition = new Vector2(bounds.center.x, bounds.min.y);
 
-        // ÇÃ·¹ÀÌ¾î°¡ ¹Ù´ÚÀ» ¹â°í ÀÖ´ÂÁö Ã¼Å©ÇÏ´Â Ãæµ¹ ¹Ú½º
+        // í”Œë ˆì´ì–´ê°€ ë°”ë‹¥ì„ ë°Ÿê³  ìˆëŠ”ì§€ ì²´í¬í•˜ëŠ” ì¶©ëŒ ë°•ìŠ¤
         IsGrounded = Physics2D.OverlapBox(footPosition, collisionSize, 0, groundCheckLayer);
         // Physics2D.OverlapBox(Vector2 point, Vector2 size, float angle, int layerMask);
-        // point À§Ä¡¿¡ size Å©±âÀÇ Ãæµ¹ ¹Ú½º(BoxCollider2D)¸¦ angle °¢µµ¸¸Å­ È¸ÀüÇØ¼­ »ı¼º
-        // ÀÌ Ãæµ¹ ¹Ú½º´Â layerMask¿¡ ¼³Á¤µÈ ·¹ÀÌ¾î¸¸ Ãæµ¹ÀÌ °¡´É      
+        // point ìœ„ì¹˜ì— size í¬ê¸°ì˜ ì¶©ëŒ ë°•ìŠ¤(BoxCollider2D)ë¥¼ angle ê°ë„ë§Œí¼ íšŒì „í•´ì„œ ìƒì„±
+        // ì´ ì¶©ëŒ ë°•ìŠ¤ëŠ” layerMaskì— ì„¤ì •ëœ ë ˆì´ì–´ë§Œ ì¶©ëŒì´ ê°€ëŠ¥      
 
-        // ÇÃ·¹ÀÌ¾îÀÇ ¸Ó¸®/¹ß¿¡ Ãæµ¹ÇÑ ¿ÀºêÁ§Æ® Á¤º¸¸¦ ÀúÀåÇÏ´Â Ãæµ¹ ¹Ú½º
+        // í”Œë ˆì´ì–´ì˜ ë¨¸ë¦¬/ë°œì— ì¶©ëŒí•œ ì˜¤ë¸Œì íŠ¸ ì •ë³´ë¥¼ ì €ì¥í•˜ëŠ” ì¶©ëŒ ë°•ìŠ¤
         HitAboveObject = Physics2D.OverlapBox(headPosition, collisionSize, 0, aboveColiisionLayer);
         HitBelowObject = Physics2D.OverlapBox(footPosition, collisionSize, 0, belowColiisionLayer);
     }
 
-    // ´Ù¸¥ Å¬·¡½º¿¡¼­ È£ÃâÇÏ´Â Á¡ÇÁ ¸Ş¼Òµå
-    // yÃà Á¡ÇÁ
+    // ë‹¤ë¥¸ í´ë˜ìŠ¤ì—ì„œ í˜¸ì¶œí•˜ëŠ” ì í”„ ë©”ì†Œë“œ
+    // yì¶• ì í”„
     public void Jump()
     {
         /*        if (IsGrounded == true)
@@ -119,8 +120,8 @@ public class MovementRigidbody2D : MonoBehaviour
 
     private void JumpHeight()
     {
-        // ³·Àº Á¡ÇÁ, ³ôÀº Á¡ÇÁ ±¸ÇöÀ» À§ÇÑ Áß·Â °è¼ö(gravityScale) Á¶Àı (Jump UpÀÏ ¶§¸¸ Àû¿ëµÈ´Ù)
-        // Áß·Â °è¼ö°¡ ³·Àº if¹®Àº ³ôÀº Á¡ÇÁ°¡ µÇ°í, Áß·Â °è¼ö°¡ ³ôÀº else ¹®Àº ³·Àº Á¡ÇÁ°¡ µÈ´Ù
+        // ë‚®ì€ ì í”„, ë†’ì€ ì í”„ êµ¬í˜„ì„ ìœ„í•œ ì¤‘ë ¥ ê³„ìˆ˜(gravityScale) ì¡°ì ˆ (Jump Upì¼ ë•Œë§Œ ì ìš©ëœë‹¤)
+        // ì¤‘ë ¥ ê³„ìˆ˜ê°€ ë‚®ì€ ifë¬¸ì€ ë†’ì€ ì í”„ê°€ ë˜ê³ , ì¤‘ë ¥ ê³„ìˆ˜ê°€ ë†’ì€ else ë¬¸ì€ ë‚®ì€ ì í”„ê°€ ëœë‹¤
         if (IsLongJump && rigid2D.velocity.y > 0)
         {
             rigid2D.gravityScale = lowGravityScale;
@@ -133,16 +134,16 @@ public class MovementRigidbody2D : MonoBehaviour
 
     private void JumpAdditive()
     {
-        // ³¶¶°·¯Áö¿¡¼­ ¶³¾îÁú ¶§ ¾ÆÁÖ Àá½Ãµ¿¾È Á¡ÇÁ°¡ °¡´ÉÇÏµµ·Ï ¼³Á¤
+        // ë‚­ë– ëŸ¬ì§€ì—ì„œ ë–¨ì–´ì§ˆ ë•Œ ì•„ì£¼ ì ì‹œë™ì•ˆ ì í”„ê°€ ê°€ëŠ¥í•˜ë„ë¡ ì„¤ì •
         if (IsGrounded) hangCounter = hangTime;
         else hangCounter -= Time.deltaTime;
 
-        // ¹Ù´Ú ÂøÁö Á÷Àü Á¶±İ »¡¸® Á¡ÇÁ Å°¸¦ ´­·¶À» ¶§ ¹Ù´Ú¿¡ ÂøÁöÇÏ¸é ¹Ù·Î Á¡ÇÁÇÏµµ·Ï ¼³Á¤
+        // ë°”ë‹¥ ì°©ì§€ ì§ì „ ì¡°ê¸ˆ ë¹¨ë¦¬ ì í”„ í‚¤ë¥¼ ëˆŒë €ì„ ë•Œ ë°”ë‹¥ì— ì°©ì§€í•˜ë©´ ë°”ë¡œ ì í”„í•˜ë„ë¡ ì„¤ì •
         if (jumpBufferCounter > 0) jumpBufferCounter -= Time.deltaTime;
 
         if (jumpBufferCounter > 0 && hangCounter > 0)
         {
-            // Á¡ÇÁ Èû(jumpForce)¸¸Å­ yÃà ¹æÇâ ¼Ó·ÂÀ¸·Î ¼³Á¤
+            // ì í”„ í˜(jumpForce)ë§Œí¼ yì¶• ë°©í–¥ ì†ë ¥ìœ¼ë¡œ ì„¤ì •
             rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpForce);
             jumpBufferCounter = 0;
             hangCounter = 0;
