@@ -289,6 +289,9 @@ MonoBehaviour:
   slideKeyCode: 115
   slideDistance: 3
   slideSpeed: 10
+  jangPoongPrefab: {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
+  jangPoongSpeed: 10
+  jangPoongDistance: 5
 --- !u!114 &584510113
 MonoBehaviour:
   m_ObjectHideFlags: 0

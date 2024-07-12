@@ -55,6 +55,12 @@ public class PlayerAnimator : MonoBehaviour
     {
         Debug.Log("슬라이딩 애니메이션 종료");
     }
+
+	// player 장풍 애니메이션
+	public void JangPoongShooting()
+	{
+		Debug.Log("장풍 애니메이션");
+	}
 }
 
 
