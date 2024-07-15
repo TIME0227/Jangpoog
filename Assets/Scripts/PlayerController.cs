@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,16 @@ public class PlayerController : MonoBehaviour
     private float jangPoongSpeed = 10.0f;
     [SerializeField]
     private float jangPoongDistance = 5.0f;
+    [SerializeField]
+    private TextMeshProUGUI manaText;
+    [SerializeField]
+    private float mana = 100f;
+    [SerializeField]
+    private float maxMana = 100f;
+    [SerializeField]
+    private float manaRegenerationRate = 3f;
+    [SerializeField]
+    private float manaConsumption = 5f;
 
     private MovementRigidbody2D movement;
     private PlayerAnimator playerAnimator;
@@ -26,6 +37,8 @@ public class PlayerController : MonoBehaviour
     private float slideRemainingDistance;
     private Quaternion originalRotation;
 
+
+
     private void Awake()
     {
         movement = GetComponent<MovementRigidbody2D>();
@@ -33,6 +46,8 @@ public class PlayerController : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         originalRotation = capsuleCollider.transform.rotation;
+
+        InvokeRepeating("RegenerateMana", 1f, 1f);  // 1초마다 RegenerateMana 메서드 호출
     }
 
     private void Update()
@@ -46,6 +61,7 @@ public class PlayerController : MonoBehaviour
         UpdateSlide();
         UpdateJangPoong();
         playerAnimator.UpdateAnimation(x);
+        UpdateManaText();
     }
 
     // 이동
@@ -116,15 +132,36 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 spawnPosition = transform.position;
-            spawnPosition.y += isSliding ? 0.2f : 0.7f;
+            if (mana >= manaConsumption)
+            {
+                mana -= manaConsumption;
 
-            GameObject jangPoong = Instantiate(jangPoongPrefab, spawnPosition, Quaternion.identity);
-            Rigidbody2D jangPoongRb = jangPoong.GetComponent<Rigidbody2D>();
-            Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
-            jangPoongRb.velocity = jangPoongDirection * jangPoongSpeed;
-            playerAnimator.JangPoongShooting();
-            Destroy(jangPoong, jangPoongDistance / jangPoongSpeed);
+                Vector3 spawnPosition = transform.position;
+                spawnPosition.y += isSliding ? 0.2f : 0.7f;
+
+                GameObject jangPoong = Instantiate(jangPoongPrefab, spawnPosition, Quaternion.identity);
+                Rigidbody2D jangPoongRb = jangPoong.GetComponent<Rigidbody2D>();
+                Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
+                jangPoongRb.velocity = jangPoongDirection * jangPoongSpeed;
+                playerAnimator.JangPoongShooting();
+                Destroy(jangPoong, jangPoongDistance / jangPoongSpeed);
+            }
+            else // 잔여 마나량 < 5
+            {
+                Debug.Log("마나량 부족");
+            }
         }
+    }
+
+    // 마나 재생
+    private void RegenerateMana()
+    {
+        mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
+    }
+
+    // 마나 텍스트 업데이트
+    private void UpdateManaText()
+    {
+        manaText.text = $"Mana {mana}/{maxMana}";
     }
 }
