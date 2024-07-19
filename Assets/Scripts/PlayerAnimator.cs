@@ -61,6 +61,12 @@ public class PlayerAnimator : MonoBehaviour
 	{
 		Debug.Log("장풍 애니메이션");
 	}
+
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        animator.speed = multiplier;
+    }
+
 }
 
 
