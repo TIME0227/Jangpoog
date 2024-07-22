@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
                 isSliding = true;
                 slideRemainingDistance = slideDistance;
                 slideDirection = new Vector2(transform.localScale.x, 0).normalized;
-                capsuleCollider.transform.rotation = Quaternion.Euler(0, 0, 90);
+                // capsuleCollider.transform.rotation = Quaternion.Euler(0, 0, 90);
                 playerAnimator.StartSliding();
             }
         }

@@ -12,6 +12,8 @@ public class PlayerDataManager : MonoBehaviour
     public float jangPoongDistance = 5.0f;
     [SerializeField]
     public float jangPoongLevel = 1.0f;
+    [SerializeField]
+    public float levelUpToken = 0;
 
     // 마나 데이터 설정
     [SerializeField]
@@ -41,6 +43,12 @@ public class PlayerDataManager : MonoBehaviour
     private void Update()
     {
         UpdateManaText();
+
+        // 레벨업 테스트용
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LevelUp();
+        }
     }
 
     // 마나 재생
@@ -53,6 +61,13 @@ public class PlayerDataManager : MonoBehaviour
     private void UpdateManaText()
     {
         manaText.text = $"Mana {mana}/{maxMana}";
+    }
+
+    // 레벨업
+    public  void LevelUp()
+    {
+        levelUpToken += 1;
+        jangPoongLevel = 1 + levelUpToken;
     }
 
 }
