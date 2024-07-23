@@ -13,11 +13,11 @@ public class CameraFollow : MonoBehaviour
     private void Awake()
     {
         //target 자동으로 player로 설정
-        target = GameObject.FindWithTag("Player").transform;
+        //target = GameObject.FindWithTag("Player").transform;
 
         //offsetY 값 설정
         //target과 카메라의 y 거리 = |(카메라의 y 위치) - (tartget의 y 위치)|
-        offsetY = Mathf.Abs(transform.position.y - target.position.y);
+        //offsetY = Mathf.Abs(transform.position.y - target.position.y);
     }
     void Start()
     {
@@ -25,6 +25,7 @@ public class CameraFollow : MonoBehaviour
     }
     private void LateUpdate()
     {
+        if (target == null) return;
         //true 축만 target의 좌표를 따라가도록 한다.
         //카메라의 위치는 x,y,z 각각 true면 target의 위치로, false면 카메라 위치 그대로
         //단 y 축은 target + offsetY
