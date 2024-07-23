@@ -1,0 +1,5464 @@
+fileFormatVersion: 2
+guid: 86a1d6e5913974b46810fb24e91348a5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 16
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae88eb54c8a3a4f64b889608c1baea1f
+      internalID: -1719939674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 16
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a275789828f496685d545bc6dfad6f
+      internalID: 1070624539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_2
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 16
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1084388d95444c6b04b334314a0c28
+      internalID: -880420034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_3
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 16
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7e5121c5d934d738b390acefbc0869
+      internalID: -794680681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e2f3263a50842ee81a34c8378bbab5
+      internalID: 1251399640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a630ebb57a840ca81b57df5d8e4a34
+      internalID: -199069829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94423f2522334f9b94713ce1059614a
+      internalID: 1042224941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c67bc71978ed441993a0f606b9693ee
+      internalID: -632993700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf613a7bfca640528520292d8ed4857
+      internalID: 1412634053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4079455a7654d28867e7e7d7928b72
+      internalID: -1505195368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f33f7349ab24408ad019530d87dcea
+      internalID: -1602986758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_11
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af8e9dc138724b1fb49e18d72f4204c
+      internalID: -1005803580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57783e43099c24826893ef82ad375ac6
+      internalID: 1474358837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_13
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a59bcd4614c145c99c36785c234370f
+      internalID: 1557231626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181e3173a8a8441e0b01221c979a2b19
+      internalID: -1081845482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_15
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7824dfb55732b4cc3bd325c48720aa57
+      internalID: 1328729945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f2c1a9af804475f9a81edcc9e74ae5
+      internalID: 1662334417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_17
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfeff88be57740bb9774cfa1f3d18c8
+      internalID: -815631887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_18
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e46b3821a85c44fb8a11c8a4600b5d3
+      internalID: 1297983595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_19
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbafb383a05e4e8f9d96862b1592a5e
+      internalID: 1114843416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_20
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c534051d861147a7a554cfa22488e5c
+      internalID: 1737612999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06a75b8cfb2a4dc0a3bd162bd542648
+      internalID: 1971783980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_22
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce51bfc930f844c2b85a17e6c828b6cc
+      internalID: 1139804948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_23
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4507752535fcc4d22b37cbc0573ce172
+      internalID: 1017555632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb6c73f1db594523bbe0900f9b3a135
+      internalID: -144994735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_25
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e45b4a423f142ca98a734b8e957416
+      internalID: 1753361845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_26
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14aa63ea61d7a4172ba0495cd6d03fa6
+      internalID: 1648259236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_27
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0be2abf184c4d96913ae8c3741d6f5
+      internalID: 1807871951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_28
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1704cba8e3624e5e893a2b2d7403687
+      internalID: -50729039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_29
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c2713eb5bab4a55a632acfef357af4
+      internalID: -84233379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_30
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0dd9acafb1e4c82935048ee72bd7a5
+      internalID: -1253407973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef29d977e46645cdb54348b250b5336
+      internalID: 828032899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b2d1aadaf6d48a1baaeeb971be8d6f
+      internalID: -916157747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_33
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989c594952e034f7bb19087cd679e885
+      internalID: -550895550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_34
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6b05b1cc960419d8f9f944ea7a242b
+      internalID: 14789655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_35
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db49a262616a45f3812946bacb0dfc5
+      internalID: 132333123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_36
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17adb464c53c74f7d94fdb196acea5b2
+      internalID: 1801192598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_37
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8ccbc83fa314c56af0992991a56d7b
+      internalID: -116495601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_38
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1582bc3a6edd04c208c8b188eb55151e
+      internalID: -1977317875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_39
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c15ff09d3c9141d4a9dfe980f3176c2
+      internalID: 480718636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_40
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef57cd18c6a554db2b792db7243470a8
+      internalID: -154976590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_41
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be9c3e1991b348fdb83da2052608c1d
+      internalID: -322592341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_42
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ec9681444de446680f131a76bf4f59
+      internalID: 290224814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4510f1cf7f0414fda98f81069d929dac
+      internalID: -766059024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96af80df4d18d4833870aac49b6c9fea
+      internalID: 38084623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_45
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb8984078b9c400794796f8dcad4cad
+      internalID: -1369787427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_46
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49a0ca7b4a79491d9c4c4b069c5db30
+      internalID: 550970536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_47
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68aee92f01ec8409dbf0f6d699e5ae1a
+      internalID: -1137399898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f7cb3121933474f8f2bffb13ab8b33
+      internalID: -69733186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_49
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fd7244a520742ecbc714a8ee4fc535
+      internalID: 514434021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_50
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cede18d8a70934253933e65bc1d351e0
+      internalID: -1208534235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_51
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7dc486298c441539db2d3924de869d
+      internalID: 968562553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_52
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d86ac0a5b81b4e54a66b60df389d48a
+      internalID: 1405224560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_53
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4067f25fdc94327a38cbcd8c9a55f1
+      internalID: -712505820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_54
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e16fad47c47a42fb85973eb10613cb9
+      internalID: 940336681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_55
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f57de470c5a04fccbfc952b8f146c91
+      internalID: -455760331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_56
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b732b85c9dc4740858c4564de78e2a
+      internalID: 1359619989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_57
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd10811fe6be4ab0a7afd3aab6f093b
+      internalID: -1792611197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_58
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7e1062ec05d43128cc573bfc3dbd9a
+      internalID: -1057478535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_59
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87130470f52924d0b9e169395b0fb92d
+      internalID: 137499445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_60
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8edc5b32c8744c3ab3856bcf33e89d
+      internalID: 139188923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_61
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8d5a5a85bf644db97cc6c654c26f18
+      internalID: 1669385195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_62
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac27dd8d45d384685a51d8b07e9cd615
+      internalID: -253848808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_63
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c9d444a1bfa4d0a8a7fbe5770ba15b
+      internalID: -714567110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af934eea44d3f4fe9bcb07dd9615f665
+      internalID: 1204662258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_65
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc54fa31f05a9426c9b716489a5676ea
+      internalID: 442518534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_66
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9217585edb71341588a842948d2b69e0
+      internalID: 375288664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_67
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2541bf477b4d34917974f15b4ae71378
+      internalID: -1196373838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_68
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ea0dfae4cb342279ea1cbcde35361e
+      internalID: 2007114589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_69
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75568c10f39bf41fd9d4517b360f3675
+      internalID: -1913798298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_70
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21421241e1a7c4ef2a1b139dd5cb021a
+      internalID: -326592173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_71
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f78076199e284c759cbc4426743ca3f
+      internalID: -958693197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_72
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08d8e5c90c2448c59fee5c5a6f9f632
+      internalID: 1690168324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_73
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141965022c7b041ffa8be5c514a94c2a
+      internalID: -229004099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_74
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f13a1fdb9ac425d8e51d41bf74b6ed
+      internalID: 1317775021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_75
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c073adb181ec4b5ba4712bf14d7eff0
+      internalID: 1406570606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_76
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb44e86d372a64ca9a2ab95827540ef7
+      internalID: 1122082144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_77
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63220141bc94646fc8a66a1c845d5195
+      internalID: -1000228335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_78
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac73ba3d3a76484f9e25ca7b48440ba
+      internalID: -1292088287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_79
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5edb77c8ec1ea4191a42e71302edface
+      internalID: -1425680326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_80
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248099908aa4e42879d2c26b148631a1
+      internalID: -1310667528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_81
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd70cdfddbe047c08f955b254cbba09
+      internalID: -1284551767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_82
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b4e42e6633d46b2b3ae2f55f57b7b6
+      internalID: -681010751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_83
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da98fd1822ac34870924af5b3c69894b
+      internalID: -579300304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_84
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24c3528cabe64e02884dfca440ee1d4
+      internalID: 1761253728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_85
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcb0113ef6b441ca8fe658d2359f647
+      internalID: -63210428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_86
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8573671d3adac4321ad94e6faecca80a
+      internalID: -1731856180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_87
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86318f27b2d8469181d6057a6bb1597
+      internalID: -1108864657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_88
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c69a7df1dfa74974924fb1bce4d1a4e
+      internalID: -534645581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_89
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97da533f2947d421982acfc0694a6346
+      internalID: -1172339892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_90
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649a5db7f9c9e4e19893bc821e70365c
+      internalID: -1211863771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_91
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6871072f368874a668dacccaaec76863
+      internalID: 2127297769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_92
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11693c353496f4346a497ea68dbf9988
+      internalID: 1857617784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_93
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e3997f448bd4e28a2a2742b5bc0124
+      internalID: -742346558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_94
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c8d7ea486894f93a07f654f060d869
+      internalID: 1462367049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_95
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7852f9a84424433b1a598b6599d2e8
+      internalID: -1259563061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_96
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43974e694d4774929825c6cb8814619e
+      internalID: -16621075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_97
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ca7bd654a6546289f0d12bd0e9bfdb
+      internalID: 379004926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_98
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d626a46f4804adcb7ad41e4eb8cb22
+      internalID: 1674818538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_99
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8dfec7bef234c7aa7f4efea45a34b3
+      internalID: 906442086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_100
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0301eb9cb54e04060b1fad2fc385fa4a
+      internalID: 1181019439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_101
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2688922c0e3654f98abb91e7c6327505
+      internalID: 1468286430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_102
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8449f82986aa7410ab2700f7dbd9fee1
+      internalID: -1408568177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_103
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d7b5ef5ee604b00bcffccd22228cc6
+      internalID: -849718599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_104
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4339f0095c0004cd18533adc78b11128
+      internalID: 1237400187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_105
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae01333b89db46f6bb3c7fbfe0c2e06
+      internalID: 1677760799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_106
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5caefa0b736a4200aa89d22646d20ef
+      internalID: 1451101603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_107
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a552f837e1ff6480284c32b901819779
+      internalID: 1979998486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_108
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb2189d85b5e45b29fd43df41953537
+      internalID: -100560318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_109
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8c923a9e6a84ccd9773b44f9196712
+      internalID: -1890205838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_110
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23fd6398dc134edbb5ecd586adc843f
+      internalID: -572981179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_111
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef31b8f40d97841f885e7e70481f5dda
+      internalID: 2125905210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_112
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291bc6b51ff0d41948e355babcba912f
+      internalID: 1365430868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_113
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce4cf4ce85f847968d6a7ef0987861f
+      internalID: -1086533451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_114
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c86b24cd43df4e82ae08fd32966a460
+      internalID: 1666987944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_115
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6131e3c92e8d5486b90bf1c361e59e05
+      internalID: -1486433283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_116
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971e3dee00c3843c1bc922cc3568dadd
+      internalID: 739051843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_117
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64e2aeefd04d4569a27cf332ef294b0
+      internalID: 260171367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_118
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fd6e216b7194089bf143348d78a852
+      internalID: -2081277465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_119
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8742e33253c4641b0710481e73c31d
+      internalID: 411119577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_120
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf10619f66074d4e80d2638cf47ba72
+      internalID: 1844895311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_121
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e534500608de14bfb8fae7c63f9e4fa7
+      internalID: -1793697742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_122
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f69a8e6ab9d3468baae98de67f7ec5d
+      internalID: -1804532693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_123
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2432627898f485ba5a2fdf54d1f4fe
+      internalID: 1421214736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_124
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7a1b3a5e5b04e90b8c06645e00c242
+      internalID: 1051119430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_125
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f64167d7304a4b1e818505cb8ac044b
+      internalID: 1100064608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_126
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee06c0796634f4e11b3060b60ead2198
+      internalID: 1924030317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_127
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4737d4c9d9a4fd79d1a7ec690f1cf3
+      internalID: 1161742337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_128
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0760ae6ccc6184490b617741f94978dd
+      internalID: -1538044589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_129
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812567655a0304d60afd7c7a18d6b4fc
+      internalID: -1294608380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_130
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54931f3fcb7a144339f034d94592d084
+      internalID: -775806890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_131
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9860c2c06ac24943845374ee146c0cc
+      internalID: 1981222490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_132
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275a7aad695c74076bd8e285f68d8a4a
+      internalID: 261858109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_133
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1bee49a238740a88742408a475f618
+      internalID: 469251536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_134
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0f00802718b4b39a7b8cf7ffd6f464
+      internalID: -1977322635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_135
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacb688cab4194e6c9aa230f3169f539
+      internalID: 1334840412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_136
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf45919e95e8445e86f01d53fd032f2
+      internalID: 1511650070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_137
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681c1257b07854af59e7584221c3b76d
+      internalID: -1190000362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_138
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da06da19db9a4edc9aa6a7c9111fdbf
+      internalID: -1996868936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_139
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a542c65cbea541fc83491e42102b920
+      internalID: -1444320742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_140
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e9f781d87d0495a894797009bad8c4
+      internalID: -1184161011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_141
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f201facffa44e479f98c3f81af02c721
+      internalID: -466117603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_142
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c702435ea6b483a8a3a04371f0c933
+      internalID: 806850216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_143
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eade63693fbac4057b933ef29c0879ae
+      internalID: 972765719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_144
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5510dbdbff6f04531b5dd753d4480931
+      internalID: 25789046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_145
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35dce4567c5f49cd919ba451f2bdf8c
+      internalID: 430042200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_146
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac08edc5446f34916ba289085097c787
+      internalID: 1907791773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_147
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba4e2e606dda4bacafa1f88f9f5286a
+      internalID: -1570507543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_148
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4767f8fc159c746a4af570b3a284d995
+      internalID: 402525115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_149
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8812cd8a10f27445bbaaaa7733214123
+      internalID: 1921727013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_150
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd8159692e2c44b9afd970126dfc275
+      internalID: -1271942102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_151
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ba0d178df424fcb9b70bfd404c8735
+      internalID: 656308117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_152
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a829f776502d497182a38fde3ac45f7
+      internalID: 978085522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_153
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da3b85e656ce41d88ab2df23c41524b
+      internalID: -870718992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_154
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110cacf6740ca4a96958db0a7bc853fe
+      internalID: 274804291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_155
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74780e44fa79421abd664cfd494c97a
+      internalID: -2085797444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_156
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f221f6d65eb54b9b9e0eafc63e842b4
+      internalID: 194343617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_157
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e2b8c13bc9348efa6b88786f3dc108
+      internalID: 1244022146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_158
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de20001d6bad749fd89c31577e83a8a2
+      internalID: 529089985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_159
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83387b718bdb846ff8449cd23b1dd9d6
+      internalID: -1335644784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_160
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bf89cc230c44af1bc67981f9339069
+      internalID: -443820305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_161
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d28af0cdc15f437f95a5386ec5a55ca
+      internalID: -772914662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_162
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523472051da3c405db166a67c919a7fd
+      internalID: -1252159499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_163
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee5dc73b67cf40ea85f7db61e803592
+      internalID: -1377715114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_164
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de018a7244d7c4cc59da82d8c9f887fb
+      internalID: 2052275664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_165
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92e2374948934704939c4715ab202d7
+      internalID: 735080299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_166
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf164c4fd0f1482482be22c99e49b9a
+      internalID: -426383395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_167
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0450751494a94524b9436946c86017b
+      internalID: 415593316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_168
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47cab4cbc0f0a4ff9937c1ddef9a0884
+      internalID: 1057196131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_169
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a1b46615e3a434b95175db88e91fd6
+      internalID: -1097171319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_170
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349a4e75e5373456c9a261a38b8aba0e
+      internalID: 850371101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_171
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8166e9e81170e421b967a74fb20f1a85
+      internalID: 1554249373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_172
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68679bf0de81e4de390e6c5f4dd7f947
+      internalID: 1857322512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_173
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd8b70d515c247548ea541e76f99682
+      internalID: 519154918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_174
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a744eda8ad540faa2e1ae228ed99b8
+      internalID: -1823621627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_175
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5688502c2dc4940bab45923197fef625
+      internalID: -813413648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_176
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866f12f9dbe6041b7a93975272355001
+      internalID: -2064400007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_177
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3618775e7037244799852726ab7d9d5b
+      internalID: -61505921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_178
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1b66bfc50324976a5c20ad33ab196f
+      internalID: 1273116588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_179
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa51e906df32d4f2fa6dff37efbf1edc
+      internalID: 1590165810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_180
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d0fb5e45e93495bbc17faafe34e977
+      internalID: -1287929129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_181
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78365b0753acf4c85af24b0e1d1ca9a9
+      internalID: 1605898182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_182
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44485efc4f2c469c8a2a92094612533
+      internalID: 1404167781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_183
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efbe48943a13463a86e2602f18572a3
+      internalID: 1358404967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_184
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc11ccaa1a4cb48c496bf82bf3f2e8d3
+      internalID: -307844301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_185
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067e27657f8f34ac097e544313e93a08
+      internalID: 445271630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_186
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05361837d276d45768dd3bac6306245f
+      internalID: -288885979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_187
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad4b101fb0b240369b69ddd4dda2c4c
+      internalID: -949729106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_188
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022a579c28a634fa3a91b3282a3c164f
+      internalID: -180101785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_189
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d93c259f4c924ce08cc27f5300e1f61
+      internalID: 924935348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_190
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153b68349e29240aaaef8f44ff905463
+      internalID: -1097440759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_191
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2c1df7fedbb412a96b8c9919cc8738
+      internalID: 1799215773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_192
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84077b25319a4b7da0572ab4b66033f
+      internalID: -1963592061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_193
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77488ea8495954fa0912dd9fa60016e3
+      internalID: 1943449421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_194
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea49b648cd5ab4822b123da705ad602d
+      internalID: -2111476192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_195
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dfd4eb521bb4c56921f32943071a73
+      internalID: 982739287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_196
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccf3a697c65f447b870594db7bd2774
+      internalID: -598901932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_197
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed699b22e9467455c9add72212da5c1c
+      internalID: -1321453515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_198
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb3551a657c1470abe313cafeaf51df
+      internalID: 1421976272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_199
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b88e75fb5f8e46af9cae1ee5f066806
+      internalID: -455687280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_200
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64c92b40c058426884f928623eb7b4d
+      internalID: 28623160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_201
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed864ba5995a48ec9950ff910b284f6
+      internalID: -1666141253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_202
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f965f2dbda044600a6568c22e154fd4
+      internalID: 234653461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_203
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0318cecd678741498d915486204e224
+      internalID: 1766511928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_204
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ce9965198c641ba902969a0a4fc127
+      internalID: -1224950113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_205
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c32b918fd9648b2a71ecd9c973c81a
+      internalID: 929133416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_206
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3be61b92cc624d6f8bb46bf57ae40a9
+      internalID: 56687696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_207
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3662b0a1c4584f87b76e402c0ef42ce
+      internalID: -980018388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_208
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add89015ed28144458ac0e01e4c38b25
+      internalID: 1834009547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_209
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058a580ec85cc4defa5c7a05cd2c4992
+      internalID: -1460771781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_210
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2171c09da28134c3ab5fa24d4e551cc0
+      internalID: -1812735274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_211
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d2c92701db848d6bb3e1c2785d9cb9
+      internalID: 2112083440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_212
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d123e0aa2a8445eb37befe586988d1
+      internalID: -390391288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_213
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d986db71034ad49a5856ce25df415a0f
+      internalID: -629577459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_214
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e563a493fc34cd79357158c958d03b
+      internalID: -965544674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_215
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f1700873af24ee2869fc72cb22bdab
+      internalID: -1698067228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_216
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d18551c42fae450cbf717188a6a06c5
+      internalID: 483063056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_217
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9863a01ddff464c11a8575bb469494fe
+      internalID: 188670289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_218
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09405ca7944c847799ca6dca973c4183
+      internalID: 1122690261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_219
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97912ac4083ba474382cfb41bdaa573d
+      internalID: -523935071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_220
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93d393db3df641c7b7c905c36102d76
+      internalID: 726782517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_221
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71115a499b9de424d9fb6252db83a516
+      internalID: 1974104886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_222
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23dabd7f465547e1bca7ce0e3fbc2b9
+      internalID: -533982941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_223
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31b3227d617d42ca812d3d68c35788f
+      internalID: -715806221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_224
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060f408383f3042c3b9545309af3e5e2
+      internalID: -1195046938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_225
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514677043b37e48c8b5ce5093a4d074e
+      internalID: -85012039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_226
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ebe9631a7a6845738555a836c115526
+      internalID: 39070939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSHROOM 1-2_227
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1ec47aa19cc477d9d4d4fed330c129
+      internalID: 1826681251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -11.5, y: 4.5}
+      - {x: -11.5, y: 4.5}
+      - {x: -10.5, y: 4.5}
+      - {x: -9.5, y: 4.5}
+    - - {x: -9.5, y: 4.5}
+      - {x: -9.5, y: 5.5}
+      - {x: -8.5, y: 5.5}
+      - {x: -9.5, y: 5.5}
+    - - {x: -8.5, y: 5.5}
+      - {x: -8.5, y: 6.5}
+      - {x: -8.5, y: 6.5}
+      - {x: -8.5, y: 5.5}
+    - - {x: -5.5, y: 6.5}
+      - {x: -8.5, y: 6.5}
+      - {x: -8.5, y: 6.5}
+      - {x: -5.5, y: 6.5}
+      - {x: -5.5, y: 2.5}
+    - - {x: -4.5, y: 2.5}
+      - {x: -5.5, y: 2.5}
+      - {x: -4.5, y: 2.5}
+      - {x: -4.5, y: 2.5}
+      - {x: -4.5, y: 1.5}
+    - - {x: -4.5, y: 1.5}
+      - {x: -4.5, y: 2.5}
+      - {x: -4.5, y: 1.5}
+      - {x: -2.5, y: 1.5}
+      - {x: -2.5, y: 1.5}
+    - - {x: -2.5, y: 0.5}
+      - {x: -2.5, y: 1.5}
+      - {x: -2.5, y: 1.5}
+      - {x: -2.5, y: 0.5}
+    - - {x: -2.5, y: 0.5}
+      - {x: -2.5, y: 0.5}
+      - {x: -1.5, y: 0.5}
+      - {x: -1.5, y: 0.5}
+    - - {x: -1.5, y: -2.5}
+      - {x: -1.5, y: 0.5}
+      - {x: -1.5, y: 0.5}
+      - {x: -1.5, y: -2.5}
+    - - {x: -1.5, y: -2.5}
+      - {x: -1.5, y: -2.5}
+      - {x: -0.5, y: -2.5}
+      - {x: -0.5, y: -2.5}
+    - - {x: -0.5, y: -2.5}
+      - {x: -0.5, y: 3.5}
+      - {x: -0.5, y: 3.5}
+      - {x: -0.5, y: -2.5}
+    - - {x: -4.5, y: 3.5}
+      - {x: -4.5, y: 3.5}
+      - {x: -0.5, y: 3.5}
+      - {x: -0.5, y: 3.5}
+    - - {x: -4.5, y: 3.5}
+      - {x: -4.5, y: 6.5}
+      - {x: -4.5, y: 6.5}
+      - {x: -4.5, y: 3.5}
+    - - {x: -4.5, y: 6.5}
+      - {x: -4.5, y: 6.5}
+      - {x: -2.5, y: 6.5}
+      - {x: -2.5, y: 6.5}
+    - - {x: -2.5, y: 7.5}
+      - {x: -2.5, y: 7.5}
+      - {x: -2.5, y: 7.5}
+      - {x: -2.5, y: 6.5}
+    - - {x: -1.5, y: 7.5}
+      - {x: -2.5, y: 7.5}
+      - {x: -0.5, y: 7.5}
+      - {x: -0.5, y: 7.5}
+    - - {x: -0.5, y: 7.5}
+      - {x: -0.5, y: 8.5}
+      - {x: -0.5, y: 8.5}
+      - {x: -0.5, y: 7.5}
+    - - {x: -0.5, y: 8.5}
+      - {x: -0.5, y: 8.5}
+      - {x: 3.5, y: 8.5}
+      - {x: 3.5, y: 8.5}
+    - - {x: 3.5, y: 5.5}
+      - {x: 3.5, y: 8.5}
+      - {x: 3.5, y: 8.5}
+      - {x: 3.5, y: 5.5}
+    - - {x: 1.5, y: 5.5}
+      - {x: 1.5, y: 5.5}
+      - {x: 3.5, y: 5.5}
+      - {x: 3.5, y: 5.5}
+    - - {x: 1.5, y: -1.5}
+      - {x: 1.5, y: 5.5}
+      - {x: 1.5, y: 5.5}
+      - {x: 1.5, y: -1.5}
+    - - {x: 1.5, y: -1.5}
+      - {x: 1.5, y: -1.5}
+      - {x: 2.5, y: -1.5}
+      - {x: 2.5, y: -1.5}
+    - - {x: 2.5, y: -2.5}
+      - {x: 2.5, y: -1.5}
+      - {x: 2.5, y: -1.5}
+      - {x: 2.5, y: -2.5}
+    - - {x: 2.5, y: -2.5}
+      - {x: 2.5, y: -2.5}
+      - {x: 3.5, y: -2.5}
+      - {x: 3.5, y: -2.5}
+    - - {x: 3.5, y: -3.5}
+      - {x: 3.5, y: -2.5}
+      - {x: 3.5, y: -2.5}
+      - {x: 3.5, y: -3.5}
+    - - {x: 3.5, y: -3.5}
+      - {x: 3.5, y: -3.5}
+      - {x: 4.5, y: -3.5}
+      - {x: 4.5, y: -3.5}
+    - - {x: 4.5, y: -3.5}
+      - {x: 4.5, y: -0.5}
+      - {x: 4.5, y: -0.5}
+      - {x: 4.5, y: -3.5}
+    - - {x: 3.5, y: 0.5}
+      - {x: 3.5, y: -0.5}
+      - {x: 4.5, y: -0.5}
+      - {x: 4.5, y: -0.5}
+      - {x: 4.5, y: -0.5}
+    - - {x: 3.5, y: -0.5}
+      - {x: 3.5, y: -0.5}
+      - {x: 4.5, y: -0.5}
+      - {x: 4.5, y: -0.5}
+    - - {x: 3.5, y: -0.5}
+      - {x: 3.5, y: 0.5}
+      - {x: 3.5, y: 0.5}
+      - {x: 3.5, y: -0.5}
+    - - {x: 2.5, y: 0.5}
+      - {x: 2.5, y: 0.5}
+      - {x: 3.5, y: 0.5}
+      - {x: 3.5, y: 0.5}
+    - - {x: 2.5, y: 0.5}
+      - {x: 2.5, y: 2.5}
+      - {x: 2.5, y: 2.5}
+      - {x: 2.5, y: 0.5}
+    - - {x: 2.5, y: 2.5}
+      - {x: 2.5, y: 2.5}
+      - {x: 3.5, y: 2.5}
+      - {x: 3.5, y: 2.5}
+    - - {x: 3.5, y: 2.5}
+      - {x: 3.5, y: 4.5}
+      - {x: 3.5, y: 4.5}
+      - {x: 3.5, y: 2.5}
+    - - {x: 3.5, y: 4.5}
+      - {x: 3.5, y: 4.5}
+      - {x: 6.5, y: 4.5}
+      - {x: 6.5, y: 4.5}
+    - - {x: 6.5, y: 3.5}
+      - {x: 6.5, y: 4.5}
+      - {x: 6.5, y: 3.5}
+      - {x: 8.5, y: 3.5}
+    - - {x: 8.5, y: 3.5}
+      - {x: 8.5, y: 4.5}
+      - {x: 8.5, y: 4.5}
+      - {x: 8.5, y: 3.5}
+    - - {x: 8.5, y: 4.5}
+      - {x: 8.5, y: 4.5}
+      - {x: 10.5, y: 4.5}
+      - {x: 10.5, y: 4.5}
+    - - {x: 10.5, y: 3.5}
+      - {x: 10.5, y: 4.5}
+      - {x: 10.5, y: 4.5}
+      - {x: 10.5, y: 3.5}
+    - - {x: 10.5, y: 3.5}
+      - {x: 10.5, y: 3.5}
+      - {x: 11.5, y: 3.5}
+      - {x: 11.5, y: 3.5}
+    - - {x: 11.5, y: -0.5}
+      - {x: 11.5, y: 3.5}
+      - {x: 11.5, y: 3.5}
+      - {x: 11.5, y: -0.5}
+    - - {x: 10.5, y: -0.5}
+      - {x: 10.5, y: -0.5}
+      - {x: 11.5, y: -0.5}
+      - {x: 11.5, y: -0.5}
+    - - {x: 10.5, y: -1.5}
+      - {x: 10.5, y: -0.5}
+      - {x: 10.5, y: -0.5}
+      - {x: 10.5, y: -1.5}
+    - - {x: 6.5, y: -1.5}
+      - {x: 6.5, y: -1.5}
+      - {x: 10.5, y: -1.5}
+      - {x: 10.5, y: -1.5}
+    - - {x: 3.5, y: 0.5}
+      - {x: 3.5, y: 0.5}
+      - {x: 3.5, y: 0.5}
+      - {x: 3.5, y: 0.5}
+    - - {x: 6.5, y: -4.5}
+      - {x: 6.5, y: -1.5}
+      - {x: 6.5, y: -1.5}
+      - {x: 6.5, y: -4.5}
+    - - {x: 6.5, y: -4.5}
+      - {x: 6.5, y: -4.5}
+      - {x: 7.5, y: -4.5}
+      - {x: 7.5, y: -4.5}
+    - - {x: 7.5, y: -5.5}
+      - {x: 7.5, y: -4.5}
+      - {x: 7.5, y: -4.5}
+      - {x: 7.5, y: -5.5}
+    - - {x: 7.5, y: -5.5}
+      - {x: 7.5, y: -5.5}
+      - {x: 8.5, y: -5.5}
+      - {x: 8.5, y: -5.5}
+    - - {x: 8.5, y: -8.5}
+      - {x: 8.5, y: -5.5}
+      - {x: 8.5, y: -5.5}
+      - {x: 8.5, y: -8.5}
+    - - {x: -6.5, y: -8.5}
+      - {x: -6.5, y: -8.5}
+      - {x: 8.5, y: -8.5}
+      - {x: 8.5, y: -8.5}
+    - - {x: -6.5, y: -8.5}
+      - {x: -6.5, y: -7.5}
+      - {x: -6.5, y: -7.5}
+      - {x: -6.5, y: -8.5}
+    - - {x: -7.5, y: -7.5}
+      - {x: -7.5, y: -7.5}
+      - {x: -6.5, y: -7.5}
+      - {x: -6.5, y: -7.5}
+    - - {x: -7.5, y: -7.5}
+      - {x: -7.5, y: -6.5}
+      - {x: -7.5, y: -6.5}
+      - {x: -7.5, y: -7.5}
+    - - {x: -7.5, y: -6.5}
+      - {x: -7.5, y: -6.5}
+      - {x: -6.5, y: -6.5}
+      - {x: -6.5, y: -6.5}
+    - - {x: -6.5, y: -6.5}
+      - {x: -6.5, y: -5.5}
+      - {x: -6.5, y: -5.5}
+      - {x: -6.5, y: -6.5}
+    - - {x: -6.5, y: -5.5}
+      - {x: -6.5, y: -5.5}
+      - {x: -5.5, y: -5.5}
+      - {x: -5.5, y: -5.5}
+    - - {x: -5.5, y: -5.5}
+      - {x: -5.5, y: -4.5}
+      - {x: -5.5, y: -4.5}
+      - {x: -5.5, y: -5.5}
+    - - {x: -6.5, y: -4.5}
+      - {x: -6.5, y: -4.5}
+      - {x: -5.5, y: -4.5}
+      - {x: -5.5, y: -4.5}
+    - - {x: -6.5, y: -4.5}
+      - {x: -6.5, y: -3.5}
+      - {x: -6.5, y: -3.5}
+      - {x: -6.5, y: -4.5}
+    - - {x: -8.5, y: -3.5}
+      - {x: -8.5, y: -3.5}
+      - {x: -6.5, y: -3.5}
+      - {x: -6.5, y: -3.5}
+    - - {x: -8.5, y: -3.5}
+      - {x: -8.5, y: -2.5}
+      - {x: -8.5, y: -2.5}
+      - {x: -8.5, y: -3.5}
+    - - {x: -9.5, y: -2.5}
+      - {x: -9.5, y: -2.5}
+      - {x: -8.5, y: -2.5}
+      - {x: -8.5, y: -2.5}
+    - - {x: -9.5, y: -2.5}
+      - {x: -9.5, y: -0.5}
+      - {x: -9.5, y: -0.5}
+      - {x: -9.5, y: -2.5}
+    - - {x: -9.5, y: -0.5}
+      - {x: -9.5, y: -0.5}
+      - {x: -8.5, y: -0.5}
+      - {x: -8.5, y: -0.5}
+    - - {x: -8.5, y: -0.5}
+      - {x: -8.5, y: 0.5}
+      - {x: -8.5, y: 0.5}
+      - {x: -8.5, y: -0.5}
+    - - {x: -8.5, y: 0.5}
+      - {x: -8.5, y: 0.5}
+      - {x: -6.5, y: 0.5}
+      - {x: -6.5, y: 0.5}
+    - - {x: -6.5, y: 0.5}
+      - {x: -6.5, y: 1.5}
+      - {x: -6.5, y: 1.5}
+      - {x: -6.5, y: 0.5}
+    - - {x: -7.5, y: 1.5}
+      - {x: -7.5, y: 1.5}
+      - {x: -6.5, y: 1.5}
+      - {x: -6.5, y: 1.5}
+    - - {x: -7.5, y: 1.5}
+      - {x: -7.5, y: 2.5}
+      - {x: -7.5, y: 2.5}
+      - {x: -7.5, y: 1.5}
+    - - {x: -8.5, y: 2.5}
+      - {x: -8.5, y: 2.5}
+      - {x: -7.5, y: 2.5}
+      - {x: -7.5, y: 2.5}
+    - - {x: -8.5, y: 1.5}
+      - {x: -8.5, y: 2.5}
+      - {x: -8.5, y: 2.5}
+      - {x: -8.5, y: 1.5}
+    - - {x: -11.5, y: 1.5}
+      - {x: -11.5, y: 1.5}
+      - {x: -8.5, y: 1.5}
+      - {x: -8.5, y: 1.5}
+    - - {x: -11.5, y: 1.5}
+      - {x: -11.5, y: 4.5}
+      - {x: -11.5, y: 4.5}
+      - {x: -11.5, y: 1.5}
+    - - {x: -4.5, y: 2.5}
+      - {x: -4.5, y: 2.5}
+      - {x: -4.5, y: 1.5}
+      - {x: -4.5, y: 1.5}
+    - - {x: -4.5, y: 1.5}
+      - {x: -4.5, y: 1.5}
+      - {x: -4.5, y: 1.5}
+      - {x: -4.5, y: 1.5}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MUSHROOM 1-2_0: -1719939674
+      MUSHROOM 1-2_1: 1070624539
+      MUSHROOM 1-2_10: -1602986758
+      MUSHROOM 1-2_100: 1181019439
+      MUSHROOM 1-2_101: 1468286430
+      MUSHROOM 1-2_102: -1408568177
+      MUSHROOM 1-2_103: -849718599
+      MUSHROOM 1-2_104: 1237400187
+      MUSHROOM 1-2_105: 1677760799
+      MUSHROOM 1-2_106: 1451101603
+      MUSHROOM 1-2_107: 1979998486
+      MUSHROOM 1-2_108: -100560318
+      MUSHROOM 1-2_109: -1890205838
+      MUSHROOM 1-2_11: -1005803580
+      MUSHROOM 1-2_110: -572981179
+      MUSHROOM 1-2_111: 2125905210
+      MUSHROOM 1-2_112: 1365430868
+      MUSHROOM 1-2_113: -1086533451
+      MUSHROOM 1-2_114: 1666987944
+      MUSHROOM 1-2_115: -1486433283
+      MUSHROOM 1-2_116: 739051843
+      MUSHROOM 1-2_117: 260171367
+      MUSHROOM 1-2_118: -2081277465
+      MUSHROOM 1-2_119: 411119577
+      MUSHROOM 1-2_12: 1474358837
+      MUSHROOM 1-2_120: 1844895311
+      MUSHROOM 1-2_121: -1793697742
+      MUSHROOM 1-2_122: -1804532693
+      MUSHROOM 1-2_123: 1421214736
+      MUSHROOM 1-2_124: 1051119430
+      MUSHROOM 1-2_125: 1100064608
+      MUSHROOM 1-2_126: 1924030317
+      MUSHROOM 1-2_127: 1161742337
+      MUSHROOM 1-2_128: -1538044589
+      MUSHROOM 1-2_129: -1294608380
+      MUSHROOM 1-2_13: 1557231626
+      MUSHROOM 1-2_130: -775806890
+      MUSHROOM 1-2_131: 1981222490
+      MUSHROOM 1-2_132: 261858109
+      MUSHROOM 1-2_133: 469251536
+      MUSHROOM 1-2_134: -1977322635
+      MUSHROOM 1-2_135: 1334840412
+      MUSHROOM 1-2_136: 1511650070
+      MUSHROOM 1-2_137: -1190000362
+      MUSHROOM 1-2_138: -1996868936
+      MUSHROOM 1-2_139: -1444320742
+      MUSHROOM 1-2_14: -1081845482
+      MUSHROOM 1-2_140: -1184161011
+      MUSHROOM 1-2_141: -466117603
+      MUSHROOM 1-2_142: 806850216
+      MUSHROOM 1-2_143: 972765719
+      MUSHROOM 1-2_144: 25789046
+      MUSHROOM 1-2_145: 430042200
+      MUSHROOM 1-2_146: 1907791773
+      MUSHROOM 1-2_147: -1570507543
+      MUSHROOM 1-2_148: 402525115
+      MUSHROOM 1-2_149: 1921727013
+      MUSHROOM 1-2_15: 1328729945
+      MUSHROOM 1-2_150: -1271942102
+      MUSHROOM 1-2_151: 656308117
+      MUSHROOM 1-2_152: 978085522
+      MUSHROOM 1-2_153: -870718992
+      MUSHROOM 1-2_154: 274804291
+      MUSHROOM 1-2_155: -2085797444
+      MUSHROOM 1-2_156: 194343617
+      MUSHROOM 1-2_157: 1244022146
+      MUSHROOM 1-2_158: 529089985
+      MUSHROOM 1-2_159: -1335644784
+      MUSHROOM 1-2_16: 1662334417
+      MUSHROOM 1-2_160: -443820305
+      MUSHROOM 1-2_161: -772914662
+      MUSHROOM 1-2_162: -1252159499
+      MUSHROOM 1-2_163: -1377715114
+      MUSHROOM 1-2_164: 2052275664
+      MUSHROOM 1-2_165: 735080299
+      MUSHROOM 1-2_166: -426383395
+      MUSHROOM 1-2_167: 415593316
+      MUSHROOM 1-2_168: 1057196131
+      MUSHROOM 1-2_169: -1097171319
+      MUSHROOM 1-2_17: -815631887
+      MUSHROOM 1-2_170: 850371101
+      MUSHROOM 1-2_171: 1554249373
+      MUSHROOM 1-2_172: 1857322512
+      MUSHROOM 1-2_173: 519154918
+      MUSHROOM 1-2_174: -1823621627
+      MUSHROOM 1-2_175: -813413648
+      MUSHROOM 1-2_176: -2064400007
+      MUSHROOM 1-2_177: -61505921
+      MUSHROOM 1-2_178: 1273116588
+      MUSHROOM 1-2_179: 1590165810
+      MUSHROOM 1-2_18: 1297983595
+      MUSHROOM 1-2_180: -1287929129
+      MUSHROOM 1-2_181: 1605898182
+      MUSHROOM 1-2_182: 1404167781
+      MUSHROOM 1-2_183: 1358404967
+      MUSHROOM 1-2_184: -307844301
+      MUSHROOM 1-2_185: 445271630
+      MUSHROOM 1-2_186: -288885979
+      MUSHROOM 1-2_187: -949729106
+      MUSHROOM 1-2_188: -180101785
+      MUSHROOM 1-2_189: 924935348
+      MUSHROOM 1-2_19: 1114843416
+      MUSHROOM 1-2_190: -1097440759
+      MUSHROOM 1-2_191: 1799215773
+      MUSHROOM 1-2_192: -1963592061
+      MUSHROOM 1-2_193: 1943449421
+      MUSHROOM 1-2_194: -2111476192
+      MUSHROOM 1-2_195: 982739287
+      MUSHROOM 1-2_196: -598901932
+      MUSHROOM 1-2_197: -1321453515
+      MUSHROOM 1-2_198: 1421976272
+      MUSHROOM 1-2_199: -455687280
+      MUSHROOM 1-2_2: -880420034
+      MUSHROOM 1-2_20: 1737612999
+      MUSHROOM 1-2_200: 28623160
+      MUSHROOM 1-2_201: -1666141253
+      MUSHROOM 1-2_202: 234653461
+      MUSHROOM 1-2_203: 1766511928
+      MUSHROOM 1-2_204: -1224950113
+      MUSHROOM 1-2_205: 929133416
+      MUSHROOM 1-2_206: 56687696
+      MUSHROOM 1-2_207: -980018388
+      MUSHROOM 1-2_208: 1834009547
+      MUSHROOM 1-2_209: -1460771781
+      MUSHROOM 1-2_21: 1971783980
+      MUSHROOM 1-2_210: -1812735274
+      MUSHROOM 1-2_211: 2112083440
+      MUSHROOM 1-2_212: -390391288
+      MUSHROOM 1-2_213: -629577459
+      MUSHROOM 1-2_214: -965544674
+      MUSHROOM 1-2_215: -1698067228
+      MUSHROOM 1-2_216: 483063056
+      MUSHROOM 1-2_217: 188670289
+      MUSHROOM 1-2_218: 1122690261
+      MUSHROOM 1-2_219: -523935071
+      MUSHROOM 1-2_22: 1139804948
+      MUSHROOM 1-2_220: 726782517
+      MUSHROOM 1-2_221: 1974104886
+      MUSHROOM 1-2_222: -533982941
+      MUSHROOM 1-2_223: -715806221
+      MUSHROOM 1-2_224: -1195046938
+      MUSHROOM 1-2_225: -85012039
+      MUSHROOM 1-2_226: 39070939
+      MUSHROOM 1-2_227: 1826681251
+      MUSHROOM 1-2_23: 1017555632
+      MUSHROOM 1-2_24: -144994735
+      MUSHROOM 1-2_25: 1753361845
+      MUSHROOM 1-2_26: 1648259236
+      MUSHROOM 1-2_27: 1807871951
+      MUSHROOM 1-2_28: -50729039
+      MUSHROOM 1-2_29: -84233379
+      MUSHROOM 1-2_3: -794680681
+      MUSHROOM 1-2_30: -1253407973
+      MUSHROOM 1-2_31: 828032899
+      MUSHROOM 1-2_32: -916157747
+      MUSHROOM 1-2_33: -550895550
+      MUSHROOM 1-2_34: 14789655
+      MUSHROOM 1-2_35: 132333123
+      MUSHROOM 1-2_36: 1801192598
+      MUSHROOM 1-2_37: -116495601
+      MUSHROOM 1-2_38: -1977317875
+      MUSHROOM 1-2_39: 480718636
+      MUSHROOM 1-2_4: 1251399640
+      MUSHROOM 1-2_40: -154976590
+      MUSHROOM 1-2_41: -322592341
+      MUSHROOM 1-2_42: 290224814
+      MUSHROOM 1-2_43: -766059024
+      MUSHROOM 1-2_44: 38084623
+      MUSHROOM 1-2_45: -1369787427
+      MUSHROOM 1-2_46: 550970536
+      MUSHROOM 1-2_47: -1137399898
+      MUSHROOM 1-2_48: -69733186
+      MUSHROOM 1-2_49: 514434021
+      MUSHROOM 1-2_5: -199069829
+      MUSHROOM 1-2_50: -1208534235
+      MUSHROOM 1-2_51: 968562553
+      MUSHROOM 1-2_52: 1405224560
+      MUSHROOM 1-2_53: -712505820
+      MUSHROOM 1-2_54: 940336681
+      MUSHROOM 1-2_55: -455760331
+      MUSHROOM 1-2_56: 1359619989
+      MUSHROOM 1-2_57: -1792611197
+      MUSHROOM 1-2_58: -1057478535
+      MUSHROOM 1-2_59: 137499445
+      MUSHROOM 1-2_6: 1042224941
+      MUSHROOM 1-2_60: 139188923
+      MUSHROOM 1-2_61: 1669385195
+      MUSHROOM 1-2_62: -253848808
+      MUSHROOM 1-2_63: -714567110
+      MUSHROOM 1-2_64: 1204662258
+      MUSHROOM 1-2_65: 442518534
+      MUSHROOM 1-2_66: 375288664
+      MUSHROOM 1-2_67: -1196373838
+      MUSHROOM 1-2_68: 2007114589
+      MUSHROOM 1-2_69: -1913798298
+      MUSHROOM 1-2_7: -632993700
+      MUSHROOM 1-2_70: -326592173
+      MUSHROOM 1-2_71: -958693197
+      MUSHROOM 1-2_72: 1690168324
+      MUSHROOM 1-2_73: -229004099
+      MUSHROOM 1-2_74: 1317775021
+      MUSHROOM 1-2_75: 1406570606
+      MUSHROOM 1-2_76: 1122082144
+      MUSHROOM 1-2_77: -1000228335
+      MUSHROOM 1-2_78: -1292088287
+      MUSHROOM 1-2_79: -1425680326
+      MUSHROOM 1-2_8: 1412634053
+      MUSHROOM 1-2_80: -1310667528
+      MUSHROOM 1-2_81: -1284551767
+      MUSHROOM 1-2_82: -681010751
+      MUSHROOM 1-2_83: -579300304
+      MUSHROOM 1-2_84: 1761253728
+      MUSHROOM 1-2_85: -63210428
+      MUSHROOM 1-2_86: -1731856180
+      MUSHROOM 1-2_87: -1108864657
+      MUSHROOM 1-2_88: -534645581
+      MUSHROOM 1-2_89: -1172339892
+      MUSHROOM 1-2_9: -1505195368
+      MUSHROOM 1-2_90: -1211863771
+      MUSHROOM 1-2_91: 2127297769
+      MUSHROOM 1-2_92: 1857617784
+      MUSHROOM 1-2_93: -742346558
+      MUSHROOM 1-2_94: 1462367049
+      MUSHROOM 1-2_95: -1259563061
+      MUSHROOM 1-2_96: -16621075
+      MUSHROOM 1-2_97: 379004926
+      MUSHROOM 1-2_98: 1674818538
+      MUSHROOM 1-2_99: 906442086
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
