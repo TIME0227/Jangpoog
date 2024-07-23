@@ -37,6 +37,7 @@ public class MovementRigidbody2D : MonoBehaviour
     private Vector2 collisionSize; // 머리, 발 위치에 생성하는 충돌 박스 크기
     private Vector2 footPosition; // 발 위치
     private Vector2 headPosition; // 머리 위치
+    public Vector2 HeadPosition { get { return headPosition; } }
 
     private Rigidbody2D rigid2D; // 물리를 제어하는 컴포넌트
     private Collider2D collider2D; // 현재 오브젝트의 충돌 범위
@@ -55,7 +56,7 @@ public class MovementRigidbody2D : MonoBehaviour
 
         rigid2D = GetComponent<Rigidbody2D>();
         collider2D = GetComponent<Collider2D>();
-        if (collider2D == null) collider2D = GetComponentInChildren<Collider2D>(); 
+        if (collider2D == null) collider2D = GetComponentInChildren<Collider2D>();
     }
 
     private void Update()

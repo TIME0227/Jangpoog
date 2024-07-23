@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -13,20 +14,20 @@ TagManager:
   - UI
   - Ground
   - Level1
-  - Level2
+  - LevelN
+  - 
+  - 
+  - ' '
   - 
   - 
   - 
+  - Player
+  - Monster
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Items_Both
+  - Items_Player
   - 
   - 
   - 
