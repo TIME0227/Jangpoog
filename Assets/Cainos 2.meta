@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Cainos 2.meta
 guid: 2792eb457b55748bc80c6f33fe0293f3
 folderAsset: yes
 DefaultImporter:
+========
+guid: 63ee81d9b3ed94269a180f0a05eba363
+NativeFormatImporter:
+>>>>>>>> a0bceb8b2dfdf587f158947562059d5042d6e307:Assets/sunnyland woods/Tilemap/tileset-sliced_0.asset.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
