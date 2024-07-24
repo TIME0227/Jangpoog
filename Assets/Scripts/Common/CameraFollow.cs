@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] private Transform target; //카메라 추적 대상
-    [SerializeField] bool x, y, z;  //추적 축
+    [SerializeField] bool x = true, y = true, z;  //추적 축
     float offsetY; //target과 카메라의 y 거리 값을 저장하는 변수
 
     // Start is called before the first frame update
@@ -13,11 +13,11 @@ public class CameraFollow : MonoBehaviour
     private void Awake()
     {
         //target 자동으로 player로 설정
-        //target = GameObject.FindWithTag("Player").transform;
+        target = GameObject.FindWithTag("Player").transform;
 
         //offsetY 값 설정
         //target과 카메라의 y 거리 = |(카메라의 y 위치) - (tartget의 y 위치)|
-        //offsetY = Mathf.Abs(transform.position.y - target.position.y);
+        offsetY = Mathf.Abs(transform.position.y - target.position.y);
     }
     void Start()
     {
