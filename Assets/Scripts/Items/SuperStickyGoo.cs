@@ -18,8 +18,9 @@ public class SuperStickyGoo : ItemBase
         Debug.Log(other.name);
         if (other.CompareTag("Monster"))
         {
-            Debug.Log("공격력 증가");
+            Debug.Log("공격력, 사이즈 증가");
             other.GetComponent<MonsterController>().stat.currentDamage *= 1.5f;
+            other.transform.localScale *= 1.2f;
 
         }
 
@@ -33,8 +34,9 @@ public class SuperStickyGoo : ItemBase
     {
         if (other.CompareTag("Monster"))
         {
-            Debug.Log("공격력 원래대로");
+            Debug.Log("공격력, 사이즈 원래대로");
             other.GetComponent<MonsterController>().stat.currentDamage /= 1.5f;
+            other.transform.localScale /= 1.2f;
 
         }
 

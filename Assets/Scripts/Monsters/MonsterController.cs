@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -22,10 +23,10 @@ public abstract class MonsterController : BaseController
     [SerializeField] private LayerMask obstacleLayer; // 장애물로 인식하는 레이어
 
     //이동, 움직임 제어
-    private MovementRigidbody2D movement2D;
-    private new Collider2D collider2D; //충돌
-    private SpriteRenderer spriteRenderer; //일반, 공격, attack mode
-    private Animator animator; //애니메이션
+    protected Mon_MovementRigidbody2D movement2D;
+    protected new Collider2D collider2D; //충돌
+    //protected SpriteRenderer spriteRenderer; //일반, 공격, attack mode
+    protected Animator animator; //애니메이션
     
     [SerializeField] private float waitTime = 1.5f; // 대기 시간
 
@@ -34,10 +35,15 @@ public abstract class MonsterController : BaseController
     [SerializeField] private bool isJumping = false;
     [SerializeField] private bool isWaiting = true;
 
-    private Vector3 dir = Vector3.zero;
+    public Vector3 dir = Vector3.zero;
     
 
     [Header("Coroutine")] private Coroutine _coIdle, _coMove;
+    
+    
+    /// <summary>
+    /// 초기화 메소드. 스탯 데이터, position, move range 및 변수 초기화
+    /// </summary>
     public override void Init()
     {
         stat = gameObject.GetComponent<MonsterStat>();
@@ -55,13 +61,17 @@ public abstract class MonsterController : BaseController
         originPos = transform.position;
         minMoveRangeX = originPos.x - moveRange;
         maxMoveRangeX = originPos.x + moveRange;
-        Debug.Log(minMoveRangeX);
+        //Debug.Log(minMoveRangeX);
         
         
-        movement2D = GetComponent<MovementRigidbody2D>();
+        movement2D = GetComponent<Mon_MovementRigidbody2D>();
         collider2D = GetComponentInChildren<Collider2D>();
         animator = GetComponentInChildren<Animator>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        //spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        //구독
+        stat.DieAction -= OnDie;
+        stat.DieAction += OnDie;
     }
 
     private void Start()
@@ -73,47 +83,21 @@ public abstract class MonsterController : BaseController
 
         }
     }
-
-
-    public virtual void OnAttacked(float damage)
+    
+    #region BaseController Methods
+    protected override void OnDie()
     {
-        gameObject.GetComponentInChildren<UI_HPBar>(true).ShowHP();
-        if (damage < stat.currentHp)
-        {
-            GetComponentInChildren<SpriteRenderer>().color = Color.red;
-            StartCoroutine(ChangeColorWithDelay(Color.white, 0.5f));
-        } 
-        stat.currentHp = Mathf.Clamp(stat.currentHp - damage, 0, stat.currentHp);
+        State = Define.State.Die;
         
-        //색깔 변화 or 애니메이션 적용 -> 추후에 animation controller 생성예정
-        
-
-        if (stat.currentHp == 0)
-        {
-            State = Define.State.Die;
-            OnDead();
-        }
-    }
-
-    public virtual void OnDead()
-    {
         Debug.Log("사망");
         //사망 애니메이션 or 사망 상태로 변경
-        animator.SetTrigger("Die");
+        //아이템 드랍
+        Debug.Log("아이템을 드랍합니다.");
+        
 
         //게임 관리 매니져로 수정할 예정
         Destroy(gameObject, 1f); //1초 후에 사라지기
     }
-
-    private IEnumerator ChangeColorWithDelay(Color color, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        GetComponentInChildren<SpriteRenderer>().color = color;
-    }
-    
-
-
-    #region Update Movement
     protected override void UpdateIdle()
     {
         GameObject player = GameObject.FindWithTag("Player");
@@ -133,24 +117,43 @@ public abstract class MonsterController : BaseController
                 Debug.Log("플레이어 인식!!!!");
                 target = player;
                 StartCoroutine(nameof(CoTarget));
+                State = Define.State.Target;
             }
             else
             { 
-                //State = Define.State.Moving;
+                State = Define.State.Moving;
             }
             
         }
         else
         {
-            destPos = new Vector3(Random.Range(minMoveRangeX, maxMoveRangeX), transform.position.y,
-                transform.position.z);
+            float randomX = Mathf.Round(Random.Range(minMoveRangeX, maxMoveRangeX) * 10f) / 10f;
+
+            if (Mathf.Abs(randomX - transform.position.x) < 0.5f)
+            {
+                if (randomX < transform.position.x)
+                {
+                    randomX = Mathf.Clamp(randomX - 0.5f, minMoveRangeX, maxMoveRangeX);
+                }
+                else
+                {
+                    randomX = Mathf.Clamp(randomX + 0.5f, minMoveRangeX, maxMoveRangeX);
+                }
+            }
+
+            destPos = new Vector3(randomX, transform.position.y, transform.position.z);
+            // destPos = new Vector3(Random.Range(minMoveRangeX, maxMoveRangeX), transform.position.y,
+            //     transform.position.z);
+            State = Define.State.Moving;
+            
         }
-        State = Define.State.Moving;
         elapsedTime = 0.0f;
+      
     }
 
     protected override void UpdateMoving()
     {
+        //타겟이 있는 경우
         if (target != null)
         {
             destPos = target.transform.position;
@@ -159,9 +162,6 @@ public abstract class MonsterController : BaseController
             //플레이어가 사정 거리보다 가까우면 공격
             if (distance <= attackRange)
             {
-                //이동로직
-
-
                 //공격
                 State = Define.State.Attack;
                 return;
@@ -173,8 +173,8 @@ public abstract class MonsterController : BaseController
         //목표 위치에 도달시
         if (dir.magnitude < 0.1f)
         {
+            Debug.Log("목표 도달 정지");
             movement2D.MoveTo(0);
-            animator.SetFloat("velocityX", 0);
             State = Define.State.Idle;
         }
         else
@@ -193,81 +193,135 @@ public abstract class MonsterController : BaseController
                 //올라갈 수 있는 장애물을 만남
                 // State = Define.State.Idle;
                 Debug.Log("점프해서 올라갑니다.");
-                State = Define.State.Jumping;
+                // State = Define.State.Jumping;
+                StartCoroutine(nameof(CoJump));
             }
         
             else
             {
                 //이동
-                spriteRenderer.flipX = dir.normalized.x == 1;
+                // spriteRenderer.flipX = dir.normalized.x == 1;
                 movement2D.MoveTo(dir.normalized.x);
-                animator.SetFloat("velocityX", Mathf.Abs(dir.normalized.x));
+                //animator.SetFloat("velocityX", Mathf.Abs(dir.normalized.x));
             }
         }
     }
 
-    enum JumpState{NotJumping, StartJump, InAir, Landed, IdleWait}
     protected override void UpdateJumping()
     {
-        if (!isJumping)
-        {
-            isJumping = true;
-            movement2D.Jump();
-            animator.SetBool("isJump", true);
-            StartCoroutine(nameof(CoJump));
-        }
+        if(!isJumping)
+        StartCoroutine(nameof(CoJump));
+        // if (!isJumping)
+        // {
+        //     isJumping = true;
+        //     movement2D.Jump();
+        //     //animator.SetBool("isJump", true);
+        //     StartCoroutine(nameof(CoJump));
+        // }
          
+    }
+
+    protected override void UpdateAttack()
+    {
+        movement2D.MoveTo(0);
+        Debug.Log("공격");
+        // if (!isJumping)
+        // {
+        //     Debug.Log(("공격"));
+        //     StartCoroutine(nameof(CoJump));
+        // }
+            
     }
  #endregion
 
  
     #region Coroutine
 
+    /// <summary>
+    /// 몬스터가 플레이어 인식시 발생하는 모션
+    /// </summary>
+    /// <returns></returns>
      IEnumerator CoTarget()
      {
          //움직임 정지
          movement2D.MoveTo(0);
-         
-         //애니메이션 재생
+         GetComponentInChildren<SpriteRenderer>().flipX = target.transform.position.x >= transform.position.x;
+         //잠시 정지
          yield return new WaitForSeconds(1.5f);
-         
-         //애니메이션 정지
-         
-         
          State = Define.State.Moving;
      }
 
+     /// <summary>
+     /// 몬스터가 바닥에 떨어질때까지 대기하다, 떨어지는 순간 움직임 + 물리 + 애니메이션 처리하는 코루틴
+     /// </summary>
+     /// <returns></returns>
      IEnumerator CoJump()
      {
+         if (!isJumping)
+         {
+             isJumping = true;
+             movement2D.Jump();
+             //animator.SetBool("isJump", true);
+             //StartCoroutine(nameof(CoJump));
+         }
          yield return new WaitUntil(() => !movement2D.IsGrounded); //점프를 시작시 y 속력이 양수지만 아직 바닥과 붙어있을 수 있음. 바닥과 떨어지는 순간까지 기다림
          while (true)
          {
              //UpdateDirection();
              movement2D.MoveTo(dir.normalized.x);
              //y축 속력에 따라 올라가는 or 내려가는 애니메이션 재생
-             animator.SetFloat("velocityY", movement2D.Velocity.y);
+             //animator.SetFloat("velocityY", movement2D.Velocity.y);
          
              if (movement2D.IsGrounded)
              {
                  Debug.Log("바닥착지");
                  //바닥에 착지시 동작 멈추고 반복문 종료
-                 animator.SetBool("isJump", false);
+                 //animator.SetBool("isJump", false);
                  movement2D.MoveTo(0);
-                 animator.SetFloat("velocityX", 0);
+                 //animator.SetFloat("velocityX", 0);
                  isJumping = false;
                  // //대기 행동 코루틴 호출
-                 // yield return new WaitForSeconds(1f);
-                 State = Define.State.Idle;
+                 yield return new WaitForSeconds(2f);
+                 if (dir.magnitude < 0.1f)
+                 {
+                     Debug.Log("목표 도달 정지");
+                     movement2D.MoveTo(0);
+                     State = Define.State.Idle;
+                 }
+                 else
+                 {
+                     State = Define.State.Moving;
+                 }
+                
                  yield break;
              }
              yield return null;
          }
      }
+    
     #endregion
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log(("충돌"));
+            //수정예정
+            int dirc = transform.position.x - other.transform.position.x > 0 ? 1 : -1;
+            Debug.Log(dirc);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(dirc,0),ForceMode2D.Impulse);
+        }
+    }
 
-    // private void FixedUpdate()
-    // {
-    //     Debug.Log($"IsGrounded : {movement2D.IsGrounded}");
-    // }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log(("충돌"));
+            //수정예정
+            int dirc = transform.position.x - other.transform.position.x > 0 ? 1 : -1;
+            Debug.Log(dirc);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(dirc,0),ForceMode2D.Impulse);
+        }
+    }
 }

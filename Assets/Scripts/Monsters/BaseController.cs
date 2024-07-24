@@ -18,7 +18,7 @@ public abstract class BaseController : MonoBehaviour
         {
             state = value;
 
-            Animator anim = GetComponent<Animator>();
+            Animator anim = GetComponentInChildren<Animator>();
             switch (state)
             {
                 case Define.State.Idle:
@@ -28,8 +28,13 @@ public abstract class BaseController : MonoBehaviour
                 case Define.State.Jumping:
                     break;
                 case Define.State.Die:
+                    anim.SetTrigger("Die");
                     break;
                 case Define.State.Attack:
+                    anim.SetTrigger("Attack");
+                    break;
+                case Define.State.Target:
+                    anim.SetTrigger("Target");
                     break;
             }
         }
@@ -46,6 +51,8 @@ public abstract class BaseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Animator anim = GetComponentInChildren<Animator>();
+        GetComponentInChildren<MonsterAnimator>().UpdateAnimation();
         switch (state)
         {
             case Define.State.Idle:
@@ -78,4 +85,8 @@ public abstract class BaseController : MonoBehaviour
     protected virtual void UpdateDie(){}
     protected virtual void UpdateAttack(){}
     protected virtual void UpdateTarget(){}
+    
+    
+    //Die Event
+    protected virtual void OnDie(){}
 }

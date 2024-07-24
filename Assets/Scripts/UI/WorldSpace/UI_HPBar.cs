@@ -42,7 +42,7 @@ public class UI_HPBar : UI_Base
         //부모의 위치
         Transform parent = transform.parent;
         //hp bar 위치 = 부모 오브젝트의 머리 위치. MovementRigidbody2D의 headPosition을 이용한다.
-        Vector2 headPosition = Util.GetOrAddComponent<MovementRigidbody2D>(parent.gameObject).HeadPosition;
+        Vector2 headPosition = Util.GetOrAddComponent<Mon_MovementRigidbody2D>(parent.gameObject).HeadPosition;
         transform.position = new Vector3(headPosition.x, headPosition.y + offset_y, parent.position.z);
 
         float value = monsterController.stat.currentHp;

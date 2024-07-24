@@ -17,8 +17,14 @@ public class MonsterSlime : MonsterController
      {
          Vector3 currentScale = transform.localScale;
          currentScale *= stat.monsterData.Height / 0.8f;
+         Debug.Log(stat.monsterData.Height);
 
          transform.localScale = currentScale;
      }
-     //public 
+
+     protected override void OnDie()
+     {
+         base.OnDie();
+         Debug.Log("슬라임 죽음 일반액션");
+     }
 }
