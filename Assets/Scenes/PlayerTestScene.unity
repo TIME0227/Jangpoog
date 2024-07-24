@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 584510112}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,6 +293,10 @@ MonoBehaviour:
   jangPoongSpeed: 10
   jangPoongDistance: 5
   manaText: {fileID: 741022202}
+  mana: 100
+  maxMana: 100
+  manaRegenerationRate: 3
+  manaConsumption: 5
 --- !u!114 &584510113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +323,7 @@ MonoBehaviour:
   jumpForce: 13
   lowGravityScale: 2
   highGravityScale: 3.5
+  moveSpeed: 0
 --- !u!70 &584510114
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -456,8 +461,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mana 100/100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7a0b042a31f634509a9dddb806ab399a, type: 2}
-  m_sharedMaterial: {fileID: -6799762981409342117, guid: 7a0b042a31f634509a9dddb806ab399a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -543,6 +548,7 @@ GameObject:
   - component: {fileID: 1047242552}
   - component: {fileID: 1047242551}
   - component: {fileID: 1047242554}
+  - component: {fileID: 1047242555}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -668,6 +674,22 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1047242555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047242550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144b4448982a043a08d4cb876d09d8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  x: 1
+  y: 1
+  z: 0
 --- !u!1 &1113682570
 GameObject:
   m_ObjectHideFlags: 0
