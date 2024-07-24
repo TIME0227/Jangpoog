@@ -1294,21 +1294,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_BombSlime
       objectReference: {fileID: 0}
-    - target: {fileID: 990066786842934706, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1206778912099870612, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204218733719234115, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
-      propertyPath: groundCheckLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204218733719234115, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
-      propertyPath: belowColiisionLayer.m_Bits
-      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1348,10 +1336,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185207543957236326, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
-      propertyPath: obstacleLayer.m_Bits
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1521,14 +1505,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 261952960578330749, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
-      propertyPath: groundCheckLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 261952960578330749, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
-      propertyPath: belowColiisionLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Name
       value: Monster_Slime_v1
@@ -1571,10 +1547,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
-      propertyPath: obstacleLayer.m_Bits
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
