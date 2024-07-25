@@ -25,14 +25,31 @@ public class PlayerAnimator : MonoBehaviour
         // 바닥에 닿아 있으면
         if ( movement.IsGrounded )
 		{
-            // velocityX가 0이면 "Idle", velocityX가 0.5이면 "Walk", velocityX가 1이면 "Run" 재생
-            animator.SetFloat("velocityX", Mathf.Abs(x));
-		}
+                // velocityX가 0이면 "Idle", velocityX가 0.5이면 "Walk", velocityX가 1이면 "Run" 재생
+                animator.SetFloat("velocityX", Mathf.Abs(x));
+				animator.SetBool("isLongJump", false);
+        }
         // 바닥에 닿아 있지 않으면
         else
         {
-            // velocityY가 음수이면 "JumpDown", velocityY가 양수이면 "JumpUp" 재생
-            animator.SetFloat("velocityY", movement.Velocity.y);
+			// 더블 점프할 때 - LongJumpUp
+			if (movement.IsLongJump == true)
+			{
+				animator.SetBool("isLongJump", true);
+                animator.SetFloat("velocityY", movement.Velocity.y);
+            }
+			// 더블 점프 끝날 때 - LongJumpDown
+			else if (movement.IsLongJump == false)
+			{
+               animator.SetBool("isLongJump", false);
+               animator.SetFloat("velocityY", movement.Velocity.y);
+ 
+            }
+			else
+			{
+                // velocityY가 음수이면 "JumpDown", velocityY가 양수이면 "JumpUp" 재생
+                animator.SetFloat("velocityY", movement.Velocity.y);
+            }
 		}
 	}
 
@@ -63,6 +80,12 @@ public class PlayerAnimator : MonoBehaviour
 	{
 		Debug.Log("장풍 애니메이션");
 	}
+
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        animator.speed = multiplier;
+    }
+
 }
 
 

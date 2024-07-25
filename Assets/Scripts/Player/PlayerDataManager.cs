@@ -5,6 +5,8 @@ public class PlayerDataManager : MonoBehaviour
 {
     // 장풍 데이터 설정
     [SerializeField]
+    public GameObject[] jangPoongPrefabs;
+    [SerializeField]
     public GameObject jangPoongPrefab;
     [SerializeField]
     public float jangPoongSpeed = 10.0f;
@@ -12,6 +14,8 @@ public class PlayerDataManager : MonoBehaviour
     public float jangPoongDistance = 5.0f;
     [SerializeField]
     public float jangPoongLevel = 1.0f;
+    [SerializeField]
+    public float jangPoongDamage = 0.5f;
     [SerializeField]
     public float levelUpToken = 0;
 
@@ -31,9 +35,9 @@ public class PlayerDataManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI hpText;
     [SerializeField]
-    public float hp = 100f;
+    public float hp = 10.0f;
     [SerializeField]
-    public float maxHp = 100f;
+    public float maxHp = 10.0f;
 
     private void Awake()
     {
@@ -43,6 +47,7 @@ public class PlayerDataManager : MonoBehaviour
     private void Update()
     {
         UpdateManaText();
+        UpdateHpText();
 
         // 레벨업 테스트용
         if (Input.GetKeyDown(KeyCode.L))
@@ -64,10 +69,22 @@ public class PlayerDataManager : MonoBehaviour
     }
 
     // 레벨업
-    public  void LevelUp()
+    public void LevelUp()
     {
         levelUpToken += 1;
-        jangPoongLevel = 1 + levelUpToken;
+        jangPoongLevel = Mathf.Clamp(1 + levelUpToken, 1, jangPoongPrefabs.Length);
+        UpdateJangPoongPrefab();
     }
 
+    // 장풍 프리팹 업데이트
+    private void UpdateJangPoongPrefab()
+    {
+        jangPoongPrefab = jangPoongPrefabs[(int)jangPoongLevel - 1];
+    }
+
+    // 체력 텍스트 업데이트
+    private void UpdateHpText()
+    {
+        hpText.text = $"Hp {hp}/{maxHp}";
+    }
 }

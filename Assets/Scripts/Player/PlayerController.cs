@@ -1,8 +1,10 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    // 점프 & 슬라이딩 데이터 설정
     [SerializeField]
     private KeyCode jumpKeyCode = KeyCode.W;
     [SerializeField]
@@ -11,32 +13,23 @@ public class PlayerController : MonoBehaviour
     private float slideDistance = 3.0f;
     [SerializeField]
     private float slideSpeed = 10.0f;
-    [SerializeField]
-    private GameObject jangPoongPrefab;
-    [SerializeField]
-    private float jangPoongSpeed = 10.0f;
-    [SerializeField]
-    private float jangPoongDistance = 5.0f;
-    [SerializeField]
-    private TextMeshProUGUI manaText;
-    [SerializeField]
-    private float mana = 100f;
-    [SerializeField]
-    private float maxMana = 100f;
-    [SerializeField]
-    private float manaRegenerationRate = 3f;
-    [SerializeField]
-    private float manaConsumption = 5f;
 
     private MovementRigidbody2D movement;
     private PlayerAnimator playerAnimator;
     private CapsuleCollider2D capsuleCollider;
     private Rigidbody2D rb;
+    private PlayerDataManager playerDataManager;
     private bool isSliding = false;
     private Vector2 slideDirection;
     private float slideRemainingDistance;
     private Quaternion originalRotation;
 
+    // 더블 클릭 (대쉬) 데이터 설정
+    private float doubleClickTimeLimit = 0.25f;
+    private float speedMultiplier = 2.0f;
+    private bool isDoubleClicking = false;
+    private float lastClickTime = -1.0f;
+    private KeyCode lastKeyPressed;
 
 
     private void Awake()
@@ -45,6 +38,7 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponentInChildren<PlayerAnimator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        playerDataManager = GetComponentInChildren<PlayerDataManager>();
         originalRotation = capsuleCollider.transform.rotation;
 
         InvokeRepeating("RegenerateMana", 1f, 1f);  // 1초마다 RegenerateMana 메서드 호출
@@ -61,7 +55,9 @@ public class PlayerController : MonoBehaviour
         UpdateSlide();
         UpdateJangPoong();
         playerAnimator.UpdateAnimation(x);
-        UpdateManaText();
+
+        CheckDoubleClick(KeyCode.A);
+        CheckDoubleClick(KeyCode.D);
     }
 
     // 이동
@@ -69,6 +65,15 @@ public class PlayerController : MonoBehaviour
     {
         if (!isSliding)
         {
+            if (isDoubleClicking) // 대쉬
+            {
+                x *= speedMultiplier;
+                playerAnimator.SetSpeedMultiplier(speedMultiplier);
+            }
+            else
+            {
+                playerAnimator.SetSpeedMultiplier(1.0f);
+            }
             movement.MoveTo(x);
         }
     }
@@ -132,36 +137,71 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (mana >= manaConsumption)
+
+                // 장풍 레벨 관련 조건 추가
+
+                if (playerDataManager.mana >= playerDataManager.manaConsumption)
+                {
+                    playerDataManager.mana -= playerDataManager.manaConsumption;
+
+                    Vector3 spawnPosition = transform.position;
+                    spawnPosition.y += isSliding ? -0.58f : -0.08f;
+
+                    GameObject jangPoong = Instantiate(playerDataManager.jangPoongPrefab, spawnPosition, Quaternion.identity);
+                    Rigidbody2D jangPoongRb = jangPoong.GetComponent<Rigidbody2D>();
+                    Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
+                    jangPoongRb.velocity = jangPoongDirection * playerDataManager.jangPoongSpeed;
+                    playerAnimator.JangPoongShooting();
+                    Destroy(jangPoong, playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed);
+                }
+                else // 잔여 마나량 < 5
+                {
+                    Debug.Log("마나량 부족");
+                }
+        }
+    }
+
+    // 더블 클릭 체크
+    private void CheckDoubleClick(KeyCode key)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            if (Time.time - lastClickTime < doubleClickTimeLimit && lastKeyPressed == key)
             {
-                mana -= manaConsumption;
-
-                Vector3 spawnPosition = transform.position;
-                spawnPosition.y += isSliding ? 0.2f : 0.7f;
-
-                GameObject jangPoong = Instantiate(jangPoongPrefab, spawnPosition, Quaternion.identity);
-                Rigidbody2D jangPoongRb = jangPoong.GetComponent<Rigidbody2D>();
-                Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
-                jangPoongRb.velocity = jangPoongDirection * jangPoongSpeed;
-                playerAnimator.JangPoongShooting();
-                Destroy(jangPoong, jangPoongDistance / jangPoongSpeed);
+                isDoubleClicking = true;
+                StopAllCoroutines();
+                StartCoroutine(DoubleClickTimer());
             }
-            else // 잔여 마나량 < 5
+            else
             {
-                Debug.Log("마나량 부족");
+                lastClickTime = Time.time;
+                lastKeyPressed = key;
+            }
+        }
+
+        if (Input.GetKeyUp(key))
+        {
+            if (isDoubleClicking)
+            {
+                StopAllCoroutines();
+                StartCoroutine(DoubleClickCooldown());
             }
         }
     }
 
-    // 마나 재생
-    private void RegenerateMana()
+    private IEnumerator DoubleClickTimer()
     {
-        mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
+        while (Input.GetKey(lastKeyPressed))
+        {
+            yield return null;
+        }
+        isDoubleClicking = false;
     }
 
-    // 마나 텍스트 업데이트
-    private void UpdateManaText()
+    private IEnumerator DoubleClickCooldown()
     {
-        manaText.text = $"Mana {mana}/{maxMana}";
+        yield return new WaitForSeconds(0.5f);
+        isDoubleClicking = false;
     }
+
 }
