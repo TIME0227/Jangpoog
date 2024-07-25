@@ -134,3 +134,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,unity
+Assets/karsiori/TileMap/Decorations/MUSHROOM 1-2.asset.meta
+Assets/karsiori/TileMap/Decorations/MUSHROOM 1-2.asset.meta
+Assets/karsiori/TileMap/Decorations/mushroom1.prefab.meta
