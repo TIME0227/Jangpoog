@@ -8761,7 +8761,7 @@ MonoBehaviour:
     m_Bits: 64
   walkSpeed: 8
   runSpeed: 8
-  jumpForce: 8
+  jumpForce: 9
   lowGravityScale: 2
   highGravityScale: 3.5
   moveSpeed: 0
