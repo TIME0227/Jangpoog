@@ -39,6 +39,7 @@
             PointerUp,
             Click,
         }
-        
+
+        public float tileWidth = 0f;
     }
 

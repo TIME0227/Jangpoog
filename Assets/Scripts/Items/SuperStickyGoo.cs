@@ -1,15 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SuperStickyGoo : ItemBase
 {
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponentInParent<SpriteRenderer>();
+    }
+
     private void Start()
     {
-        StartCoroutine(FadeEffect.Fade(GetComponent<SpriteRenderer>(), 1, 0, 3, 7, () =>
+        StartCoroutine(FadeEffect.Fade(spriteRenderer, 1, 0, 3, 7, () =>
         {
             Debug.Log("ssg 사라집니다.");
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }));
     }
 
@@ -26,7 +34,9 @@ public class SuperStickyGoo : ItemBase
 
         else if (other.CompareTag("Player"))
         {
-            //...
+            Debug.Log("플레이어 속도 감소");
+            //speed가 private라서 프로퍼티 필요
+            //other.GetComponent<MovementRigidbody2D>().speed
         }
     }
 
