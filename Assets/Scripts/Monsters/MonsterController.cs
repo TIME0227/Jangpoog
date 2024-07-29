@@ -40,7 +40,7 @@ public abstract class MonsterController : BaseController
 
     [Header("Attack")] [SerializeField]
     protected float attackDelay = 3.0f;
-
+    
     
 
     //private int attackCount=0;
@@ -162,9 +162,10 @@ public abstract class MonsterController : BaseController
         //타겟이 있는 경우
         if (target != null)
         {
+            animator.SetBool("isFollow", true);
+            //animator.SetBool("isFollow", true);
             destPos = target.transform.position;
             float distance = (destPos - transform.position).magnitude;
-
             //플레이어가 사정 거리보다 가까우면 공격
             if (distance <= attackRange)
             {
@@ -175,15 +176,16 @@ public abstract class MonsterController : BaseController
                 }
                 else
                 {
+                    animator.SetBool("isFollow", false);
                     State = Define.State.Attack;
                     
                 }
                 return;
 
             }
-
             
         }
+       
         //목표 방향으로 가기
         dir = destPos - transform.position; //거리 계산(단, x축만 계산)
         dir.y = 0;
@@ -251,7 +253,7 @@ public abstract class MonsterController : BaseController
          GetComponentInChildren<SpriteRenderer>().flipX = target.transform.position.x >= transform.position.x;
          //잠시 정지
          yield return new WaitForSeconds(1.5f);
-         GetComponentInChildren<Animator>().SetBool("hasTarget", true);
+        animator.SetBool("isFollow", true);
          
          State = Define.State.Moving;
      }
@@ -289,6 +291,11 @@ public abstract class MonsterController : BaseController
                  isJumping = false;
                  dir = destPos - transform.position; //거리 계산(단, x축만 계산)
                  dir.y = 0;
+                 if (State == Define.State.Attack)
+                 {
+                     attackDelay = 3.0f;
+                 }
+
                  if (dir.magnitude < 0.1f)
                  {
                      Debug.Log("목표 도달 정지");
@@ -299,10 +306,6 @@ public abstract class MonsterController : BaseController
                  {
                      State = Define.State.Moving;
                  }
-                 if (State == Define.State.Attack)
-                 {
-                     attackDelay = 3.0f;
-                 }
                 
                  yield break;
              }
@@ -312,31 +315,6 @@ public abstract class MonsterController : BaseController
      
     
     #endregion
-
-    // private void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (other.gameObject.CompareTag("Player"))
-    //     {
-    //         Debug.Log(("충돌"));
-    //         //수정예정
-    //     int dirc = transform.position.x - other.transform.position.x > 0 ? 1 : -1;
-    //     Debug.Log(dirc);
-    //     GetComponent<Rigidbody2D>().AddForce(new Vector2(dirc,0),ForceMode2D.Impulse);
-    // }
-    // }
-
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (other.gameObject.CompareTag("Player"))
-    //     {
-    //         Debug.Log(("충돌"));
-    //         //수정예정
-    //         int dirc = transform.position.x - other.transform.position.x > 0 ? 10 : -1;
-    //         Debug.Log(dirc);
-    //         GetComponent<Rigidbody2D>().AddForce(new Vector2(dirc,0),ForceMode2D.Impulse);
-    //     }
-    // }
-    //
     
     
 }

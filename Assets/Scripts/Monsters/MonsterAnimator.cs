@@ -44,5 +44,6 @@ public class MonsterAnimator : MonoBehaviour
     
     
     public void OnHitEvent(){}
-    public void OnDie(){}
+
+    
 }

@@ -5,12 +5,6 @@ using UnityEngine;
 
 public class MonsterSlime : MonsterController
 {
-    [Header("Attack")] 
-    [SerializeField] private Transform pos;
-
-    [SerializeField] private Vector2 boxSize;
-
-    private Collider2D weaponcolldier;
     
 //
      public override void Init()
