@@ -24,6 +24,7 @@ public class MonsterAnimator : MonoBehaviour
         {
             spriteRenderer.flipX = monsterController.dir.normalized.x == 1;
         }
+        
         anim.SetBool("isJump", !movement.IsGrounded);
 
         if (movement.IsGrounded)
@@ -34,6 +35,10 @@ public class MonsterAnimator : MonoBehaviour
         {
             anim.SetFloat("velocityY", movement.Velocity.y);
         }
+        // if(movement.Velocity.y!=0)
+        // {
+        //     anim.SetFloat("velocityY", movement.Velocity.y);
+        // }
         
     }
     

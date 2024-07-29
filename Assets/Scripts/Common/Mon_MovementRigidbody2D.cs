@@ -43,7 +43,13 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     private Collider2D collider2D; // 현재 오브젝트의 충돌 범위
 
     public bool IsLongJump { set; get; } = false; // 낮은 점프, 높은 점프 체크
-    public bool IsGrounded { private set; get; } = false; // 바닥 체크 (바닥에 닿아있을 때 true)
+    [SerializeField] private bool isGrounded = false;
+    
+    public bool IsGrounded
+    {
+        private set { isGrounded = value;}
+        get { return isGrounded; }
+    } // 바닥 체크 (바닥에 닿아있을 때 true)
     public Collider2D HitAboveObject { private set; get; } // 머리에 충돌한 오브젝트 정보
                                                            // 머리의 오브젝트 충돌 여부를 MovementRigidbody2D에서 검사하기 때문에 set은 현재 클래스에서만 할 수 있도록 private으로 설정
     public Collider2D HitBelowObject { private set; get; }  // 발에 충돌한 오브젝트 정보
@@ -64,6 +70,10 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
         UpdateCollision();
         JumpHeight();
         JumpAdditive();
+        
+        
+        // if(!isGrounded)
+        //     Debug.Log("바닥아님");
     }
 
     // x축 속력(velocity) 설정, 외부 클래스에서 호출
@@ -85,13 +95,13 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
         Bounds bounds = collider2D.bounds;
 
         // 플레이어 발에 생성하는 충돌 범위
-        collisionSize = new Vector2((bounds.max.x - bounds.min.x) * 0.5f, 0.1f);
+        collisionSize = new Vector2((bounds.max.x - bounds.min.x) * 0.8f, 0.1f);
 
         // 플레이어의 머리/발 위치
         headPosition = new Vector2(bounds.center.x, bounds.max.y);
         footPosition = new Vector2(bounds.center.x, bounds.min.y);
-
-        // 플레이어가 바닥을 밟고 있는지 체크하는 충돌 박스
+        
+    // 플레이어가 바닥을 밟고 있는지 체크하는 충돌 박스
         IsGrounded = Physics2D.OverlapBox(footPosition, collisionSize, 0, groundCheckLayer);
         // Physics2D.OverlapBox(Vector2 point, Vector2 size, float angle, int layerMask);
         // point 위치에 size 크기의 충돌 박스(BoxCollider2D)를 angle 각도만큼 회전해서 생성
@@ -138,9 +148,14 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
         // 낭떠러지에서 떨어질 때 아주 잠시동안 점프가 가능하도록 설정
         if (IsGrounded) hangCounter = hangTime;
         else hangCounter -= Time.deltaTime;
-
+        
         // 바닥 착지 직전 조금 빨리 점프 키를 눌렀을 때 바닥에 착지하면 바로 점프하도록 설정
-        if (jumpBufferCounter > 0) jumpBufferCounter -= Time.deltaTime;
+        if (jumpBufferCounter > 0)
+        {
+            // Debug.Log("jumpbuffercounter 양수");
+            // Debug.Log(hangCounter);
+            jumpBufferCounter -= Time.deltaTime;
+        }
 
         if (jumpBufferCounter > 0 && hangCounter > 0)
         {
@@ -154,6 +169,16 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     public void ResetVelocityY()
     {
         rigid2D.velocity = new Vector2(rigid2D.velocity.x, 0);
+    }
+    
+    private void OnDrawGizmos()
+    {
+        
+        // 충돌 범위 디버그 표시 색상 설정
+        Gizmos.color = Color.red;
+
+        // footPosition에 생성되는 OverlapBox 디버그 표시
+        Gizmos.DrawWireCube(footPosition, collisionSize);
     }
 }
 
