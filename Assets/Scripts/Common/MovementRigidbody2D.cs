@@ -18,11 +18,11 @@ public class MovementRigidbody2D : MonoBehaviour
 
     [Header("Jump")]
     [SerializeField]
-    private float jumpForce = 13; // 점프 힘
+    private float jumpForce = 10; // 점프 힘
     [SerializeField]
     private float lowGravityScale = 2; // 점프 키를 오래 누르고 있을 때 적용되는 중력 (높은 점프)
     [SerializeField]
-    private float highGravityScale = 3.5f; // 일반적으로 적용되는 중력 (낮은 점프)
+    private float highGravityScale = 3.0f; // 일반적으로 적용되는 중력 (낮은 점프)
 
     [SerializeField] private float moveSpeed; // 이동 속도
 
@@ -106,10 +106,10 @@ public class MovementRigidbody2D : MonoBehaviour
     // y축 점프
     public void Jump()
     {
-        /*        if (IsGrounded == true)
-                {
-                    rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpForce);
-                }*/
+        if (IsGrounded == true)
+        {
+            rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpForce);
+        }
 
         jumpBufferCounter = jumpBufferTime;
     }

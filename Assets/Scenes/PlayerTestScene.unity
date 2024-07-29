@@ -8738,6 +8738,9 @@ MonoBehaviour:
   slideKeyCode: 115
   slideDistance: 3
   slideSpeed: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &584510113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8761,9 +8764,9 @@ MonoBehaviour:
     m_Bits: 64
   walkSpeed: 8
   runSpeed: 8
-  jumpForce: 9
+  jumpForce: 10
   lowGravityScale: 2
-  highGravityScale: 3.5
+  highGravityScale: 3
   moveSpeed: 0
 --- !u!70 &584510114
 CapsuleCollider2D:

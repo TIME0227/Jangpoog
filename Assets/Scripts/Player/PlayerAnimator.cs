@@ -23,35 +23,36 @@ public class PlayerAnimator : MonoBehaviour
 		animator.SetBool("isJump", !movement.IsGrounded);
 
         // 바닥에 닿아 있으면
-        if ( movement.IsGrounded )
-		{
-                // velocityX가 0이면 "Idle", velocityX가 0.5이면 "Walk", velocityX가 1이면 "Run" 재생
-                animator.SetFloat("velocityX", Mathf.Abs(x));
-				animator.SetBool("isLongJump", false);
+        if (movement.IsGrounded)
+        {
+            // velocityX가 0이면 "Idle", velocityX가 0.5이면 "Walk", velocityX가 1이면 "Run" 재생
+            animator.SetFloat("velocityX", Mathf.Abs(x));
+            animator.SetBool("isLongJump", false);
         }
         // 바닥에 닿아 있지 않으면
         else
         {
-			// 더블 점프할 때 - LongJumpUp
-			if (movement.IsLongJump == true)
-			{
-				animator.SetBool("isLongJump", true);
+            // 더블 점프할 때 - LongJumpUp
+            if (movement.IsLongJump == true)
+            {
+                animator.SetBool("isLongJump", true);
                 animator.SetFloat("velocityY", movement.Velocity.y);
             }
-			// 더블 점프 끝날 때 - LongJumpDown
-			else if (movement.IsLongJump == false)
-			{
-               animator.SetBool("isLongJump", false);
-               animator.SetFloat("velocityY", movement.Velocity.y);
- 
+            // 더블 점프 끝날 때 - LongJumpDown
+            else if (movement.IsLongJump == false)
+            {
+                animator.SetBool("isLongJump", false);
+                animator.SetFloat("velocityY", movement.Velocity.y);
+
             }
-			else
-			{
+            else
+            {
                 // velocityY가 음수이면 "JumpDown", velocityY가 양수이면 "JumpUp" 재생
                 animator.SetFloat("velocityY", movement.Velocity.y);
             }
-		}
-	}
+        }
+
+    }
 
     // SpriteRenderer 컴포넌트의 Filp을 이용해 이미지를 반전했을 때
     // 화면에 출력되는 이미지 자체만 반전되기 때문에
@@ -78,8 +79,10 @@ public class PlayerAnimator : MonoBehaviour
 	// player 장풍 애니메이션
 	public void JangPoongShooting()
 	{
-		Debug.Log("장풍 애니메이션");
-	}
+		// Debug.Log("장풍 애니메이션");
+		animator.SetTrigger("isShooting");
+        animator.SetTrigger("Idle");
+    }
 
     public void SetSpeedMultiplier(float multiplier)
     {
