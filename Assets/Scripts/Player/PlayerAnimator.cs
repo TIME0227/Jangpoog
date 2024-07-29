@@ -65,13 +65,13 @@ public class PlayerAnimator : MonoBehaviour
 	// player 슬라이딩 애니메이션
 	public void StartSliding()
 	{
-		Debug.Log("슬라이딩 애니메이션 시작");
+		// Debug.Log("슬라이딩 애니메이션 시작");
         animator.SetBool("isSliding", true);
     }
 
     public void StopSliding()
     {
-        Debug.Log("슬라이딩 애니메이션 종료");
+        // Debug.Log("슬라이딩 애니메이션 종료");
         animator.SetBool("isSliding", false);
     }
 
