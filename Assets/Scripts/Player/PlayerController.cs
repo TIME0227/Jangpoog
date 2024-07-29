@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private float slideDistance = 3.0f;
     [SerializeField]
     private float slideSpeed = 10.0f;
+    [SerializeField]
+    private LayerMask groundLayer;
 
     private MovementRigidbody2D movement;
     private PlayerAnimator playerAnimator;
@@ -22,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool isSliding = false;
     private Vector2 slideDirection;
     private float slideRemainingDistance;
-    private Quaternion originalRotation;
+    private Vector2 originalColliderSize;
 
     // 더블 클릭 (대쉬) 데이터 설정
     private float doubleClickTimeLimit = 0.25f;
@@ -31,7 +33,6 @@ public class PlayerController : MonoBehaviour
     private float lastClickTime = -1.0f;
     private KeyCode lastKeyPressed;
 
-
     private void Awake()
     {
         movement = GetComponent<MovementRigidbody2D>();
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         playerDataManager = GetComponentInChildren<PlayerDataManager>();
-        originalRotation = capsuleCollider.transform.rotation;
+        originalColliderSize = capsuleCollider.size;
 
         InvokeRepeating("RegenerateMana", 1f, 1f);  // 1초마다 RegenerateMana 메서드 호출
     }
@@ -106,13 +107,24 @@ public class PlayerController : MonoBehaviour
                 isSliding = true;
                 slideRemainingDistance = slideDistance;
                 slideDirection = new Vector2(transform.localScale.x, 0).normalized;
-               // capsuleCollider.transform.rotation = Quaternion.Euler(0, 0, 90);
+                capsuleCollider.size = new Vector2(capsuleCollider.size.x, 1.0f);
                 playerAnimator.StartSliding();
+                Debug.Log("슬라이딩 시작");
             }
         }
 
         if (isSliding)
         {
+            // 머리 위에 Ground 레이어 유무 체크
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, 1.0f, groundLayer);
+            if (hit.collider != null)
+            {
+                Debug.Log("머리 위 블럭");
+                // 머리 위에 장애물이 있는 동안 슬라이딩 상태 유지
+                rb.velocity = new Vector2(slideDirection.x * slideSpeed, rb.velocity.y);
+                return;
+            }
+
             float moveStep = slideSpeed * Time.deltaTime;
             if (moveStep > slideRemainingDistance)
             {
@@ -125,9 +137,10 @@ public class PlayerController : MonoBehaviour
             if (slideRemainingDistance <= 0)
             {
                 isSliding = false;
-                capsuleCollider.transform.rotation = originalRotation;
-                playerAnimator.StopSliding();
+                capsuleCollider.size = originalColliderSize;
                 rb.velocity = Vector2.zero;
+                playerAnimator.StopSliding();
+                Debug.Log("슬라이딩 종료");
             }
         }
     }
@@ -136,28 +149,26 @@ public class PlayerController : MonoBehaviour
     private void UpdateJangPoong()
     {
         if (Input.GetMouseButtonDown(0))
-        {
+        {            
 
-                // 장풍 레벨 관련 조건 추가
+            if (playerDataManager.mana >= playerDataManager.manaConsumption)
+            {
+                playerDataManager.mana -= playerDataManager.manaConsumption;
 
-                if (playerDataManager.mana >= playerDataManager.manaConsumption)
-                {
-                    playerDataManager.mana -= playerDataManager.manaConsumption;
+                Vector3 spawnPosition = transform.position;
+                spawnPosition.y += isSliding ? -0.58f : -0.08f;
 
-                    Vector3 spawnPosition = transform.position;
-                    spawnPosition.y += isSliding ? -0.58f : -0.08f;
-
-                    GameObject jangPoong = Instantiate(playerDataManager.jangPoongPrefab, spawnPosition, Quaternion.identity);
-                    Rigidbody2D jangPoongRb = jangPoong.GetComponent<Rigidbody2D>();
-                    Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
-                    jangPoongRb.velocity = jangPoongDirection * playerDataManager.jangPoongSpeed;
-                    playerAnimator.JangPoongShooting();
-                    Destroy(jangPoong, playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed);
-                }
-                else // 잔여 마나량 < 5
-                {
-                    Debug.Log("마나량 부족");
-                }
+                GameObject jangPoong = Instantiate(playerDataManager.jangPoongPrefab, spawnPosition, Quaternion.identity);
+                Rigidbody2D jangPoongRb = jangPoong.GetComponent<Rigidbody2D>();
+                Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
+                jangPoongRb.velocity = jangPoongDirection * playerDataManager.jangPoongSpeed;
+                playerAnimator.JangPoongShooting();
+                Destroy(jangPoong, playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed);
+            }
+            else // 잔여 마나량 < 5
+            {
+                Debug.Log("마나량 부족");
+            }
         }
     }
 
@@ -203,5 +214,4 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         isDoubleClicking = false;
     }
-
 }

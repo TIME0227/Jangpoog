@@ -18,6 +18,7 @@ public class PlayerDataManager : MonoBehaviour
     public float jangPoongDamage = 0.5f;
     [SerializeField]
     public float levelUpToken = 0;
+    private float[] LevelArr = { 0.5f, 0.7f, 1.1f, 1.6f, 2.2f, 2.9f, 3.5f, 4.2f, 5.0f };
 
     // 마나 데이터 설정
     [SerializeField]
@@ -73,6 +74,7 @@ public class PlayerDataManager : MonoBehaviour
     {
         levelUpToken += 1;
         jangPoongLevel = Mathf.Clamp(1 + levelUpToken, 1, jangPoongPrefabs.Length);
+        jangPoongDamage = LevelArr[(int)jangPoongLevel - 1];
         UpdateJangPoongPrefab();
     }
 
