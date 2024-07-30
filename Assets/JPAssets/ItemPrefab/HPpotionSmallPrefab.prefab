@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3283355403474991318}
   - component: {fileID: 4448205537123334172}
-  m_Layer: 19
+  m_Layer: 11
   m_Name: HPpotionSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2436164152922528903}
-  m_Layer: 19
+  m_Layer: 11
   m_Name: HPpotionSmallPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

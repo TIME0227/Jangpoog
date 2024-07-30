@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6704956169370323755}
   - component: {fileID: 6656326071016968547}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: superstickygoo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5598820457129293265}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: SuperstickygooPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

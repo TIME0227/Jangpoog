@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8356101829806324779}
-  m_Layer: 17
+  m_Layer: 11
   m_Name: MPpotionLargePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6305988040127907409}
   - component: {fileID: 5220732187736298370}
-  m_Layer: 17
+  m_Layer: 11
   m_Name: MPpotionLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
