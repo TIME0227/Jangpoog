@@ -19,7 +19,7 @@ PrefabInstance:
     - target: {fileID: 768346453060648080, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: b0a652fa8c5614a90960184305be81cd, type: 2}
+      objectReference: {fileID: 9100000, guid: cad6c5330827b47f4935e53062496107, type: 2}
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Name
       value: Monster_BombSlime
@@ -66,16 +66,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6342380038074297027, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Size.x
-      value: 12.812513
+      value: 3.1999998
       objectReference: {fileID: 0}
     - target: {fileID: 6342380038074297027, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Size.y
-      value: 12.800001
+      value: 3.20625
       objectReference: {fileID: 0}
     - target: {fileID: 6342380038074297027, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1232059602, guid: 2535d26aa35a54dc8884ecb151ace8d6, type: 3}
+      objectReference: {fileID: 1232059602, guid: d875d22462e394041876b00d52434d18, type: 3}
     - target: {fileID: 6342380038074297027, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -121,8 +121,8 @@ MonoBehaviour:
     m_Bits: 384
   waitTime: 1.5
   isJumping: 0
-  isWaiting: 1
   dir: {x: 0, y: 0, z: 0}
+  attackDelay: 3
 --- !u!58 &1341425861889877718
 CircleCollider2D:
   m_ObjectHideFlags: 0

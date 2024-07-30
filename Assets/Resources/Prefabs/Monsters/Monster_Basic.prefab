@@ -113,7 +113,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1501196979656692927
@@ -150,9 +150,9 @@ GameObject:
   - component: {fileID: 9006180457225617730}
   - component: {fileID: 1770653796052766881}
   - component: {fileID: 1910870213796737494}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Monster_Basic
-  m_TagString: Player
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,10 +275,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945f455c96c4349b6b116fc706cbcd01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundLayer:
+  destPos: {x: 0, y: 0, z: 0}
+  state: 3
+  target: {fileID: 0}
+  stat: {fileID: 0}
+  moveRange: 2
+  scanRange: 6
+  attackRange: 1
+  obstacleLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   waitTime: 1.5
-  moveDirection: 0
-  moveTime_min: 2
-  moveTime_max: 4
+  isJumping: 0
+  dir: {x: 0, y: 0, z: 0}
+  attackDelay: 3
