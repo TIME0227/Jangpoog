@@ -39,7 +39,7 @@ public abstract class MonsterController : BaseController
     public Vector3 dir = Vector3.zero;
 
     [Header("Attack")] [SerializeField]
-    protected float attackDelay = 3.0f;
+    protected float attackDelay = 1.5f;
     
     
 
@@ -163,7 +163,6 @@ public abstract class MonsterController : BaseController
         if (target != null)
         {
             animator.SetBool("isFollow", true);
-            //animator.SetBool("isFollow", true);
             destPos = target.transform.position;
             float distance = (destPos - transform.position).magnitude;
             //플레이어가 사정 거리보다 가까우면 공격
@@ -181,9 +180,7 @@ public abstract class MonsterController : BaseController
                     
                 }
                 return;
-
             }
-            
         }
        
         //목표 방향으로 가기
@@ -198,6 +195,7 @@ public abstract class MonsterController : BaseController
         }
         else
         { 
+            Debug.Log("거리 멀어짐");
             //움직이기
             Debug.DrawRay(transform.position,dir.normalized,Color.green);
             if (Physics2D.Raycast(transform.position, dir, 1.0f, LayerMask.GetMask("LevelN")))
@@ -287,13 +285,16 @@ public abstract class MonsterController : BaseController
                  movement2D.MoveTo(0);
                  //animator.SetFloat("velocityX", 0);
                  // //대기 행동 코루틴 호출
-                 yield return new WaitForSeconds(2f);
+                 animator.SetBool("isFollow", true);
+                 //yield return new WaitForSeconds(2f);
                  isJumping = false;
+                 
+                
                  dir = destPos - transform.position; //거리 계산(단, x축만 계산)
                  dir.y = 0;
                  if (State == Define.State.Attack)
                  {
-                     attackDelay = 3.0f;
+                     attackDelay = 1.5f;
                  }
 
                  if (dir.magnitude < 0.1f)

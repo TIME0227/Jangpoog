@@ -103,7 +103,9 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
         footPosition = new Vector2(bounds.center.x, bounds.min.y);
         
     // 플레이어가 바닥을 밟고 있는지 체크하는 충돌 박스
-        IsGrounded = Physics2D.OverlapBox(footPosition, collisionSize, 0, groundCheckLayer);
+        // IsGrounded = Physics2D.OverlapBox(footPosition, collisionSize, 0, groundCheckLayer);
+        IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundCheckLayer);
+        Debug.DrawRay(transform.position, Vector3.down*1f, Color.red);
         // Physics2D.OverlapBox(Vector2 point, Vector2 size, float angle, int layerMask);
         // point 위치에 size 크기의 충돌 박스(BoxCollider2D)를 angle 각도만큼 회전해서 생성
         // 이 충돌 박스는 layerMask에 설정된 레이어만 충돌이 가능      
@@ -175,11 +177,11 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     private void OnDrawGizmos()
     {
         
-        // 충돌 범위 디버그 표시 색상 설정
-        Gizmos.color = Color.red;
-
-        // footPosition에 생성되는 OverlapBox 디버그 표시
-        Gizmos.DrawWireCube(footPosition, collisionSize);
+        // // 충돌 범위 디버그 표시 색상 설정
+        // Gizmos.color = Color.red;
+        //
+        // // footPosition에 생성되는 OverlapBox 디버그 표시
+        // Gizmos.DrawWireCube(footPosition, collisionSize);
     }
 }
 
