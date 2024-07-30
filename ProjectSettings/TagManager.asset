@@ -9,25 +9,25 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - obstacle_goo
+  - 
   - Water
   - UI
   - Ground
   - Level1
   - LevelN
-  - obstacle_thorn
-  - 
-  - ' '
-  - 
+  - obstacle
+  - SuperStickyGoo
+  - Items_Player
+  - Player_Weapon
   - 
   - Monster_Weapon
   - Player
   - Monster
-  - Items_MP_Large
-  - Items_MP_Small
-  - Items_HP_Small
-  - Items_HP_Large
-  - Items_Player
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
