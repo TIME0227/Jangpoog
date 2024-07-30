@@ -120,8 +120,8 @@ MonoBehaviour:
   belowColiisionLayer:
     serializedVersion: 2
     m_Bits: 64
-  walkSpeed: 8
-  runSpeed: 8
+  walkSpeed: 10
+  runSpeed: 10
   jumpForce: 10
   lowGravityScale: 2
   highGravityScale: 3
