@@ -1282,7 +1282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 990066786842934706, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1206778912099870612, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_Enabled
@@ -1294,11 +1294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.482
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.86
+      value: -2.47
       objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1339,6 +1339,26 @@ PrefabInstance:
     - target: {fileID: 7185207543957236326, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: pos
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185207543957236326, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: lootTable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185207543957236326, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: lootTable.Array.data[0].item
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185207543957236326, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: lootTable.Array.data[1].item
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185207543957236326, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185207543957236326, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: lootTable.Array.data[1].dropChance
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1519,7 +1539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1560,6 +1580,22 @@ PrefabInstance:
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[1].item
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[1].dropChance
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3383,6 +3419,9 @@ MonoBehaviour:
   slideKeyCode: 115
   slideDistance: 3
   slideSpeed: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &8992515922672408582
 GameObject:
   m_ObjectHideFlags: 0
