@@ -20,11 +20,16 @@ public class Managers : MonoBehaviour
     private DataManager _data = new DataManager();
     private InputManager _input = new InputManager();
     private ResourceManager _resource = new ResourceManager();
+    private SceneManagerEx _scene = new SceneManagerEx();
     private UIManager _ui = new UIManager();
     
     public static DataManager Data { get { return Instance._data; } }
     public static InputManager Input { get { return s_instance._input; } }
     public static ResourceManager Resource { get { return Instance._resource; } }
+    public static SceneManagerEx Scene
+    {
+        get { return Instance._scene; }
+    }
     public static UIManager UI { get { return Instance._ui; } }
     #endregion
     
@@ -65,5 +70,12 @@ public class Managers : MonoBehaviour
     {
         Input.Clear();
         //추가 예정
+   }
+
+
+
+    public void SceneTest()
+    {
+        Managers.Scene.LoadScene("SampleScene");
     }
 }

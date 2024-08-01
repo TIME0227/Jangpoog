@@ -1,10 +1,11 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    // Á¡ÇÁ & ½½¶óÀÌµù µ¥ÀÌÅÍ ¼³Á¤
+    // å ì™ì˜™å ì™ì˜™ & å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
     [SerializeField]
     private KeyCode jumpKeyCode = KeyCode.W;
     [SerializeField]
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private float speedMultiplier = 2.0f;
     private bool isRunning = false;
 
-    // ´õºí Å¬¸¯ (´Þ¸®±â) µ¥ÀÌÅÍ ¼³Á¤
+    // ë”ë¸” í´ë¦­ (ë‹¬ë¦¬ê¸°) ë°ì´í„° ì„¤ì •
     /*private float doubleClickTimeLimit = 0.25f;
     private float lastClickTime = -1.0f;
     private KeyCode lastKeyPressed;*/
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
         originalColliderSize = capsuleCollider.size;
         originalColliderOffset = capsuleCollider.offset;
 
-        InvokeRepeating("RegenerateMana", 1f, 1f);  // 1ÃÊ¸¶´Ù RegenerateMana ¸Þ¼­µå È£Ãâ
+        InvokeRepeating("RegenerateMana", 1f, 1f);  // 1å ì‹­ëªŒì˜™å ì™ì˜™ RegenerateMana å ìŒ¨ì‡½ì˜™å ì™ì˜™ í˜¸å ì™ì˜™
     }
 
     private void Update()
@@ -67,12 +68,12 @@ public class PlayerController : MonoBehaviour
         CheckDoubleClick(KeyCode.D);*/
     }
 
-    // ÀÌµ¿
+    // å ì‹±ë“¸ì˜™
     private void UpdateMove(float x)
     {
         if (!isSliding)
         {
-            if (isRunning) // ´Þ¸®±â
+            if (isRunning) // ë‹¬ë¦¬ê¸°
             {
                 x *= speedMultiplier;
                 playerAnimator.SetSpeedMultiplier(speedMultiplier);
@@ -85,7 +86,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // ´Þ¸®±â
+
+    // ë‹¬ë¦¬ê¸°
     private void UpdateRun()
     {
         if (Input.GetKeyDown(runKeyCode))
@@ -98,7 +100,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Á¡ÇÁ
+    // ì í”„
     private void UpdateJump()
     {
         if (Input.GetKeyDown(jumpKeyCode))
@@ -116,7 +118,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // ½½¶óÀÌµù
+    // å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™
     private void UpdateSlide()
     {
         if (Input.GetKeyDown(slideKeyCode))
@@ -129,18 +131,18 @@ public class PlayerController : MonoBehaviour
                 capsuleCollider.size = new Vector2(capsuleCollider.size.x, 1.0f);
                 capsuleCollider.offset = new Vector2(capsuleCollider.offset.x, capsuleCollider.offset.y - 0.41f);
                 playerAnimator.StartSliding();
-                Debug.Log("½½¶óÀÌµù ½ÃÀÛ");
+                Debug.Log("å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™å ì™ì˜™");
             }
         }
 
         if (isSliding)
         {
-            // ¸Ó¸® À§¿¡ Ground ·¹ÀÌ¾î À¯¹« Ã¼Å©
+            // ë¨¸ë¦¬ ìœ„ì— Ground ë ˆì´ì–´ ìœ ë¬´ ì²´í¬
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, 1.0f, groundLayer);
             if (hit.collider != null)
             {
-                Debug.Log("¸Ó¸® À§ ºí·°");
-                // ¸Ó¸® À§¿¡ Àå¾Ö¹°ÀÌ ÀÖ´Â µ¿¾È ½½¶óÀÌµù »óÅÂ À¯Áö
+                Debug.Log("ë¨¸ë¦¬ ìœ„ ë¸”ëŸ­");
+                // ë¨¸ë¦¬ ìœ„ì— ìž¥ì• ë¬¼ì´ ìžˆëŠ” ë™ì•ˆ ìŠ¬ë¼ì´ë”© ìƒíƒœ ìœ ì§€
                 rb.velocity = new Vector2(slideDirection.x * slideSpeed, rb.velocity.y);
                 return;
             }
@@ -161,14 +163,17 @@ public class PlayerController : MonoBehaviour
                 capsuleCollider.offset = originalColliderOffset;
                 rb.velocity = Vector2.zero;
                 playerAnimator.StopSliding();
-                Debug.Log("½½¶óÀÌµù Á¾·á");
+                Debug.Log("ìŠ¬ë¼ì´ë”© ì¢…ë£Œ");
             }
         }
     }
 
-    // ÀåÇ³ ¹ß»ç
+    // ìž¥í’ ë°œì‚¬
     private void UpdateJangPoong()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) {
+            return;  ////UI í´ë¦­ì‹œëŠ” ìž¥í’ ë°œì‚¬ê°€ ë˜ì§€ ì•Šë„ë¡ ì²˜ë¦¬ (240802 ë„í˜„)
+        }        
         if (Input.GetMouseButtonDown(0))
         {
             if (playerDataManager.mana >= playerDataManager.manaConsumption)
@@ -186,14 +191,57 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.JangPoongShooting();
                 Destroy(jangPoong, playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed);
             }
-            else // ÀÜ¿© ¸¶³ª·® < 5
+            else // ìž”ì—¬ ë§ˆë‚˜ëŸ‰ < 5
             {
-                Debug.Log("¸¶³ª·® ºÎÁ·");
+                Debug.Log("ë§ˆë‚˜ëŸ‰ ë¶€ì¡±");
             }
         }
     }
 
-    /*   // ´õºí Å¬¸¯ Ã¼Å©
+    /*   // ë”ë¸” í´ë¦­ ì²´í¬
+    private void CheckDoubleClick(KeyCode key)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            if (Time.time - lastClickTime < doubleClickTimeLimit && lastKeyPressed == key)
+            {
+                isDoubleClicking = true;
+                StopAllCoroutines();
+                StartCoroutine(DoubleClickTimer());
+            }
+            else
+            {
+                lastClickTime = Time.time;
+                lastKeyPressed = key;
+            }
+        }
+
+        if (Input.GetKeyUp(key))
+        {
+            if (isDoubleClicking)
+            {
+                StopAllCoroutines();
+                StartCoroutine(DoubleClickCooldown());
+            }
+        }
+    }
+
+    private IEnumerator DoubleClickTimer()
+    {
+        while (Input.GetKey(lastKeyPressed))
+        {
+            yield return null;
+        }
+        isDoubleClicking = false;
+    }
+
+    private IEnumerator DoubleClickCooldown()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isDoubleClicking = false;
+    }
+=======
+    /*   // ë”ë¸” í´ë¦­ ì²´í¬
        private void CheckDoubleClick(KeyCode key)
        {
            if (Input.GetKeyDown(key))
