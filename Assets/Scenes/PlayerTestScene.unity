@@ -8736,11 +8736,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpKeyCode: 119
   slideKeyCode: 115
+  runKeyCode: 304
   slideDistance: 3
   slideSpeed: 10
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 448
 --- !u!114 &584510113
 MonoBehaviour:
   m_ObjectHideFlags: 0

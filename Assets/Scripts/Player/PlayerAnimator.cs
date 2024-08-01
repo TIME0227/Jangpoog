@@ -81,7 +81,7 @@ public class PlayerAnimator : MonoBehaviour
 	{
 		// Debug.Log("장풍 애니메이션");
 		animator.SetTrigger("isShooting");
-        animator.SetTrigger("Idle");
+        animator.SetBool("Idle", true);
     }
 
     public void SetSpeedMultiplier(float multiplier)
