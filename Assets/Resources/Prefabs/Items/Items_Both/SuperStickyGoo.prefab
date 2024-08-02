@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5824150129615486641}
   - component: {fileID: 4530157333274456601}
   - component: {fileID: 5288050680417336551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 1898100218383838436}
   - component: {fileID: 7737196011800392988}
   - component: {fileID: 2438878172999188757}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: SuperStickyGoo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

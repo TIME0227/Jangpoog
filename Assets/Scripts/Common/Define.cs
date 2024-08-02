@@ -11,11 +11,7 @@
 
         public enum Layer
         {
-            Ground = 6,
-            Level1,
-            LevelN,
-            Player = 15,
-            Monster = 16,
+            
         }
         public enum State
         {

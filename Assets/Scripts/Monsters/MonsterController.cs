@@ -40,8 +40,9 @@ public abstract class MonsterController : BaseController
 
     [Header("Attack")] [SerializeField]
     protected float attackDelay = 1.5f;
-    
-    
+
+
+    [Header("Loot")] public List<LootItem> lootTable = new List<LootItem>();
 
     //private int attackCount=0;
     
@@ -96,11 +97,11 @@ public abstract class MonsterController : BaseController
         StopAllCoroutines();
         
         Debug.Log("사망");
-        //사망 애니메이션 or 사망 상태로 변경
-        //아이템 드랍
-        Debug.Log("아이템을 드랍합니다.");
-       
 
+        
+        //아이템 드랍 (사망 애니메이션 후 보이도록 0.9f 딜레이)
+        Invoke(nameof(SpawnItem), 0.9f);
+        
         //게임 관리 매니져로 수정할 예정
         Destroy(gameObject, 1f); //1초 후에 사라지기
     }
@@ -316,6 +317,32 @@ public abstract class MonsterController : BaseController
      
     
     #endregion
-    
+
+    #region SpawnItem
+    /// <summary>
+    /// 아이템 spawn
+    /// </summary>
+    protected void SpawnItem()
+    {
+        int itemCount = 0;
+        foreach (LootItem lootItem in lootTable)
+        {
+            GameObject dropItem = null;
+            if (Random.Range(0, 100f) <= lootItem.dropChance)
+            {
+                Debug.Log($"Items/Items_Player/{lootItem.item}");
+                dropItem = Managers.Resource.Instantiate($"Items/Items_Player/{lootItem.item}");
+
+                float offsetX = 0.5f * itemCount;
+                dropItem.transform.position = new Vector3(transform.position.x+offsetX, transform.position.y + 0.3f,
+                    transform.position.z);
+                itemCount++;
+            }
+
+
+        }
+    }
+
+    #endregion
     
 }
