@@ -34,7 +34,7 @@ public class UI_Buttons : MonoBehaviour
     public void OnClickSettings()
     {
         Debug.Log("설정");
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("SettingsHome");
     }
 
     public void OnClickExit()
@@ -48,6 +48,7 @@ public class UI_Buttons : MonoBehaviour
     public void OnClickNormal()
     {
         Debug.Log("보통 난이도 게임");
+       
     }
 
     public void OnClickHard()
@@ -62,12 +63,25 @@ public class UI_Buttons : MonoBehaviour
     public void OnClickPlayerSettings()
     {
         Debug.Log("설정으로 이동");
+        SceneManager.LoadScene("SettingsPlay");
     }
 
     public void OnClickChapters()
     {
         Debug.Log("챕터맵으로 이동");
         SceneManager.LoadScene("Chapters");
+    }
+
+    public void OnClickPause()
+    {
+        Debug.Log("게임 멈춤");
+        SceneManager.LoadScene("Pause");
+    }
+
+    public void OnClick2ExitScene()
+    {
+        Debug.Log("exit scene으로");
+        SceneManager.LoadScene("Exit");
     }
 
     public void OnClickSaveAndExitToMain()
