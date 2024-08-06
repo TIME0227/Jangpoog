@@ -145,7 +145,7 @@ MonoBehaviour:
   slideSpeed: 10
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 448
 --- !u!1 &8105578856210962824
 GameObject:
   m_ObjectHideFlags: 0
