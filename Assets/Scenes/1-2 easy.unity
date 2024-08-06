@@ -5373,6 +5373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpKeyCode: 119
   slideKeyCode: 115
+  runKeyCode: 304
   slideDistance: 3
   slideSpeed: 10
   groundLayer:

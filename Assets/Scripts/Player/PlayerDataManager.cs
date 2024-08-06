@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
 
 public class PlayerDataManager : MonoBehaviour
 {
-    // ÀåÇ³ µ¥ÀÌÅÍ ¼³Á¤
+    [Header("JangPoong")]
+    // ï¿½ï¿½Ç³ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
     public GameObject[] jangPoongPrefabs;
     [SerializeField]
@@ -20,7 +23,8 @@ public class PlayerDataManager : MonoBehaviour
     public float levelUpToken = 0;
     private float[] LevelArr = { 0.5f, 0.7f, 1.1f, 1.6f, 2.2f, 2.9f, 3.5f, 4.2f, 5.0f };
 
-    // ¸¶³ª µ¥ÀÌÅÍ ¼³Á¤
+    [Header("Mana")]
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
     private TextMeshProUGUI manaText;
     [SerializeField]
@@ -32,17 +36,29 @@ public class PlayerDataManager : MonoBehaviour
     [SerializeField]
     public float manaConsumption = 5f;
 
-    // Ã¼·Â µ¥ÀÌÅÍ ¼³Á¤
+    // Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    [Header("Hp")]
     [SerializeField]
     private TextMeshProUGUI hpText;
     [SerializeField]
-    public float hp = 10.0f;
+    //HP privateë¡œ ë³€ê²½, í”„ë¡œí¼í‹° ìƒì„±
+    private float hp = 10.0f;
     [SerializeField]
     public float maxHp = 10.0f;
 
+    public Action DieAction = null;
+    public float Hp
+    {
+        get { return hp; }
+        private set
+        {
+            hp = value;
+        }
+    }
+
     private void Awake()
     {
-        InvokeRepeating("RegenerateMana", 1f, 1f);  // 1ÃÊ¸¶´Ù RegenerateMana ¸Ş¼­µå È£Ãâ
+        InvokeRepeating("RegenerateMana", 1f, 1f);  // 1ï¿½Ê¸ï¿½ï¿½ï¿½ RegenerateMana ï¿½Ş¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½
     }
 
     private void Update()
@@ -50,26 +66,26 @@ public class PlayerDataManager : MonoBehaviour
         UpdateManaText();
         UpdateHpText();
 
-        // ·¹º§¾÷ Å×½ºÆ®¿ë
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ®ï¿½ï¿½
         if (Input.GetKeyDown(KeyCode.L))
         {
             LevelUp();
         }
     }
 
-    // ¸¶³ª Àç»ı
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     private void RegenerateMana()
     {
         mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
     }
 
-    // ¸¶³ª ÅØ½ºÆ® ¾÷µ¥ÀÌÆ®
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     private void UpdateManaText()
     {
         manaText.text = $"Mana {mana}/{maxMana}";
     }
 
-    // ·¹º§¾÷
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void LevelUp()
     {
         levelUpToken += 1;
@@ -78,15 +94,32 @@ public class PlayerDataManager : MonoBehaviour
         UpdateJangPoongPrefab();
     }
 
-    // ÀåÇ³ ÇÁ¸®ÆÕ ¾÷µ¥ÀÌÆ®
+    // ï¿½ï¿½Ç³ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     private void UpdateJangPoongPrefab()
     {
         jangPoongPrefab = jangPoongPrefabs[(int)jangPoongLevel - 1];
     }
+    
+    
+    #region HP
 
-    // Ã¼·Â ÅØ½ºÆ® ¾÷µ¥ÀÌÆ®
+    // Ã¼ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     private void UpdateHpText()
     {
         hpText.text = $"Hp {hp}/{maxHp}";
     }
+
+    public void OnAttacked(float damage)
+    {
+        Hp = Mathf.Clamp(Hp - damage, 0, Hp);
+        if (Hp == 0)
+        {
+            DieAction?.Invoke();
+        }
+        else
+        {
+            
+        }
+    }
+    #endregion
 }
