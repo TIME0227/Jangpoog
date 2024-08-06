@@ -8,4 +8,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/UI/Main.unity
+    guid: 3a9d50a331d78b943a6b5cbfc355947a
+  - enabled: 1
+    path: Assets/Scenes/UI/Difficulty.unity
+    guid: 5e98f54984138ed42ac78554a5da1146
+  - enabled: 1
+    path: Assets/Scenes/UI/Pause.unity
+    guid: 5a6ec121ca40b48ad8aa37e3d886b38f
+  - enabled: 1
+    path: Assets/Scenes/UI/Exit.unity
+    guid: 720809f534b464343997c192e018d3a8
+  - enabled: 1
+    path: Assets/Scenes/UI/SettingsHome.unity
+    guid: d21dadf375969fd43ad9c6a8012c4167
+  - enabled: 1
+    path: Assets/Scenes/UI/PlayerUI.unity
+    guid: 57d07f805ae8c4f4b9accbc7f0af1c72
+  - enabled: 1
+    path: Assets/Scenes/1-1 tutorial.unity
+    guid: 93ba3bbb7ecd24620a9f7d93b864f27b
   m_configObjects: {}
