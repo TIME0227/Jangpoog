@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    // 占쏙옙占쏙옙 & 占쏙옙占쏙옙占싱듸옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙
+    private StageData stageData;
+    // 점프 & 슬라이딩 데이터 설정
     [SerializeField]
     private KeyCode jumpKeyCode = KeyCode.W;
     [SerializeField]
@@ -51,6 +52,12 @@ public class PlayerController : MonoBehaviour
         InvokeRepeating("RegenerateMana", 1f, 1f);  // 1占십몌옙占쏙옙 RegenerateMana 占쌨쇽옙占쏙옙 호占쏙옙
     }
 
+    public void SetUp(StageData stageData)
+    {
+        this.stageData = stageData;
+        transform.position = this.stageData.PlayerPosition;
+    }
+
     private void Update()
     {
         float x = Input.GetAxisRaw("Horizontal");
@@ -84,6 +91,9 @@ public class PlayerController : MonoBehaviour
             }
             movement.MoveTo(x);
         }
+        //플레이어 x축 이동 한계 설정(240805)
+        float xPos = Mathf.Clamp(transform.position.x, stageData.PlayerLimitMinX, stageData.PlayerLimitMaxX);
+        transform.position = new Vector2(xPos, transform.position.y);
     }
 
 
@@ -131,7 +141,7 @@ public class PlayerController : MonoBehaviour
                 capsuleCollider.size = new Vector2(capsuleCollider.size.x, 1.0f);
                 capsuleCollider.offset = new Vector2(capsuleCollider.offset.x, capsuleCollider.offset.y - 0.41f);
                 playerAnimator.StartSliding();
-                Debug.Log("占쏙옙占쏙옙占싱듸옙 占쏙옙占쏙옙");
+                Debug.Log("슬라이딩 시작");
             }
         }
 
