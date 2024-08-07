@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MonsterWeaponCollider : MonoBehaviour
@@ -8,11 +9,16 @@ public class MonsterWeaponCollider : MonoBehaviour
     private Collider2D weaponCollider;
     private MonsterController monster;
     public Vector2 boxSize;
+    private float damage;
 
     void Awake()
     {
         weaponCollider = GetComponent<Collider2D>();
         monster = GetComponentInParent<MonsterController>();
+    }
+
+    private void Start()
+    {
     }
 
     private void Update()
@@ -22,7 +28,14 @@ public class MonsterWeaponCollider : MonoBehaviour
             Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(transform.position, boxSize, 0);
             foreach (Collider2D collider in collider2Ds)
             {
-                Debug.Log(collider.tag);
+                if (collider.CompareTag("Player"))
+                {
+                    Debug.Log("몬스터가 플레이어를 공격합니다.");
+                    PlayerDataManager playerDataManager = Util.FindChild<PlayerDataManager>(collider.gameObject, null, true);
+                    playerDataManager.OnAttacked(GetComponentInParent<MonsterStat>().monsterData.Damage);
+                    return;
+                }
+
             }
         }
     }

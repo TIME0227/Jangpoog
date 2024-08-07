@@ -11,6 +11,15 @@
 
         public enum Layer
         {
+            Default = 0,
+            PlayerDamaged = 3,
+            Ground = 6,
+            Level1=7,
+            LevelN=8,
+            Obstacle = 9,
+            
+            Player = 15,
+            Monster = 16,
             
         }
         public enum State
