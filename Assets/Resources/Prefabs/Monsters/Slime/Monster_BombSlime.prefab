@@ -24,13 +24,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_BombSlime
       objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.47
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -82,7 +86,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
-    m_RemovedGameObjects: []
+    - {fileID: 1582441881594047105, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 2601874532076664223, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+    - {fileID: 6108194013099265183, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
@@ -114,7 +121,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stat: {fileID: 0}
   moveRange: 2
-  scanRange: 6
+  scanRange: 8
   attackRange: 2
   obstacleLayer:
     serializedVersion: 2
@@ -123,6 +130,11 @@ MonoBehaviour:
   isJumping: 0
   dir: {x: 0, y: 0, z: 0}
   attackDelay: 3
+  lootTable:
+  - item: 1
+    dropChance: 100
+  - item: 2
+    dropChance: 80
 --- !u!58 &1341425861889877718
 CircleCollider2D:
   m_ObjectHideFlags: 0

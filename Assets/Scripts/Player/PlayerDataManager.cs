@@ -1,48 +1,74 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
 
 public class PlayerDataManager : MonoBehaviour
 {
-    // ÀåÇ³ µ¥ÀÌÅÍ ¼³Á¤
+    [Header("JangPoong")]
+    // ï¿½ï¿½Ç³ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
     public GameObject[] jangPoongPrefabs;
-    [SerializeField]
-    public GameObject jangPoongPrefab;
-    [SerializeField]
-    public float jangPoongSpeed = 10.0f;
-    [SerializeField]
-    public float jangPoongDistance = 5.0f;
-    [SerializeField]
-    public float jangPoongLevel = 1.0f;
-    [SerializeField]
-    public float jangPoongDamage = 0.5f;
-    [SerializeField]
-    public float levelUpToken = 0;
+
+    [SerializeField] public GameObject jangPoongPrefab;
+    [SerializeField] public float jangPoongSpeed = 10.0f;
+    [SerializeField] public float jangPoongDistance = 5.0f;
+    [SerializeField] public float jangPoongLevel = 1.0f;
+    [SerializeField] public float jangPoongDamage = 0.5f;
+    [SerializeField] public float levelUpToken = 0;
     private float[] LevelArr = { 0.5f, 0.7f, 1.1f, 1.6f, 2.2f, 2.9f, 3.5f, 4.2f, 5.0f };
 
-    // ¸¶³ª µ¥ÀÌÅÍ ¼³Á¤
+    [Header("Mana")]
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
     private TextMeshProUGUI manaText;
-    [SerializeField]
-    public float mana = 100f;
-    [SerializeField]
-    public float maxMana = 100f;
-    [SerializeField]
-    public float manaRegenerationRate = 3f;
-    [SerializeField]
-    public float manaConsumption = 5f;
 
-    // Ã¼·Â µ¥ÀÌÅÍ ¼³Á¤
+    [SerializeField] public float mana = 100f;
+    [SerializeField] public float maxMana = 100f;
+    [SerializeField] public float manaRegenerationRate = 3f;
+    [SerializeField] public float manaConsumption = 5f;
+
+    // Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    [Header("Hp")] [SerializeField] private TextMeshProUGUI hpText;
+
     [SerializeField]
-    private TextMeshProUGUI hpText;
-    [SerializeField]
-    public float hp = 10.0f;
-    [SerializeField]
-    public float maxHp = 10.0f;
+    //HP privateë¡œ ë³€ê²½, í”„ë¡œí¼í‹° ìƒì„±
+    private float hp = 10.0f;
+
+    [SerializeField] public float maxHp = 10.0f;
+
+    public float Hp
+    {
+        get { return hp; }
+        private set
+        {
+            if (value != hp)
+            {
+                hp = value;
+                UpdateHpText();
+
+            }
+        }
+    }
+
+    //Action
+    public Action DieAction = null;
+
+    //Invincibility
+    [Header("Invincibility")] 
+    [SerializeField][Tooltip("í”¼ê²© ì‹œ ì¶”ê°€ë˜ëŠ” ë¬´ì  ì§€ì† ì‹œê°„")] private float invincibilityDuration = 1;//í”¼ê²©ì‹œ ì¶”ê°€ë˜ëŠ” ë¬´ì  ì‹œê°„
+    private float invincibilityTime = 0; //ë¬´ì  ì§€ì† ì‹œê°„
+    private bool isInvincibility = false; //ë¬´ì  ì—¬ë¶€
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    private Color originColor;
+    
 
     private void Awake()
     {
-        InvokeRepeating("RegenerateMana", 1f, 1f);  // 1ÃÊ¸¶´Ù RegenerateMana ¸Ş¼­µå È£Ãâ
+        InvokeRepeating("RegenerateMana", 1f, 1f); // 1ï¿½Ê¸ï¿½ï¿½ï¿½ RegenerateMana ï¿½Ş¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½
+        if(spriteRenderer==null) spriteRenderer = transform.parent.GetComponentInChildren<SpriteRenderer>();
+        originColor = spriteRenderer.color;
     }
 
     private void Update()
@@ -50,26 +76,26 @@ public class PlayerDataManager : MonoBehaviour
         UpdateManaText();
         UpdateHpText();
 
-        // ·¹º§¾÷ Å×½ºÆ®¿ë
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ®ï¿½ï¿½
         if (Input.GetKeyDown(KeyCode.L))
         {
             LevelUp();
         }
     }
 
-    // ¸¶³ª Àç»ı
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     private void RegenerateMana()
     {
         mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
     }
 
-    // ¸¶³ª ÅØ½ºÆ® ¾÷µ¥ÀÌÆ®
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     private void UpdateManaText()
     {
         manaText.text = $"Mana {mana}/{maxMana}";
     }
 
-    // ·¹º§¾÷
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void LevelUp()
     {
         levelUpToken += 1;
@@ -78,15 +104,87 @@ public class PlayerDataManager : MonoBehaviour
         UpdateJangPoongPrefab();
     }
 
-    // ÀåÇ³ ÇÁ¸®ÆÕ ¾÷µ¥ÀÌÆ®
+    // ï¿½ï¿½Ç³ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     private void UpdateJangPoongPrefab()
     {
         jangPoongPrefab = jangPoongPrefabs[(int)jangPoongLevel - 1];
     }
 
-    // Ã¼·Â ÅØ½ºÆ® ¾÷µ¥ÀÌÆ®
+
+    #region HP
+
+    // Ã¼ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     private void UpdateHpText()
     {
-        hpText.text = $"Hp {hp}/{maxHp}";
+        hpText.text = $"Hp {hp:F2}/{maxHp:F2}"; //Format the HP text with two decimal places (240807)
     }
+
+    public void OnAttacked(float damage)
+    {
+        if (damage <= 0)
+        {
+            Debug.Log("ì˜¤ë¥˜ : ëª¬ìŠ¤í„° ê³µê²© ë°ë¯¸ì§€ê°€ 0 ë˜ëŠ” ìŒìˆ˜ì…ë‹ˆë‹¤!!");
+            return;
+        }
+        //1. ë¬´ì  ìƒíƒœ ì²˜ë¦¬
+        if (isInvincibility) return; //ë¬´ì  ìƒíƒœì—ì„œëŠ” HP ê°ì†Œ x
+
+        OnInvincibility(invincibilityDuration); //ê³µê²© ë°›ìœ¼ë©´ invincibilityDurationì´ˆ ë™ì•ˆ ë¬´ì  ìƒíƒœ
+
+        //2. ì²´ë ¥ ê°ì†Œ ì²˜ë¦¬
+        Hp = Mathf.Clamp(Hp - damage, 0, Hp);
+        if (Hp == 0)
+        {
+            DieAction?.Invoke();
+        }
+    }
+
+    #endregion
+
+
+
+    #region invincibility
+
+    private void OnInvincibility(float time)
+    {
+        if (isInvincibility)
+        {
+            invincibilityTime += time;
+        }
+        else
+        {
+            invincibilityTime = time;
+            StartCoroutine(nameof(Invincibility));
+
+        }
+
+    }
+
+    IEnumerator Invincibility()
+    {
+        //1. flag ì„¤ì •
+        isInvincibility = true;
+        //2. invincibilityTime ë™ì•ˆ ë ˆì´ì–´ ë³€ê²½, ê¹œë°•ì´ê¸° íš¨ê³¼
+        transform.parent.gameObject.layer = (int)Define.Layer.PlayerDamaged; //ë¬´ì  ìƒíƒœ ë ˆì´ì–´ë¡œ ë³€ê²½
+        
+        //3. blink speed
+        float blinkSpeed = 10;
+        while (invincibilityTime>0)
+        {
+            invincibilityTime -= Time.deltaTime;
+            Color color = spriteRenderer.color;
+            color.a = Mathf.SmoothStep(0, 1, Mathf.PingPong(Time.time * blinkSpeed, 1));
+            //PingPong : 0~1 ì‚¬ì´ë¥¼ ì™•ë³µ
+            //SmoothStep : ë‘ ê°’ ì‚¬ì´ì˜ ë¶€ë“œëŸ¬ìš´ ì „í™˜(ë³´ê°„) íš¨ê³¼
+            spriteRenderer.color = color;
+            yield return null;
+        }
+
+        spriteRenderer.color = originColor; //alpha ë³µêµ¬
+        transform.parent.gameObject.layer = (int)Define.Layer.Player; //ì›ë˜ ë ˆì´ì–´ë¡œ ë³µêµ¬
+        isInvincibility = false;
+
+    }
+
+#endregion
 }
