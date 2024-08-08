@@ -193,7 +193,7 @@ MonoBehaviour:
   jangPoongPrefabs:
   - {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
   - {fileID: 3139336975419484278, guid: b23b47d27b47f405f95f5aa7b244dcd3, type: 3}
-  - {fileID: 3139336975419484278, guid: 46f000c784bcc4c6b92279f30a3b24dc, type: 3}
+  - {fileID: 3139336975419484278, guid: f15e0ca70240741bd8b65aaa2d2a74a6, type: 3}
   jangPoongPrefab: {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
   jangPoongSpeed: 10
   jangPoongDistance: 7

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: -997330957718860770}
   - component: {fileID: 5786588798200053587}
   - component: {fileID: 4626774199168933010}
-  m_Layer: 19
+  - component: {fileID: 4548064933645919560}
+  m_Layer: 12
   m_Name: jangpoong Lv1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +145,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1796551531270458315}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6c42c4c2860954c3d8fc0109ba9ba59b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -164,9 +165,22 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0060317814, y: 0.018095464}
   serializedVersion: 2
-  m_Radius: 1.6
+  m_Radius: 0.45998552
+--- !u!114 &4548064933645919560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796551531270458315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388e4c18cbce5492a918af615cf224fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0.5
