@@ -6,10 +6,24 @@ using UnityEngine;
 
 public class JangpoongController : MonoBehaviour
 {  
+    //=====장풍 레벨 정보, 데미지 관리, 업그레이드를 어떻게 처리할 것인가? ======//
+    
     private Animator animator;
     private Collider2D collider2D;
     private Rigidbody2D rb;
+   
     [SerializeField] private float damage = 0.5f;
+    private bool isColliding = false;
+
+        
+    private float aliveTime;
+    public float AliveTime
+    {
+        set
+        {
+            aliveTime = value;
+        }
+    }
     
     //1. 충돌
     //충돌 여부에 따라 애니메이션 조절
@@ -19,7 +33,7 @@ public class JangpoongController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag);
+        isColliding = true;
         //장풍 일시정지
         rb.velocity = new Vector2(0,0);
         collider2D.enabled = false;
@@ -30,29 +44,65 @@ public class JangpoongController : MonoBehaviour
             other.GetComponent<MonsterStat>().OnAttacked(damage);
         }
     }
-
-    public void JangpoongVanish()
-    {
-        Destroy(gameObject);
-    }
-
-
-    //2. 장풍 데미지, 레벨 정보? 이걸 어디서 관리할 것이냐. playercontroller에서 장풍 생성할 때 값을 넘겨줄 것이냐, 아니면 어쩔 것이냐???????
     
-    //3. 좌우 이동에 따라 장풍 좌우 반전 처리 -> scale로 처리? 아니면 filp으로 처리하는게 좋을까?
-    
-    
+    // //3. 좌우 이동에 따라 장풍 좌우 반전 처리
+    // private void SetDirection()
+    // {
+    //     if (rb.velocity.x < 0)
+    //     {
+    //         Vector3 scale = transform.localScale;
+    //         scale.x = -Mathf.Abs(transform.localScale.x);
+    //         transform.localScale = scale;
+    //         Debug.Log(transform.localScale.x);
+    //     }
+    // }
+    //
+    //
     // Start is called before the first frame update
     void Start()
+    {
+        Init();
+        StartCoroutine(nameof(DestroyAfterTime));
+    }
+
+    void Init()
     {
         collider2D = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    private IEnumerator DestroyAfterTime()
     {
-        
+        yield return new WaitForSeconds(aliveTime);
+
+        if (!isColliding)
+        {
+            Destroy(gameObject);
+        }
     }
+
+
+
+
+    #region AnimationEventMethod
+    public void JangpoongVanish()
+    {
+        Destroy(gameObject);
+    }
+
+    public void IncreaseScale()
+    {
+        Vector3 scale = transform.localScale;
+
+        // 각 축에 대해 동일한 크기 증가 적용
+        scale = Vector3.Scale(scale.normalized, Vector3.one * 0.2f) + scale;
+
+        // 변경된 크기를 오브젝트에 적용
+        transform.localScale = scale; }
+    
+
+    #endregion
+   
 }

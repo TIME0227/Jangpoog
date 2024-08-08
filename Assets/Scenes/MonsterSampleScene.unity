@@ -1221,7 +1221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414786546025496976, guid: 045341f78fe1b4453b08e88f70b46470, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8741587388311543539, guid: 045341f78fe1b4453b08e88f70b46470, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3500,7 +3500,7 @@ MonoBehaviour:
   - {fileID: 1796551531270458315, guid: c3a391f898f488e40ae3f7b0bc8543b9, type: 3}
   jangPoongPrefab: {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
   jangPoongSpeed: 10
-  jangPoongDistance: 7
+  jangPoongDistance: 100
   jangPoongLevel: 1
   jangPoongDamage: 0.5
   levelUpToken: 0
