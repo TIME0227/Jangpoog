@@ -192,8 +192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jangPoongPrefabs:
   - {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
-  - {fileID: 1796551531270458315, guid: 8450f8ae8dc61a84ca8199da79e9b53c, type: 3}
-  - {fileID: 1796551531270458315, guid: c3a391f898f488e40ae3f7b0bc8543b9, type: 3}
+  - {fileID: 3139336975419484278, guid: b23b47d27b47f405f95f5aa7b244dcd3, type: 3}
+  - {fileID: 3139336975419484278, guid: 46f000c784bcc4c6b92279f30a3b24dc, type: 3}
   jangPoongPrefab: {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
   jangPoongSpeed: 10
   jangPoongDistance: 7
@@ -208,6 +208,8 @@ MonoBehaviour:
   hpText: {fileID: 0}
   hp: 10
   maxHp: 10
+  invincibilityDuration: 1
+  spriteRenderer: {fileID: 0}
 --- !u!1 &8984064176265936863
 GameObject:
   m_ObjectHideFlags: 0
