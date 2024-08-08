@@ -3890,6 +3890,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3295315376192781972, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: hpText
+      value: 
+      objectReference: {fileID: 111912089}
+    - target: {fileID: 3295315376192781972, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: manaText
+      value: 
+      objectReference: {fileID: 1375642922}
     - target: {fileID: 6209429945396007862, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: hpText
       value: 
@@ -3911,17 +3919,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
---- !u!114 &1886355089 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6944388229652730403, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
-  m_PrefabInstance: {fileID: 1886355088}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72101e87c36c1bd49a8bc9c889fee912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1925933397
 GameObject:
   m_ObjectHideFlags: 0
@@ -4447,7 +4444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f2c39921773406485171cbaa590655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1886355089}
+  playerController: {fileID: 0}
   cameraFollow: {fileID: 533499343}
   currentStageData: {fileID: 0}
   tempChapter: 1

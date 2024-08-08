@@ -84,6 +84,7 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool("Idle", true);
     }
 
+    // 달리기 시 애니메이션 배속
     public void SetSpeedMultiplier(float multiplier)
     {
         animator.speed = multiplier;
