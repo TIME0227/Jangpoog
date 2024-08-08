@@ -8715,7 +8715,7 @@ GameObject:
   - component: {fileID: 584510114}
   - component: {fileID: 584510113}
   - component: {fileID: 584510112}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -9309,7 +9309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047242550}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 144b4448982a043a08d4cb876d09d8ed, type: 3}
   m_Name: 
@@ -9396,7 +9396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163389047}
   - component: {fileID: 1163389046}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: PlayerDataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9433,6 +9433,8 @@ MonoBehaviour:
   hpText: {fileID: 650487721}
   hp: 10
   maxHp: 10
+  invincibilityDuration: 1
+  spriteRenderer: {fileID: 0}
 --- !u!4 &1163389047
 Transform:
   m_ObjectHideFlags: 0
@@ -9460,7 +9462,7 @@ GameObject:
   - component: {fileID: 1379379841}
   - component: {fileID: 1379379842}
   - component: {fileID: 1379379843}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

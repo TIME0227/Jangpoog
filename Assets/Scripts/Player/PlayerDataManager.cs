@@ -7,7 +7,7 @@ using Unity.Mathematics;
 public class PlayerDataManager : MonoBehaviour
 {
     [Header("JangPoong")]
-    // ��ǳ ������ ����
+    // 장풍 데이터 설정
     [SerializeField]
     public GameObject[] jangPoongPrefabs;
 
@@ -20,7 +20,7 @@ public class PlayerDataManager : MonoBehaviour
     private float[] LevelArr = { 0.5f, 0.7f, 1.1f, 1.6f, 2.2f, 2.9f, 3.5f, 4.2f, 5.0f };
 
     [Header("Mana")]
-    // ���� ������ ����
+    // 마나 데이터 설정
     [SerializeField]
     private TextMeshProUGUI manaText;
 
@@ -29,7 +29,7 @@ public class PlayerDataManager : MonoBehaviour
     [SerializeField] public float manaRegenerationRate = 3f;
     [SerializeField] public float manaConsumption = 5f;
 
-    // ü�� ������ ����
+    // 체력 데이터 설정
     [Header("Hp")] [SerializeField] private TextMeshProUGUI hpText;
 
     [SerializeField]
@@ -66,8 +66,8 @@ public class PlayerDataManager : MonoBehaviour
 
     private void Awake()
     {
-        InvokeRepeating("RegenerateMana", 1f, 1f); // 1�ʸ��� RegenerateMana �޼��� ȣ��
-        if(spriteRenderer==null) spriteRenderer = transform.parent.GetComponentInChildren<SpriteRenderer>();
+        InvokeRepeating("RegenerateMana", 1f, 1f); // 1초마다 RegenerateMana 메소드 호출
+        if (spriteRenderer==null) spriteRenderer = transform.parent.GetComponentInChildren<SpriteRenderer>();
         originColor = spriteRenderer.color;
     }
 
@@ -76,26 +76,26 @@ public class PlayerDataManager : MonoBehaviour
         UpdateManaText();
         UpdateHpText();
 
-        // ������ �׽�Ʈ��
+        // 레벨업 테스트용 (L키 눌러 레벨업)
         if (Input.GetKeyDown(KeyCode.L))
         {
             LevelUp();
         }
     }
 
-    // ���� ���
+    // 마나 재생
     private void RegenerateMana()
     {
         mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
     }
 
-    // ���� �ؽ�Ʈ ������Ʈ
+    // 마나 텍스트 업데이트
     private void UpdateManaText()
     {
         manaText.text = $"Mana {mana}/{maxMana}";
     }
 
-    // ������
+    // 레벨업
     public void LevelUp()
     {
         levelUpToken += 1;
@@ -104,7 +104,7 @@ public class PlayerDataManager : MonoBehaviour
         UpdateJangPoongPrefab();
     }
 
-    // ��ǳ ������ ������Ʈ
+    // 장풍 프리팹 업데이트
     private void UpdateJangPoongPrefab()
     {
         jangPoongPrefab = jangPoongPrefabs[(int)jangPoongLevel - 1];
@@ -113,7 +113,7 @@ public class PlayerDataManager : MonoBehaviour
 
     #region HP
 
-    // ü�� �ؽ�Ʈ ������Ʈ
+    // 체력 텍스트 업데이트
     private void UpdateHpText()
     {
         hpText.text = $"Hp {hp:F2}/{maxHp:F2}"; //Format the HP text with two decimal places (240807)

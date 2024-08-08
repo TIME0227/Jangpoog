@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1252522071778896892}
   - component: {fileID: 4910114061534720229}
   - component: {fileID: -997330957718860770}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: jangpoong Lv3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
