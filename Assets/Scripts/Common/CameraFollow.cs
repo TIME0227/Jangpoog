@@ -38,6 +38,7 @@ public class CameraFollow : MonoBehaviour
         transform.position = new Vector3(x ? target.position.x : transform.position.x, y ? target.position.y + offsetY : transform.position.y, z ? target.position.z : transform.position.z);
         
         //카메라의 좌/우측 이동 범위를 넘어가지 않도록 설정
+        if (stageData == null) return;
         Vector3 position = transform.position;
         position.x = Mathf.Clamp(transform.position.x, stageData.CameraLimitMinX, stageData.CameraLimitMaxX);
         transform.position = position;

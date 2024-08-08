@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
             movement.MoveTo(x);
         }
         //플레이어 x축 이동 한계 설정(240805)
+        if (stageData == null) return;
         float xPos = Mathf.Clamp(transform.position.x, stageData.PlayerLimitMinX, stageData.PlayerLimitMaxX);
         transform.position = new Vector2(xPos, transform.position.y);
     }
@@ -206,13 +207,20 @@ public class PlayerController : MonoBehaviour
                 GameObject jangPoong = Instantiate(playerDataManager.jangPoongPrefab, spawnPosition, Quaternion.identity);
                 Rigidbody2D jangPoongRb = jangPoong.GetComponent<Rigidbody2D>();
 
+                
+                
+                //장풍 alive time 설정가(240809) - 도현
+                JangpoongController jc = jangPoong.GetComponent<JangpoongController>();
+                jc.AliveTime = playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed;
+                
                 Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
                 jangPoongRb.velocity = jangPoongDirection * playerDataManager.jangPoongSpeed;
-                jangPoong.transform.localScale = new Vector3((transform.localScale.x > 0 ? 0.5f : -0.5f), 0.5f, 0.5f);
-
+                jangPoong.transform.localScale = new Vector3((jangPoongDirection.x > 0 ? 0.5f : -0.5f), 0.5f, 0.5f); //수정
+                Debug.Log(jangPoong.transform.localScale);
+                
                 playerAnimator.JangPoongShooting();
-
-                Destroy(jangPoong, playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed);
+                
+                //Destroy(jangPoong, playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed); //Destory 로직 장풍 오브젝트에서 관리하도록 수정(240809) - 도현
             }
             else // 잔여 마나량 < 5
             {
