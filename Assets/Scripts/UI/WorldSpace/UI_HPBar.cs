@@ -10,13 +10,13 @@ public class UI_HPBar : UI_Base
     private float offset_y = 0.2f;
 
 
-    [FormerlySerializedAs("monsterBase")] [SerializeField] MonsterController monsterController;
+    [SerializeField] MonsterController monsterController;
 
     private float max; //slider max
     private float min; //slider min
 
 
-    [SerializeField] private float activeTime = 3f;
+    [SerializeField] private float activeTime = 2f;
 
 
 

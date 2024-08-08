@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
             movement.MoveTo(x);
         }
         //플레이어 x축 이동 한계 설정(240805)
+        if (stageData == null) return;
         float xPos = Mathf.Clamp(transform.position.x, stageData.PlayerLimitMinX, stageData.PlayerLimitMaxX);
         transform.position = new Vector2(xPos, transform.position.y);
     }
