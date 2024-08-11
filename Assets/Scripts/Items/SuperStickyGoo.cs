@@ -56,6 +56,10 @@ public class SuperStickyGoo : ItemBase
         }
     }
 
+    public override void UpdateCollision(Transform target)
+    {
+        // ItemBase 상속 받느라 기능은 없지만 ...
+    }
 
 
 

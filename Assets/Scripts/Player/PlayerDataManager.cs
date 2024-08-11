@@ -16,7 +16,8 @@ public class PlayerDataManager : MonoBehaviour
     [SerializeField] public float jangPoongDistance = 5.0f;
     [SerializeField] public float jangPoongLevel = 1.0f;
     [SerializeField] public float jangPoongDamage = 0.5f;
-    [SerializeField] public float levelUpToken = 0;
+
+    [SerializeField] public int levelUpToken = 0;
     private float[] LevelArr = { 0.5f, 0.7f, 1.1f, 1.6f, 2.2f, 2.9f, 3.5f, 4.2f, 5.0f };
 
     [Header("Mana")]
@@ -75,14 +76,11 @@ public class PlayerDataManager : MonoBehaviour
     {
         UpdateManaText();
         UpdateHpText();
+        UpdateLevelUpToken();
 
-        // 레벨업 테스트용 (L키 눌러 레벨업)
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LevelUp();
-        }
     }
 
+    #region MP
     // 마나 재생
     private void RegenerateMana()
     {
@@ -94,11 +92,20 @@ public class PlayerDataManager : MonoBehaviour
     {
         manaText.text = $"Mana {mana}/{maxMana}";
     }
+    #endregion
 
-    // 레벨업
-    public void LevelUp()
+
+
+    #region LevelUpToken
+    public int LevelUpToken
     {
-        levelUpToken += 1;
+        set => levelUpToken = Math.Clamp(value, 0, 9999);
+        get => levelUpToken;
+    }
+
+    // 레벨업토큰 업데이트
+    public void UpdateLevelUpToken()
+    {
         jangPoongLevel = Mathf.Clamp(1 + levelUpToken, 1, jangPoongPrefabs.Length);
         jangPoongDamage = LevelArr[(int)jangPoongLevel - 1];
         UpdateJangPoongPrefab();
@@ -109,6 +116,8 @@ public class PlayerDataManager : MonoBehaviour
     {
         jangPoongPrefab = jangPoongPrefabs[(int)jangPoongLevel - 1];
     }
+    #endregion
+
 
 
     #region HP
