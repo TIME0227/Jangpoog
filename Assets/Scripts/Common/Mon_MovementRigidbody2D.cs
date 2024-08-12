@@ -24,7 +24,7 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     [SerializeField]
     private float highGravityScale = 3.5f; // 일반적으로 적용되는 중력 (낮은 점프)
 
-    [SerializeField] private float moveSpeed; // 이동 속도
+    private float moveSpeed; // 이동 속도
 
     // 바닥에 착지 직전 조금 빨리 점프 키를 눌렀을 때 바닥에 착지하면 바로 점프가 되도록
     private float jumpBufferTime = 0.1f; // 공중에 떠있을 때 점프 키 + 0.1초 안에 착지하면 자동 점프

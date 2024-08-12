@@ -13,7 +13,7 @@ public abstract class MonsterController : BaseController
     
     [Header("Range")]
     [SerializeField] private float moveRange = 2;
-    [SerializeField] private float scanRange = 6;
+    [SerializeField] private float scanRange = 8;
     [SerializeField] protected float attackRange = 1;
 
     private Vector3 originPos;
@@ -114,14 +114,14 @@ public abstract class MonsterController : BaseController
         elapsedTime += Time.deltaTime;
         if (elapsedTime < waitTime) return;
         
-        Debug.Log("기다리기 끝");
+        //Debug.Log("기다리기 끝");
         float distance = (player.transform.position - transform.position).magnitude;
         //Debug.Log($"distance:{distance}");
         if (distance <= scanRange)
         {
             if (target == null)
             {
-                Debug.Log("플레이어 인식!!!!");
+                //Debug.Log("플레이어 인식!!!!");
                 target = player;
                 StartCoroutine(nameof(CoTarget));
                 State = Define.State.Target;
@@ -190,18 +190,18 @@ public abstract class MonsterController : BaseController
         //목표 위치에 도달시
         if (dir.magnitude < 0.1f)
         {
-            Debug.Log("목표 도달 정지");
+            //Debug.Log("목표 도달 정지");
             movement2D.MoveTo(0);
             State = Define.State.Idle;
         }
         else
         { 
-            Debug.Log("거리 멀어짐");
+            //Debug.Log("거리 멀어짐");
             //움직이기
             Debug.DrawRay(transform.position,dir.normalized,Color.green);
             if (Physics2D.Raycast(transform.position, dir, 1.0f, LayerMask.GetMask("LevelN")))
             {
-                Debug.Log("장애물 감지. 더 이상 이동할 수 없음");
+                //Debug.Log("장애물 감지. 더 이상 이동할 수 없음");
                 //이동할 수 없는 영역, 장애물을 만남
                 State = Define.State.Idle;
                 return;
@@ -213,7 +213,7 @@ public abstract class MonsterController : BaseController
                 // State = Define.State.Jumping;
                 if (!isJumping)
                 {
-                Debug.Log("점프해서 올라갑니다.");
+                //Debug.Log("점프해서 올라갑니다.");
                     //StartCoroutine(nameof(CoJump));
                     State = Define.State.Jumping;
                 }
@@ -280,7 +280,7 @@ public abstract class MonsterController : BaseController
          
              if (movement2D.IsGrounded)
              {
-                 Debug.Log("바닥착지");
+                 //Debug.Log("바닥착지");
                  //바닥에 착지시 동작 멈추고 반복문 종료
                  //animator.SetBool("isJump", false);
                  movement2D.MoveTo(0);
@@ -300,7 +300,7 @@ public abstract class MonsterController : BaseController
 
                  if (dir.magnitude < 0.1f)
                  {
-                     Debug.Log("목표 도달 정지");
+                     //Debug.Log("목표 도달 정지");
                      movement2D.MoveTo(0);
                      State = Define.State.Idle;
                  }
@@ -330,7 +330,6 @@ public abstract class MonsterController : BaseController
             GameObject dropItem = null;
             if (Random.Range(0, 100f) <= lootItem.dropChance)
             {
-                Debug.Log($"Items/Items_Player/{lootItem.item}");
                 dropItem = Managers.Resource.Instantiate($"Items/Items_Player/{lootItem.item}");
 
                 float offsetX = 0.5f * itemCount;

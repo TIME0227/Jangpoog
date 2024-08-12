@@ -30,7 +30,7 @@ public class ResourceManager
     /// <param name="path">프리팹이 위치한 폴더 경로(Resource/Prefabs 를 기준)</param>
     /// <param name="parent"></param>
     /// <returns></returns>
-    public GameObject Instantiate(string path, Transform parent = null)
+    public GameObject Instantiate(string path, Transform parent = null, Vector3 position=default)
     {
         //prefab 가져오기
         GameObject prefab = Load<GameObject>($"Prefabs/{path}");
@@ -40,7 +40,7 @@ public class ResourceManager
             Debug.Log($"Failed to load prefab : {path}");
             return null;
         }
-        return Object.Instantiate(prefab, parent); //Object 붙인 이유 : 현재 함수 이름과 Object.Instantiate 이름이 동일하기 때문에 그냥 사용시 현재 함수가 재귀 호출 될 수 있음.
+        return Object.Instantiate(prefab, position, Quaternion.identity, parent); //Object 붙인 이유 : 현재 함수 이름과 Object.Instantiate 이름이 동일하기 때문에 그냥 사용시 현재 함수가 재귀 호출 될 수 있음.
 
     }
 

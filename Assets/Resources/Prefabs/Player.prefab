@@ -208,7 +208,7 @@ MonoBehaviour:
   hpText: {fileID: 0}
   hp: 10
   maxHp: 10
-  invincibilityDuration: 1
+  invincibilityDuration: 1.5
   spriteRenderer: {fileID: 0}
 --- !u!1 &8984064176265936863
 GameObject:
