@@ -48,6 +48,7 @@ public class PlayerDataManager : MonoBehaviour
             {
                 hp = value;
                 UpdateHpText();
+                UpdateHpAction?.Invoke(hp);
 
             }
         }
@@ -55,6 +56,7 @@ public class PlayerDataManager : MonoBehaviour
 
     //Action
     public Action DieAction = null;
+    public Action<float> UpdateHpAction = null;
 
     //Invincibility
     [Header("Invincibility")] 
