@@ -25,10 +25,11 @@ public class PlayerDataManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI manaText;
 
-    [SerializeField] public float mana = 100f;
-    [SerializeField] public float maxMana = 100f;
-    [SerializeField] public float manaRegenerationRate = 3f;
-    [SerializeField] public float manaConsumption = 5f;
+    // mana int로 변경
+    [SerializeField] public int mana = 100;
+    [SerializeField] public int maxMana = 100;
+    [SerializeField] public int manaRegenerationRate = 3;
+    [SerializeField] public int manaConsumption = 5;
 
     // 체력 데이터 설정
     [Header("Hp")] [SerializeField] private TextMeshProUGUI hpText;
@@ -42,7 +43,7 @@ public class PlayerDataManager : MonoBehaviour
     public float Hp
     {
         get { return hp; }
-        private set
+        set                             // << private을 지웠는데 괜찮을까요? (240812 다인)
         {
             if (value != hp)
             {
@@ -91,6 +92,12 @@ public class PlayerDataManager : MonoBehaviour
     private void UpdateManaText()
     {
         manaText.text = $"Mana {mana}/{maxMana}";
+    }
+
+    public int Mana
+    {
+        set => mana = Mathf.Clamp(value, 0, 9999);
+        get => mana;
     }
     #endregion
 
@@ -147,7 +154,6 @@ public class PlayerDataManager : MonoBehaviour
             DieAction?.Invoke();
         }
     }
-
     #endregion
 
 
