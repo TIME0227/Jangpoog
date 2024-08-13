@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5572394890164846417, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+      propertyPath: lootTable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572394890164846417, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+      propertyPath: lootTable.Array.data[1].item
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572394890164846417, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572394890164846417, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+      propertyPath: lootTable.Array.data[1].dropChance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7606962654666622922, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
       propertyPath: m_Name
-      value: Monster_KnifeGoblin
+      value: Monster_BatGoblin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

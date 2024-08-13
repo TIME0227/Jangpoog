@@ -108,6 +108,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.58
       objectReference: {fileID: 0}
+    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[0].item
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[1].item
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[1].dropChance
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
