@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 originalColliderSize;                              // 기존 Player Collider Size
     private Vector2 originalColliderOffset;                           // 기존 Player Collider Offset
 
-    private float speedMultiplier = 2.0f;                                // 달리기할 때 속도 배속
+    public float speedMultiplier = 2.0f;                                // 달리기할 때 속도 배속
     private bool isRunning = false;                                        // 달리기 중이면 true
 
     // 더블 클릭 (달리기) 데이터 설정
