@@ -22,21 +22,47 @@ public class PlayerDataManager : MonoBehaviour
 
     [Header("Mana")]
     // 마나 데이터 설정
-    [SerializeField]
-    private TextMeshProUGUI manaText;
+    [SerializeField] private TextMeshProUGUI manaText;
 
     // mana int로 변경
-    [SerializeField] public int mana = 100;
-    [SerializeField] public int maxMana = 100;
+    [SerializeField] private int mana = 100;
+    [SerializeField] private int maxMana = 100;
     [SerializeField] public int manaRegenerationRate = 3;
     [SerializeField] public int manaConsumption = 5;
 
+    public int Mana
+    {
+        get { return mana; }
+        set
+        {
+            if (value != mana)
+            {
+                mana = Mathf.Clamp(value, 0, maxMana);
+                UpdateManaText();
+                UpdateManaAction?.Invoke(mana);
+            }
+        }
+    }
+    
+    public int MaxMana
+    {
+        get { return maxMana; }
+        set
+        {
+            if (maxMana != value)
+            {
+                maxMana = value;
+                UpdateManaAction?.Invoke(Mana);
+            }
+          
+        }
+    }
+    
     // 체력 데이터 설정
-    [Header("Hp")] [SerializeField] private TextMeshProUGUI hpText;
-
-    [SerializeField]
-    //HP private로 변경, 프로퍼티 생성
-    private float hp = 10.0f;
+    [Header("Hp")] 
+    [SerializeField] private TextMeshProUGUI hpText;
+    
+    [SerializeField] private float hp = 10.0f; //HP private로 변경, 프로퍼티 생성
 
     [SerializeField] public float maxHp = 10.0f;
 
@@ -50,7 +76,9 @@ public class PlayerDataManager : MonoBehaviour
                 hp = value;
                 UpdateHpText();
                 UpdateHpAction?.Invoke(hp);
-
+                
+                if(hp==0)
+                    DieAction?.Invoke();
             }
         }
     }
@@ -58,6 +86,7 @@ public class PlayerDataManager : MonoBehaviour
     //Action
     public Action DieAction = null;
     public Action<float> UpdateHpAction = null;
+    public Action<int> UpdateManaAction = null;
 
     //Invincibility
     [Header("Invincibility")] 
@@ -94,12 +123,6 @@ public class PlayerDataManager : MonoBehaviour
     private void UpdateManaText()
     {
         manaText.text = $"Mana {mana}/{maxMana}";
-    }
-
-    public int Mana
-    {
-        set => mana = Mathf.Clamp(value, 0, 9999);
-        get => mana;
     }
     #endregion
 
@@ -150,11 +173,7 @@ public class PlayerDataManager : MonoBehaviour
         OnInvincibility(invincibilityDuration); //공격 받으면 invincibilityDuration초 동안 무적 상태
 
         //2. 체력 감소 처리
-        Hp = Mathf.Clamp(Hp - damage, 0, Hp);
-        if (Hp == 0)
-        {
-            DieAction?.Invoke();
-        }
+        Hp -= damage;
     }
     #endregion
 
