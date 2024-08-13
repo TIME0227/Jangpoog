@@ -197,9 +197,9 @@ public class PlayerController : MonoBehaviour
         }        
         if (Input.GetMouseButtonDown(0))    // 마우스 좌클릭으로 장풍 발사
         {
-            if (playerDataManager.mana >= playerDataManager.manaConsumption)
+            if (playerDataManager.Mana >= playerDataManager.manaConsumption)
             {
-                playerDataManager.mana -= playerDataManager.manaConsumption;
+                playerDataManager.Mana -= playerDataManager.manaConsumption;
 
                 Vector3 spawnPosition = transform.position;
                 spawnPosition.y += isSliding ? -0.38f : -0.08f;     // 슬라이딩 시에는 y값 -0.08f에서 장풍 발사되도록
