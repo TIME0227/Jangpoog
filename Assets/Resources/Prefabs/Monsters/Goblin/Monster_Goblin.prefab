@@ -86,12 +86,11 @@ MonoBehaviour:
   belowColiisionLayer:
     serializedVersion: 2
     m_Bits: 192
-  walkSpeed: 2.5
-  runSpeed: 2.5
+  walkSpeed: 5.6
+  runSpeed: 5.6
   jumpForce: 11
   lowGravityScale: 2
   highGravityScale: 3.5
-  moveSpeed: 0
   isGrounded: 0
 --- !u!114 &3768807491463201559
 MonoBehaviour:

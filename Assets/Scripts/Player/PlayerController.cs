@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         UpdateJangPoong();
         playerAnimator.UpdateAnimation(x);
 
-        // 더블 클릭 체크
+        // 더블 클릭 체크(삭제되었음)
         /*CheckDoubleClick(KeyCode.A);
         CheckDoubleClick(KeyCode.D);*/
     }
