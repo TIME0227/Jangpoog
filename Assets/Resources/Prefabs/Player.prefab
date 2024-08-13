@@ -34,7 +34,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6663401287757767244}
   - {fileID: 9016580331172656443}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -178,70 +177,6 @@ MonoBehaviour:
   hp: 10
   maxHp: 10
   invincibilityDuration: 1.5
-  spriteRenderer: {fileID: 187112809751830480}
---- !u!1 &8105578856210962824
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6663401287757767244}
-  - component: {fileID: 6209429945396007862}
-  m_Layer: 15
-  m_Name: PlayerDataManager
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6663401287757767244
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8105578856210962824}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.32193762, y: 0.29649282, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 331557050696736152}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6209429945396007862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8105578856210962824}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd354c9d2b5220540a40de4e03336f3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jangPoongPrefabs:
-  - {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
-  - {fileID: 3139336975419484278, guid: b23b47d27b47f405f95f5aa7b244dcd3, type: 3}
-  - {fileID: 3139336975419484278, guid: f15e0ca70240741bd8b65aaa2d2a74a6, type: 3}
-  jangPoongPrefab: {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
-  jangPoongSpeed: 10
-  jangPoongDistance: 7
-  jangPoongLevel: 1
-  jangPoongDamage: 0.5
-  levelUpToken: 0
-  manaText: {fileID: 0}
-  mana: 100
-  maxMana: 100
-  manaRegenerationRate: 3
-  manaConsumption: 5
-  hpText: {fileID: 0}
-  hp: 10
-  maxHp: 10
-  invincibilityDuration: 1
   spriteRenderer: {fileID: 187112809751830480}
 --- !u!1 &8984064176265936863
 GameObject:
