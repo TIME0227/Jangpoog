@@ -69,11 +69,15 @@ public class PlayerDataManager : MonoBehaviour
     public float Hp
     {
         get { return hp; }
-        set                             // << private을 지웠는데 괜찮을까요? (240812 다인)
+        set                           
         {
             if (value != hp)
             {
                 hp = value;
+                if(maxHp <= hp)
+                {
+                    hp = maxHp;
+                }
                 UpdateHpText();
                 UpdateHpAction?.Invoke(hp);
                 
