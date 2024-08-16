@@ -23,7 +23,6 @@ public class SuperStickyGoo : ItemBase
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
         if (other.CompareTag("Monster"))
         {
             Debug.Log("공격력, 사이즈 증가");

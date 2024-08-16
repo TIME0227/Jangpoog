@@ -14,7 +14,7 @@ public class MonsterWeaponCollider : MonoBehaviour
     void Awake()
     {
         weaponCollider = GetComponent<Collider2D>();
-        monster = GetComponentInParent<MonsterController>();
+        //monster = GetComponentInParent<MonsterController>();
     }
 
     private void Start()
@@ -23,33 +23,31 @@ public class MonsterWeaponCollider : MonoBehaviour
 
     private void Update()
     {
-        if (monster.State == Define.State.Attack)
-        {
-            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(transform.position, boxSize, 0);
-            foreach (Collider2D collider in collider2Ds)
-            {
-                if (collider.CompareTag("Player"))
-                {
-                    Debug.Log("몬스터가 플레이어를 공격합니다.");
-                    PlayerDataManager playerDataManager = Util.FindChild<PlayerDataManager>(collider.gameObject, null, true);
-                    playerDataManager.OnAttacked(GetComponentInParent<MonsterStat>().monsterData.Damage);
-                    return;
-                }
-
-            }
-        }
+        // if (monster.State == Define.State.Attack)
+        // {
+        //     Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(transform.position, boxSize, 0);
+        //     foreach (Collider2D collider in collider2Ds)
+        //     {
+        //         if (collider.CompareTag("Player"))
+        //         {
+        //             Debug.Log("몬스터가 플레이어를 공격합니다.");
+        //             PlayerDataManager playerDataManager = Util.FindChild<PlayerDataManager>(collider.gameObject, null, true);
+        //             playerDataManager.OnAttacked(GetComponentInParent<MonsterStat>().monsterData.Damage);
+        //             return;
+        //         }
+        //
+        //     }
+        // }
     }
 
-    // void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         Debug.Log("Player hit by weapon!");
-    //         // 플레이어의 HP를 깎는 로직
-    //         
-    //         
-    //     }
-    // }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("플레이어 충돌");
+            Managers.PlayerData.OnAttacked(GetComponentInParent<MonsterStat>().monsterData.Damage);
+        }
+    }
     
     private void OnDrawGizmos()
     {

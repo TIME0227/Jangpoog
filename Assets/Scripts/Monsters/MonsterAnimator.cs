@@ -20,21 +20,21 @@ public class MonsterAnimator : MonoBehaviour
 
     public void UpdateAnimation()
     {
-        if (movement.Velocity.x != 0)
-        {
-            spriteRenderer.flipX = monsterController.dir.normalized.x == 1;
-        }
-        
-        anim.SetBool("isJump", !movement.IsGrounded);
-
-        if (movement.IsGrounded)
-        {
-            anim.SetFloat("velocityX", movement.Velocity.x>0?1:0);
-        }
-        else
-        {
-            anim.SetFloat("velocityY", movement.Velocity.y);
-        }
+        // if (movement.Velocity.x != 0)
+        // {
+        //     spriteRenderer.flipX = monsterController.dir.normalized.x == 1;
+        // }
+        //
+        // anim.SetBool("isJump", !movement.IsGrounded);
+        //
+        // if (movement.IsGrounded)
+        // {
+        //     anim.SetFloat("velocityX", movement.Velocity.x>0?1:0);
+        // }
+        // else
+        // {
+        //     anim.SetFloat("velocityY", movement.Velocity.y);
+        // }
         // if(movement.Velocity.y!=0)
         // {
         //     anim.SetFloat("velocityY", movement.Velocity.y);
