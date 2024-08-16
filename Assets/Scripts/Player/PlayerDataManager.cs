@@ -43,7 +43,7 @@ public class PlayerDataManager : MonoBehaviour
             }
         }
     }
-    
+
     public int MaxMana
     {
         get { return maxMana; }
@@ -54,14 +54,14 @@ public class PlayerDataManager : MonoBehaviour
                 maxMana = value;
                 UpdateManaAction?.Invoke(Mana);
             }
-          
+
         }
     }
-    
+
     // 체력 데이터 설정
-    [Header("Hp")] 
+    [Header("Hp")]
     [SerializeField] private TextMeshProUGUI hpText;
-    
+
     [SerializeField] private float hp = 10.0f; //HP private로 변경, 프로퍼티 생성
 
     [SerializeField] public float maxHp = 10.0f;
@@ -69,14 +69,19 @@ public class PlayerDataManager : MonoBehaviour
     public float Hp
     {
         get { return hp; }
-        set                             // << private을 지웠는데 괜찮을까요? (240812 다인)
+        set
         {
             if (value != hp)
             {
                 hp = value;
+                if (maxHp <= hp)
+                {
+                    hp = maxHp;
+                }
+                //UpdateHpText();
                 UpdateHpAction?.Invoke(hp);
-                
-                if(hp==0)
+
+                if (hp == 0)
                     DieAction?.Invoke();
             }
         }
@@ -88,18 +93,18 @@ public class PlayerDataManager : MonoBehaviour
     public Action<int> UpdateManaAction = null;
 
     //Invincibility
-    [Header("Invincibility")] 
+    [Header("Invincibility")]
     [SerializeField][Tooltip("피격 시 추가되는 무적 지속 시간")] private float invincibilityDuration = 1;//피격시 추가되는 무적 시간
     private float invincibilityTime = 0; //무적 지속 시간
     private bool isInvincibility = false; //무적 여부
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Color originColor;
-    
+
 
     private void Awake()
     {
         InvokeRepeating("RegenerateMana", 1f, 1f); // 1초마다 RegenerateMana 메소드 호출
-        if (spriteRenderer==null) spriteRenderer = transform.parent.GetComponentInChildren<SpriteRenderer>();
+        if (spriteRenderer == null) spriteRenderer = transform.parent.GetComponentInChildren<SpriteRenderer>();
         originColor = spriteRenderer.color;
     }
 
@@ -201,10 +206,10 @@ public class PlayerDataManager : MonoBehaviour
         isInvincibility = true;
         //2. invincibilityTime 동안 레이어 변경, 깜박이기 효과
         transform.parent.gameObject.layer = (int)Define.Layer.PlayerDamaged; //무적 상태 레이어로 변경
-        
+
         //3. blink speed
         float blinkSpeed = 10;
-        while (invincibilityTime>0)
+        while (invincibilityTime > 0)
         {
             invincibilityTime -= Time.deltaTime;
             Color color = spriteRenderer.color;
@@ -221,5 +226,5 @@ public class PlayerDataManager : MonoBehaviour
 
     }
 
-#endregion
+    #endregion
 }

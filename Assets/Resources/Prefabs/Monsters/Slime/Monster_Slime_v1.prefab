@@ -120,10 +120,10 @@ MonoBehaviour:
   dir: {x: 0, y: 0, z: 0}
   attackDelay: 3
   lootTable:
-  - item: 0
-    dropChance: 80
-  - item: 3
-    dropChance: 20
+  - item: 1
+    dropChance: 2
+  - item: 4
+    dropChance: 1
 --- !u!70 &1582441881594047105
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

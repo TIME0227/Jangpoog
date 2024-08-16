@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1191551650843982732, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_Name
-      value: Monster_Goblin
+      value: Monster_KnifeGoblin
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,26 @@ PrefabInstance:
     - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: lootTable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: lootTable.Array.data[0].item
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: lootTable.Array.data[1].item
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: lootTable.Array.data[1].dropChance
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
