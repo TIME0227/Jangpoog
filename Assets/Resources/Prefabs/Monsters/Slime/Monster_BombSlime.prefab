@@ -132,9 +132,9 @@ MonoBehaviour:
   attackDelay: 3
   lootTable:
   - item: 1
-    dropChance: 100
+    dropChance: 5
   - item: 2
-    dropChance: 80
+    dropChance: 0.01
 --- !u!58 &1341425861889877718
 CircleCollider2D:
   m_ObjectHideFlags: 0
