@@ -74,7 +74,6 @@ public class PlayerDataManager : MonoBehaviour
             if (value != hp)
             {
                 hp = value;
-                UpdateHpText();
                 UpdateHpAction?.Invoke(hp);
                 
                 if(hp==0)
@@ -116,7 +115,7 @@ public class PlayerDataManager : MonoBehaviour
     // 마나 재생
     private void RegenerateMana()
     {
-        mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
+        Mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
     }
 
     // 마나 텍스트 업데이트
