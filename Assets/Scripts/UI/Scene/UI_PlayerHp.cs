@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class UI_PlayerHp : MonoBehaviour
 {
-    //hp 변경 이벤트 구독 필요\
     [SerializeField] private List<Slider> hpHeartList;
     private float maxHp;
     
