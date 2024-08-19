@@ -13,7 +13,6 @@ public class Managers : MonoBehaviour
         Init();
         return s_instance;
     } } //유일한 매니져를 가져온다.
-
     
     #region Core
 
@@ -22,6 +21,7 @@ public class Managers : MonoBehaviour
     private ResourceManager _resource = new ResourceManager();
     private SceneManagerEx _scene = new SceneManagerEx();
     private UIManager _ui = new UIManager();
+    private SoundManager sound = new SoundManager();
     private PlayerDataManager _playerData;
     
     public static DataManager Data { get { return Instance._data; } }
@@ -32,6 +32,10 @@ public class Managers : MonoBehaviour
         get { return Instance._scene; }
     }
     public static UIManager UI { get { return Instance._ui; } }
+    public static SoundManager Sound
+    {
+        get { return Instance.sound; }
+    }
 
     public static PlayerDataManager PlayerData
     {
@@ -77,6 +81,7 @@ public class Managers : MonoBehaviour
 
 
             s_instance._data.Init();
+            s_instance.sound.Init();
         }
 
     }
@@ -84,13 +89,9 @@ public class Managers : MonoBehaviour
     public static void Clear()
     {
         Input.Clear();
+        Sound.Clear();
         //추가 예정
    }
 
-
-
-    public void SceneTest()
-    {
-        Managers.Scene.LoadScene("SampleScene");
-    }
+    
 }

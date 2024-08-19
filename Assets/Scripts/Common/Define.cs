@@ -44,7 +44,14 @@
             PointerUp,
             Click,
         }
+        
+        public enum Sound
+        {
+            Bgm,
+            Sfx,
+            MaxCount,
+        }
 
-        public float tileWidth = 0f;
+        
     }
 
