@@ -6,13 +6,7 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     private StageData stageData;
-    // 점프 & 슬라이딩 데이터 설정
-    [SerializeField]
-    private KeyCode jumpKeyCode = KeyCode.W;              // 점프 키
-    [SerializeField]
-    private KeyCode slideKeyCode = KeyCode.S;               // 슬라이딩 키
-    [SerializeField]
-    private KeyCode runKeyCode = KeyCode.LeftShift;     // 달리기 키
+    // 슬라이딩 데이터 설정
     [SerializeField]
     private float slideDistance = 3.0f;                                    // 슬라이딩 거리
     [SerializeField]
@@ -40,6 +34,8 @@ public class PlayerController : MonoBehaviour
     private float lastClickTime = -1.0f;
     private KeyCode lastKeyPressed;*/
 
+    private KeyBindingManager keyBindingManager;
+
     private void Awake()
     {
         movement = GetComponent<MovementRigidbody2D>();
@@ -47,6 +43,7 @@ public class PlayerController : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         playerDataManager = GetComponentInChildren<PlayerDataManager>();
+        keyBindingManager = KeyBindingManager.Instance;
 
         originalColliderSize = capsuleCollider.size;
         originalColliderOffset = capsuleCollider.offset;
@@ -60,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        float x = GetHorizontalInput();
         float offset = 0.5f + Input.GetAxisRaw("Sprint") * 0.5f;
         x *= offset;
 
@@ -70,10 +67,20 @@ public class PlayerController : MonoBehaviour
         UpdateRun();
         UpdateJangPoong();
         playerAnimator.UpdateAnimation(x);
+    }
 
-        // 더블 클릭 체크(삭제되었음)
-        /*CheckDoubleClick(KeyCode.A);
-        CheckDoubleClick(KeyCode.D);*/
+    private float GetHorizontalInput()
+    {
+        float x = 0;
+        if (Input.GetKey(keyBindingManager.leftKeyCode))
+        {
+            x = -1;
+        }
+        else if (Input.GetKey(keyBindingManager.rightKeyCode))
+        {
+            x = 1;
+        }
+        return x;
     }
 
     #region 이동
@@ -81,18 +88,18 @@ public class PlayerController : MonoBehaviour
     {
         if (!isSliding)
         {
-            if (isRunning) // 달리기 중이면, 달리기 키를 누르고 있는 중이면
+            if (isRunning)
             {
                 x *= speedMultiplier;
                 playerAnimator.SetSpeedMultiplier(speedMultiplier);
             }
-            else                // 달리기 키를 떼면 원래 속도로
+            else
             {
                 playerAnimator.SetSpeedMultiplier(1.0f);
             }
             movement.MoveTo(x);
         }
-        //플레이어 x축 이동 한계 설정(240805)
+
         if (stageData == null) return;
         float xPos = Mathf.Clamp(transform.position.x, stageData.PlayerLimitMinX, stageData.PlayerLimitMaxX);
         transform.position = new Vector2(xPos, transform.position.y);
@@ -102,11 +109,11 @@ public class PlayerController : MonoBehaviour
     #region 달리기
     private void UpdateRun()
     {
-        if (Input.GetKeyDown(runKeyCode))
+        if (Input.GetKeyDown(keyBindingManager.runKeyCode))
         {
             isRunning = true;
         }
-        else if (Input.GetKeyUp(runKeyCode))
+        else if (Input.GetKeyUp(keyBindingManager.runKeyCode))
         {
             isRunning = false;
         }
@@ -116,17 +123,17 @@ public class PlayerController : MonoBehaviour
     #region 점프, 더블점프
     private void UpdateJump()
     {
-        if (Input.GetKeyDown(jumpKeyCode))
+        if (Input.GetKeyDown(keyBindingManager.jumpKeyCode))
         {
             movement.Jump();
         }
 
         // 더블 점프 체크
-        if (Input.GetKey(jumpKeyCode))
+        if (Input.GetKey(keyBindingManager.jumpKeyCode))
         {
             movement.IsLongJump = true;
         }
-        else if (Input.GetKeyUp(jumpKeyCode))
+        else if (Input.GetKeyUp(keyBindingManager.jumpKeyCode))
         {
             movement.IsLongJump = false;
         }
@@ -136,8 +143,9 @@ public class PlayerController : MonoBehaviour
     #region 슬라이딩
     private void UpdateSlide()
     {
-        if (movement.IsGrounded) {                          // 공중 슬라이딩 방지 (isGrounded : 바닥에 닿았을 때 true)
-            if (Input.GetKeyDown(slideKeyCode))     // 슬라이딩 키 눌렀을 때
+        if (movement.IsGrounded)
+        {                          // 공중 슬라이딩 방지 (isGrounded : 바닥에 닿았을 때 true)
+            if (Input.GetKeyDown(keyBindingManager.slideKeyCode))     // 슬라이딩 키 눌렀을 때
             {
                 if (!isSliding)
                 {
@@ -172,7 +180,7 @@ public class PlayerController : MonoBehaviour
             {
                 moveStep = slideRemainingDistance;
             }
-            
+
             rb.velocity = new Vector2(slideDirection.x * slideSpeed, rb.velocity.y);
             slideRemainingDistance -= moveStep;
 
@@ -192,9 +200,10 @@ public class PlayerController : MonoBehaviour
     #region 장풍 발사
     private void UpdateJangPoong()
     {
-        if (EventSystem.current.IsPointerOverGameObject()) {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
             return;  ////UI 클릭시는 장풍 발사가 되지 않도록 처리 (240802 도현)
-        }        
+        }
         if (Input.GetMouseButtonDown(0))    // 마우스 좌클릭으로 장풍 발사
         {
             if (playerDataManager.Mana >= playerDataManager.manaConsumption)
@@ -207,19 +216,19 @@ public class PlayerController : MonoBehaviour
                 GameObject jangPoong = Instantiate(playerDataManager.jangPoongPrefab, spawnPosition, Quaternion.identity);
                 Rigidbody2D jangPoongRb = jangPoong.GetComponent<Rigidbody2D>();
 
-                
-                
+
+
                 //장풍 alive time 설정가(240809) - 도현
                 JangpoongController jc = jangPoong.GetComponent<JangpoongController>();
                 jc.AliveTime = playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed;
-                
+
                 Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
                 jangPoongRb.velocity = jangPoongDirection * playerDataManager.jangPoongSpeed;
                 jangPoong.transform.localScale = new Vector3((jangPoongDirection.x > 0 ? 0.5f : -0.5f), 0.5f, 0.5f); //수정
                 Debug.Log(jangPoong.transform.localScale);
-                
+
                 playerAnimator.JangPoongShooting();
-                
+
                 //Destroy(jangPoong, playerDataManager.jangPoongDistance / playerDataManager.jangPoongSpeed); //Destory 로직 장풍 오브젝트에서 관리하도록 수정(240809) - 도현
             }
             else // 잔여 마나량 < 5
