@@ -22,8 +22,6 @@ public class PlayerDataManager : MonoBehaviour
 
     [Header("Mana")]
     // 마나 데이터 설정
-    [SerializeField] private TextMeshProUGUI manaText;
-
     // mana int로 변경
     [SerializeField] private int mana = 100;
     [SerializeField] private int maxMana = 100;
@@ -60,8 +58,6 @@ public class PlayerDataManager : MonoBehaviour
     
     // 체력 데이터 설정
     [Header("Hp")] 
-    [SerializeField] private TextMeshProUGUI hpText;
-    
     [SerializeField] private float hp = 10.0f; //HP private로 변경, 프로퍼티 생성
 
     [SerializeField] public float maxHp = 10.0f;
@@ -94,7 +90,7 @@ public class PlayerDataManager : MonoBehaviour
 
     //Invincibility
     [Header("Invincibility")] 
-    [SerializeField][Tooltip("피격 시 추가되는 무적 지속 시간")] private float invincibilityDuration = 1;//피격시 추가되는 무적 시간
+    [SerializeField][Tooltip("피격 시 추가되는 무적 지속 시간")] private float invincibilityDuration = 2;//피격시 추가되는 무적 시간
     private float invincibilityTime = 0; //무적 지속 시간
     private bool isInvincibility = false; //무적 여부
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -120,14 +116,9 @@ public class PlayerDataManager : MonoBehaviour
     // 마나 재생
     private void RegenerateMana()
     {
-        mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
+        Mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
     }
-
-    // 마나 텍스트 업데이트
-    // private void UpdateManaText()
-    // {
-    //    manaText.text = $"Mana {mana}/{maxMana}";
-    // }
+    
     #endregion
 
 
@@ -157,13 +148,6 @@ public class PlayerDataManager : MonoBehaviour
 
 
     #region HP
-
-    // 체력 텍스트 업데이트
-    // private void UpdateHpText()
-    // {
-    //     hpText.text = $"Hp {hp:F2}/{maxHp:F2}"; //Format the HP text with two decimal places (240807)
-    // }
-
     public void OnAttacked(float damage)
     {
         if (damage <= 0)
@@ -200,7 +184,7 @@ public class PlayerDataManager : MonoBehaviour
 
     }
 
-    IEnumerator Invincibility()
+    private IEnumerator Invincibility()
     {
         //1. flag 설정
         isInvincibility = true;
