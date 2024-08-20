@@ -11,11 +11,11 @@ public class MovementRigidbody2D : MonoBehaviour
     private LayerMask belowColiisionLayer; // 발 충돌 체크를 위한 레이어
 
     [Header("Move")]
+    public float walkSpeed = 5; // 걷는 속도
     [SerializeField]
-    private float walkSpeed = 5; // 걷는 속도
-    [SerializeField]
-    private float runSpeed = 8; // 뛰는 속도
-
+    public float runSpeed = 8; // 뛰는 속도
+    
+    
     [Header("Jump")]
     [SerializeField]
     private float jumpForce = 10; // 점프 힘
@@ -76,6 +76,7 @@ public class MovementRigidbody2D : MonoBehaviour
         //if (x != 0) x = Mathf.Sign(x); //도현 : 뛰기 없으므로 x가 1일때 모두 walkspeed로 처리. 이를 위해 코드 주석 처리(0704)
 
         // x축 방향 속력을 x * moveSpeed로 설정
+        moveSpeed = walkSpeed;
         rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
     }
 
