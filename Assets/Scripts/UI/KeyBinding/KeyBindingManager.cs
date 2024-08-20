@@ -5,14 +5,6 @@ public class KeyBindingManager
 {
     public static KeyBindingManager Instance { get; private set; }
 
-    // ��� �׽�Ʈ�� ��ư
-    private string nextSceneName = "1-1 tutorial";
-
-    public void OnButtonClick()
-    {
-        SceneManager.LoadScene(nextSceneName);
-    }
-
 
     // private void Awake()
     // {

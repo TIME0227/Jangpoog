@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeyBindingUIManager : MonoBehaviour
 {
@@ -9,18 +10,26 @@ public class KeyBindingUIManager : MonoBehaviour
     public TMP_InputField leftKeyInputField;
     public TMP_InputField rightKeyInputField;
 
-    private KeyBindingManager keyBindingManager;
+    // private KeyBindingManager keyBindingManager;
+
+    // ??? ?????? ???
+    private string nextSceneName = "1-1 tutorial";
+
+    public void OnButtonClick()
+    {
+        SceneManager.LoadScene(nextSceneName);
+    }
 
     private void Start()
     {
-        keyBindingManager = KeyBindingManager.Instance;
+        // keyBindingManager = KeyBindingManager.Instance;
 
         // 초기값 설정
-        jumpKeyInputField.text = keyBindingManager.jumpKeyCode.ToString();
-        slideKeyInputField.text = keyBindingManager.slideKeyCode.ToString();
-        runKeyInputField.text = keyBindingManager.runKeyCode.ToString();
-        leftKeyInputField.text = keyBindingManager.leftKeyCode.ToString();
-        rightKeyInputField.text = keyBindingManager.rightKeyCode.ToString();
+        jumpKeyInputField.text = Managers.KeyBind.jumpKeyCode.ToString();
+        slideKeyInputField.text = Managers.KeyBind.slideKeyCode.ToString();
+        runKeyInputField.text = Managers.KeyBind.runKeyCode.ToString();
+        leftKeyInputField.text = Managers.KeyBind.leftKeyCode.ToString();
+        rightKeyInputField.text = Managers.KeyBind.rightKeyCode.ToString();
 
         jumpKeyInputField.onEndEdit.AddListener(SetJumpKey);
         slideKeyInputField.onEndEdit.AddListener(SetSlideKey);
@@ -47,12 +56,12 @@ public class KeyBindingUIManager : MonoBehaviour
         KeyCode newKey = GetKeyCodeFromName(key);
         if (newKey != KeyCode.None)
         {
-            keyBindingManager.jumpKeyCode = newKey;
-            keyBindingManager.SaveKeyBindings();
+            Managers.KeyBind.jumpKeyCode = newKey;
+            Managers.KeyBind.SaveKeyBindings();
         }
         else
         {
-            jumpKeyInputField.text = keyBindingManager.jumpKeyCode.ToString();
+            jumpKeyInputField.text = Managers.KeyBind.jumpKeyCode.ToString();
         }
     }
 
@@ -61,40 +70,40 @@ public class KeyBindingUIManager : MonoBehaviour
         KeyCode newKey = GetKeyCodeFromName(key);
         if (newKey != KeyCode.None)
         {
-            keyBindingManager.slideKeyCode = newKey;
-            keyBindingManager.SaveKeyBindings();
+            Managers.KeyBind.slideKeyCode = newKey;
+            Managers.KeyBind.SaveKeyBindings();
         }
         else
         {
-            slideKeyInputField.text = keyBindingManager.slideKeyCode.ToString();
+            slideKeyInputField.text = Managers.KeyBind.slideKeyCode.ToString();
         }
     }
 
-/*    private void SetRunKey(string key)
-    {
-        KeyCode newKey = GetKeyCodeFromName(key);
-        if (newKey != KeyCode.None)
+    /*    private void SetRunKey(string key)
         {
-            keyBindingManager.runKeyCode = newKey;
-            keyBindingManager.SaveKeyBindings();
-        }
-        else
-        {
-            runKeyInputField.text = keyBindingManager.runKeyCode.ToString();
-        }
-    }*/
+            KeyCode newKey = GetKeyCodeFromName(key);
+            if (newKey != KeyCode.None)
+            {
+                Managers.KeyBind.runKeyCode = newKey;
+                Managers.KeyBind.SaveKeyBindings();
+            }
+            else
+            {
+                runKeyInputField.text = Managers.KeyBind.runKeyCode.ToString();
+            }
+        }*/
 
     private void SetLeftKey(string key)
     {
         KeyCode newKey = GetKeyCodeFromName(key);
         if (newKey != KeyCode.None)
         {
-            keyBindingManager.leftKeyCode = newKey;
-            keyBindingManager.SaveKeyBindings();
+            Managers.KeyBind.leftKeyCode = newKey;
+            Managers.KeyBind.SaveKeyBindings();
         }
         else
         {
-            leftKeyInputField.text = keyBindingManager.leftKeyCode.ToString();
+            leftKeyInputField.text = Managers.KeyBind.leftKeyCode.ToString();
         }
     }
 
@@ -103,12 +112,12 @@ public class KeyBindingUIManager : MonoBehaviour
         KeyCode newKey = GetKeyCodeFromName(key);
         if (newKey != KeyCode.None)
         {
-            keyBindingManager.rightKeyCode = newKey;
-            keyBindingManager.SaveKeyBindings();
+            Managers.KeyBind.rightKeyCode = newKey;
+            Managers.KeyBind.SaveKeyBindings();
         }
         else
         {
-            rightKeyInputField.text = keyBindingManager.rightKeyCode.ToString();
+            rightKeyInputField.text = Managers.KeyBind.rightKeyCode.ToString();
         }
     }
 }
