@@ -123,13 +123,13 @@ public class PlayerController : MonoBehaviour
     #region 점프, 더블점프
     private void UpdateJump()
     {
-        if (Input.GetKeyDown(keyBindingManager.jumpKeyCode))
+        if (Input.GetKeyDown(Managers.KeyBind.jumpKeyCode))
         {
             movement.Jump();
         }
 
         // 더블 점프 체크
-        if (Input.GetKey(keyBindingManager.jumpKeyCode))
+        if (Input.GetKey(Managers.KeyBind.jumpKeyCode))
         {
             movement.IsLongJump = true;
         }
