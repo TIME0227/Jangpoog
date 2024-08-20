@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class LevelUpToken : ItemBase
 {
-    public override void UpdateCollision(Transform target)
+/*    public override void UpdateCollision(Transform target)
     {
         target.GetComponent<PlayerDataManager>().LevelUpToken++;
+    }*/
+    public override void UpdateCollision(Transform target)
+    {
+        var playerDataManager = target.GetComponent<PlayerDataManager>();
+
+        if (playerDataManager != null)
+        {
+            playerDataManager.LevelUpToken++;
+
+            Destroy(gameObject);
+        }
     }
 }
