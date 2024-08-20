@@ -10516,6 +10516,14 @@ PrefabInstance:
       propertyPath: manaText
       value: 
       objectReference: {fileID: 1666561251}
+    - target: {fileID: 6753386744825305097, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: hpText
+      value: 
+      objectReference: {fileID: 1257995098}
+    - target: {fileID: 6753386744825305097, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: manaText
+      value: 
+      objectReference: {fileID: 1666561251}
     - target: {fileID: 7899691687604606367, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: m_Name
       value: Player

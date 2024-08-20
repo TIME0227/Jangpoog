@@ -206,9 +206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd3a8538ff56437491576cdf0178e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterData: {fileID: 0}
-  currentHp: 0
-  currentDamage: 0
+  monsterData: {fileID: 11400000, guid: 61021b9dde2674198acca4e318b85caa, type: 2}
+  currentHp: 2.5
+  currentDamage: 0.4
 --- !u!1 &1460995482492397856
 GameObject:
   m_ObjectHideFlags: 0
