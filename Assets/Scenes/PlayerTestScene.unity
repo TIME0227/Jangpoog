@@ -10362,6 +10362,10 @@ PrefabInstance:
       propertyPath: manaRegenerationRate
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7094759453260409950, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7899691687604606367, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: m_Name
       value: Player
