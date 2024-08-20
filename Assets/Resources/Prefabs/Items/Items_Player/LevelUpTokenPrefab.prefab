@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1689687031440058444}
-  m_Layer: 17
+  m_Layer: 11
   m_Name: LevelUpTokenPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1182803806033894559}
   - component: {fileID: 517438767388493924}
   - component: {fileID: 4579573337239870839}
-  m_Layer: 17
+  m_Layer: 11
   m_Name: LevelUpToken
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1593,7 +1593,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 571887355}
-  - component: {fileID: 571887357}
   - component: {fileID: 571887356}
   m_Layer: 0
   m_Name: KeyboadController
@@ -1634,23 +1633,6 @@ MonoBehaviour:
   runKeyInputField: {fileID: 527472902}
   leftKeyInputField: {fileID: 1685320178}
   rightKeyInputField: {fileID: 1029400588}
---- !u!114 &571887357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571887354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3074a80c110434d986310197df52a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpKeyCode: 119
-  slideKeyCode: 115
-  runKeyCode: 304
-  leftKeyCode: 97
-  rightKeyCode: 100
 --- !u!1 &645705239
 GameObject:
   m_ObjectHideFlags: 0
@@ -3927,8 +3909,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571887357}
-        m_TargetAssemblyTypeName: KeyBindingManager, Assembly-CSharp
+      - m_Target: {fileID: 571887356}
+        m_TargetAssemblyTypeName: KeyBindingUIManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
