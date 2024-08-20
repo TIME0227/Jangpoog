@@ -23,6 +23,9 @@ public class Managers : MonoBehaviour
     private UIManager _ui = new UIManager();
     private SoundManager sound = new SoundManager();
     private PlayerDataManager _playerData;
+
+    private KeyBindingManager _keyBind = new KeyBindingManager();
+    
     
     public static DataManager Data { get { return Instance._data; } }
     public static InputManager Input { get { return Instance._input; } }
@@ -47,6 +50,15 @@ public class Managers : MonoBehaviour
             }
 
             return Instance._playerData;
+        }
+    }
+
+
+    public static KeyBindingManager KeyBind
+    {
+        get
+        {
+            return Instance._keyBind;
         }
     }
     
@@ -82,6 +94,7 @@ public class Managers : MonoBehaviour
 
             s_instance._data.Init();
             s_instance.sound.Init();
+            s_instance._keyBind.LoadKeyBindings();
         }
 
     }
