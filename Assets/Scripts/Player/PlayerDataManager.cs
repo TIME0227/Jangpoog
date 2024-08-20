@@ -38,7 +38,7 @@ public class PlayerDataManager : MonoBehaviour
             if (value != mana)
             {
                 mana = Mathf.Clamp(value, 0, maxMana);
-                UpdateManaText();
+                //UpdateManaText();
                 UpdateManaAction?.Invoke(mana);
             }
         }
@@ -78,7 +78,7 @@ public class PlayerDataManager : MonoBehaviour
                 {
                     hp = maxHp;
                 }
-                UpdateHpText();
+                //UpdateHpText();
                 UpdateHpAction?.Invoke(hp);
                 
                 if(hp==0)
@@ -124,10 +124,10 @@ public class PlayerDataManager : MonoBehaviour
     }
 
     // 마나 텍스트 업데이트
-    private void UpdateManaText()
-    {
-       manaText.text = $"Mana {mana}/{maxMana}";
-    }
+    // private void UpdateManaText()
+    // {
+    //    manaText.text = $"Mana {mana}/{maxMana}";
+    // }
     #endregion
 
 
@@ -159,10 +159,10 @@ public class PlayerDataManager : MonoBehaviour
     #region HP
 
     // 체력 텍스트 업데이트
-    private void UpdateHpText()
-    {
-        hpText.text = $"Hp {hp:F2}/{maxHp:F2}"; //Format the HP text with two decimal places (240807)
-    }
+    // private void UpdateHpText()
+    // {
+    //     hpText.text = $"Hp {hp:F2}/{maxHp:F2}"; //Format the HP text with two decimal places (240807)
+    // }
 
     public void OnAttacked(float damage)
     {

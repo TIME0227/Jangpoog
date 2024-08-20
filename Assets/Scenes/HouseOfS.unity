@@ -8960,11 +8960,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 317841078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1557250110 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 187112809751830480, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
-  m_PrefabInstance: {fileID: 1816823931}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1661211000
 GameObject:
   m_ObjectHideFlags: 0
@@ -9007,7 +9002,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1727740717}
   - component: {fileID: 1727740718}
-  - component: {fileID: 1727740719}
   m_Layer: 13
   m_Name: InteractObject
   m_TagString: Untagged
@@ -9082,29 +9076,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!136 &1727740719
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727740716}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1
-  m_Height: 0.14
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.00000011920929, z: 0}
 --- !u!1001 &1816823931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9157,6 +9128,18 @@ PrefabInstance:
       propertyPath: manaText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6753386744825305097, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944388229652730403, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190888457531995727, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7899691687604606367, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -9182,7 +9165,6 @@ GameObject:
   - component: {fileID: 2055837765}
   - component: {fileID: 2055837764}
   - component: {fileID: 2055837766}
-  - component: {fileID: 2055837767}
   m_Layer: 13
   m_Name: Silvan
   m_TagString: Untagged
@@ -9246,44 +9228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680bd306dcfc94ce4a73ee0147d5d7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactSprite: {fileID: 1557250110}
+  _interactSprite: {fileID: 1727740718}
   dialogueText: {fileID: 11400000, guid: 0f401b79ebded472e8b1392e0da5786f, type: 2}
   dialogueController: {fileID: 1340841894}
---- !u!70 &2055837767
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055837763}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
 --- !u!1 &2112177670
 GameObject:
   m_ObjectHideFlags: 0
@@ -9369,13 +9316,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!136 &2112177673
-CapsuleCollider:
+--- !u!58 &2112177673
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112177670}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9384,14 +9333,24 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.023728946, y: 0.03}
   serializedVersion: 2
-  m_Radius: 0.25999996
-  m_Height: 0.44999996
-  m_Direction: 1
-  m_Center: {x: -0.000000007450581, y: -0.00000011920929, z: 0}
+  m_Radius: 0.15
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
