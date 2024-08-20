@@ -72,11 +72,11 @@ public class PlayerController : MonoBehaviour
     private float GetHorizontalInput()
     {
         float x = 0;
-        if (Input.GetKey(keyBindingManager.leftKeyCode))
+        if (Input.GetKey(Managers.KeyBind.leftKeyCode))
         {
             x = -1;
         }
-        else if (Input.GetKey(keyBindingManager.rightKeyCode))
+        else if (Input.GetKey(Managers.KeyBind.rightKeyCode))
         {
             x = 1;
         }
@@ -109,11 +109,11 @@ public class PlayerController : MonoBehaviour
     #region 달리기
     private void UpdateRun()
     {
-        if (Input.GetKeyDown(keyBindingManager.runKeyCode))
+        if (Input.GetKeyDown(Managers.KeyBind.runKeyCode))
         {
             isRunning = true;
         }
-        else if (Input.GetKeyUp(keyBindingManager.runKeyCode))
+        else if (Input.GetKeyUp(Managers.KeyBind.runKeyCode))
         {
             isRunning = false;
         }
@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
         {
             movement.IsLongJump = true;
         }
-        else if (Input.GetKeyUp(keyBindingManager.jumpKeyCode))
+        else if (Input.GetKeyUp(Managers.KeyBind.jumpKeyCode))
         {
             movement.IsLongJump = false;
         }
@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
     {
         if (movement.IsGrounded)
         {                          // 공중 슬라이딩 방지 (isGrounded : 바닥에 닿았을 때 true)
-            if (Input.GetKeyDown(keyBindingManager.slideKeyCode))     // 슬라이딩 키 눌렀을 때
+            if (Input.GetKeyDown(Managers.KeyBind.slideKeyCode))     // 슬라이딩 키 눌렀을 때
             {
                 if (!isSliding)
                 {
