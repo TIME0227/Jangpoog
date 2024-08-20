@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class KeyBindingManager : MonoBehaviour
+public class KeyBindingManager
 {
     public static KeyBindingManager Instance { get; private set; }
 
-    // Àá±ñ Å×½ºÆ®¿ë ¹öÆ°
+    // ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½Æ°
     private string nextSceneName = "1-1 tutorial";
 
     public void OnButtonClick()
@@ -14,18 +14,18 @@ public class KeyBindingManager : MonoBehaviour
     }
 
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    // private void Awake()
+    // {
+    //     if (Instance == null)
+    //     {
+    //         Instance = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     else
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     public KeyCode jumpKeyCode = KeyCode.W;
     public KeyCode slideKeyCode = KeyCode.S;
@@ -33,10 +33,10 @@ public class KeyBindingManager : MonoBehaviour
     public KeyCode leftKeyCode = KeyCode.A;
     public KeyCode rightKeyCode = KeyCode.D;
 
-    private void Start()
-    {
-        LoadKeyBindings();
-    }
+    // private void Start()
+    // {
+    //    
+    // }
 
     public void SaveKeyBindings()
     {

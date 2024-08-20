@@ -110,8 +110,8 @@ public class PlayerDataManager : MonoBehaviour
 
     private void Update()
     {
-        UpdateManaText();
-        UpdateHpText();
+        // UpdateManaText();
+        // UpdateHpText();
         UpdateLevelUpToken();
 
     }
