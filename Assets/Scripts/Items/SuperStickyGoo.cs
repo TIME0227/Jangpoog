@@ -35,8 +35,9 @@ public class SuperStickyGoo : ItemBase
         else if (other.CompareTag("Player"))
         {
             Debug.Log("플레이어 속도 감소");
-            //speed가 private라서 프로퍼티 필요
-            //other.GetComponent<MovementRigidbody2D>().speed
+            other.GetComponent<MovementRigidbody2D>().walkSpeed /= 2;
+            
+            
         }
     }
 
@@ -52,7 +53,7 @@ public class SuperStickyGoo : ItemBase
 
         else if (other.CompareTag("Player"))
         {
-            //...
+            other.GetComponent<MovementRigidbody2D>().walkSpeed *= 2;
         }
     }
 

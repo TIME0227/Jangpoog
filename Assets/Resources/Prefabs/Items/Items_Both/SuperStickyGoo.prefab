@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5824150129615486641}
   - component: {fileID: 4530157333274456601}
   - component: {fileID: 5288050680417336551}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631be0063d3324b13a8a2f65e81b181d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnForce: {x: 1, y: 7}
+  aliveTImeAfterSpwn: 5
 --- !u!1 &6996909955919031919
 GameObject:
   m_ObjectHideFlags: 0
