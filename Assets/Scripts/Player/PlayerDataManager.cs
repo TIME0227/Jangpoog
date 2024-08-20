@@ -189,14 +189,16 @@ public class PlayerDataManager : MonoBehaviour
         //1. flag 설정
         isInvincibility = true;
         //2. invincibilityTime 동안 레이어 변경, 깜박이기 효과
-        transform.parent.gameObject.layer = (int)Define.Layer.PlayerDamaged; //무적 상태 레이어로 변경
+        gameObject.layer = (int)Define.Layer.PlayerDamaged; //무적 상태 레이어로 변경
         
         //3. blink speed
         float blinkSpeed = 10;
+        Debug.Log(invincibilityTime);
         while (invincibilityTime>0)
         {
             invincibilityTime -= Time.deltaTime;
             Color color = spriteRenderer.color;
+            Debug.Log("a;lfdjas;lfja;lf");
             color.a = Mathf.SmoothStep(0, 1, Mathf.PingPong(Time.time * blinkSpeed, 1));
             //PingPong : 0~1 사이를 왕복
             //SmoothStep : 두 값 사이의 부드러운 전환(보간) 효과
@@ -205,7 +207,7 @@ public class PlayerDataManager : MonoBehaviour
         }
 
         spriteRenderer.color = originColor; //alpha 복구
-        transform.parent.gameObject.layer = (int)Define.Layer.Player; //원래 레이어로 복구
+        gameObject.layer = (int)Define.Layer.Player; //원래 레이어로 복구
         isInvincibility = false;
 
     }
