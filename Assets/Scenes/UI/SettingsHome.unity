@@ -3927,8 +3927,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571887357}
-        m_TargetAssemblyTypeName: KeyBindingManager, Assembly-CSharp
+      - m_Target: {fileID: 571887356}
+        m_TargetAssemblyTypeName: KeyBindingUIManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
