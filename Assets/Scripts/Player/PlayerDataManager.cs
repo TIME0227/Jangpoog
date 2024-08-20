@@ -126,7 +126,7 @@ public class PlayerDataManager : MonoBehaviour
     // 마나 텍스트 업데이트
     private void UpdateManaText()
     {
-        manaText.text = $"Mana {mana}/{maxMana}";
+       manaText.text = $"Mana {mana}/{maxMana}";
     }
     #endregion
 
