@@ -15,7 +15,11 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     private float walkSpeed = 5; // 걷는 속도
     [SerializeField]
     private float runSpeed = 8; // 뛰는 속도
-
+    public float WalkSpeed
+    {
+        get { return walkSpeed; }
+    }
+    
     [Header("Jump")]
     [SerializeField]
     private float jumpForce = 13; // 점프 힘
@@ -71,21 +75,11 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
         UpdateCollision();
         JumpHeight();
         JumpAdditive();
-        
-        
-        // if(!isGrounded)
-        //     Debug.Log("바닥아님");
     }
 
     // x축 속력(velocity) 설정, 외부 클래스에서 호출
     public void MoveTo(float x)
     {
-        // x의 절대값이 0.5이면 걷기(walkSpeed), 1이면 뛰기(runSpeed)
-        // moveSpeed = Mathf.Abs(x) != 1 ? walkSpeed : runSpeed; //도현 : 뛰기 없으므로 x가 1일때 모두 walkspeed로 처리. 이를 위해 코드 주석 처리(0704)
-
-        // x가 -0.5, 0.5의 값을 가질 때 x를 -1, 1로 변경
-        //if (x != 0) x = Mathf.Sign(x); //도현 : 뛰기 없으므로 x가 1일때 모두 walkspeed로 처리. 이를 위해 코드 주석 처리(0704)
-
         // x축 방향 속력을 x * moveSpeed로 설정
         rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
     }
@@ -119,10 +113,10 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     // y축 점프
     public void Jump()
     {
-        /*        if (IsGrounded == true)
-                {
-                    rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpForce);
-                }*/
+       if (IsGrounded == true)
+       {
+            rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpForce);
+       }
 
         jumpBufferCounter = jumpBufferTime;
     }
@@ -173,15 +167,6 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     {
         rigid2D.velocity = new Vector2(rigid2D.velocity.x, 0);
     }
-    
-    private void OnDrawGizmos()
-    {
-        
-        // // 충돌 범위 디버그 표시 색상 설정
-        // Gizmos.color = Color.red;
-        //
-        // // footPosition에 생성되는 OverlapBox 디버그 표시
-        // Gizmos.DrawWireCube(footPosition, collisionSize);
-    }
+
 }
 

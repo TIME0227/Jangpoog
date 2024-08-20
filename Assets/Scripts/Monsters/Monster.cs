@@ -82,8 +82,11 @@ public class Monster : MonoBehaviour
     private void Update()
     {
         CalcDirection();
+    }
+
+    private void LateUpdate()
+    {
         //FlipSprite();
-        
     }
 
     #region Control
