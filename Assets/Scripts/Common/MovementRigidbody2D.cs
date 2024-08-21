@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MovementRigidbody2D : MonoBehaviour
@@ -11,7 +12,73 @@ public class MovementRigidbody2D : MonoBehaviour
     private LayerMask belowColiisionLayer; // 발 충돌 체크를 위한 레이어
 
     [Header("Move")]
-    public float walkSpeed = 5; // 걷는 속도
+    public float originWalkSpeed = 5; // 걷는 속도
+
+    #region Move Speed Control Variables / Methods
+    [NonSerialized] public float walkSpeed;
+    [NonSerialized] public float ssgWalkSpeed;
+    [NonSerialized] public float sgWalkSpeed;
+    private bool isInSsg = false;
+    private bool isInSg = false;
+
+
+    public bool IsInSgg
+    {
+        get { return isInSsg; }
+        set
+        {
+            isInSsg = value;
+            int state = value ? 1 : (IsInSg ? 2 : 0);
+            controlSpeedAction?.Invoke(state);
+            
+        }
+    }
+
+
+    public bool IsInSg
+    {
+        get { return isInSg; }
+        set
+        {
+            isInSg = value;
+            int state = IsInSg ? 1 : (value ? 2 : 0);
+            controlSpeedAction?.Invoke(state);
+        }
+    }
+
+
+    public Action<int> controlSpeedAction = null;
+
+    /// <summary>
+    /// 0 : 원래 속도대로
+    /// 1 : ssg 안에서 감속 (0.5배)
+    /// 2 : sg 안에서 감속(0.75배)
+    /// </summary>
+    /// <param name="state"></param>
+    private void WalkSpeedState(int state)
+    {
+        switch (state)
+        {
+            case 0:
+                //원래 속도대로
+                walkSpeed = originWalkSpeed;
+                break;
+            case 1:
+                //ssg
+                walkSpeed = ssgWalkSpeed;
+                break;
+            case 2:
+                //sg
+                walkSpeed = sgWalkSpeed;
+                break;
+        }
+        Debug.Log($"state : {state} / walkspeed : {walkSpeed}");
+
+    }
+
+    #endregion
+
+    
     [SerializeField]
     public float runSpeed = 8; // 뛰는 속도
     
@@ -37,7 +104,6 @@ public class MovementRigidbody2D : MonoBehaviour
     private Vector2 collisionSize; // 머리, 발 위치에 생성하는 충돌 박스 크기
     private Vector2 footPosition; // 발 위치
     private Vector2 headPosition; // 머리 위치
-    public Vector2 HeadPosition { get { return headPosition; } }
 
     private Rigidbody2D rigid2D; // 물리를 제어하는 컴포넌트
     private Collider2D collider2D; // 현재 오브젝트의 충돌 범위
@@ -52,11 +118,20 @@ public class MovementRigidbody2D : MonoBehaviour
 
     private void Awake()
     {
-        moveSpeed = walkSpeed;
-
         rigid2D = GetComponent<Rigidbody2D>();
         collider2D = GetComponent<Collider2D>();
         if (collider2D == null) collider2D = GetComponentInChildren<Collider2D>();
+        
+        //speed 설정 & ssg, sg에 의해 감속된 speed 값 구해두기
+        walkSpeed = originWalkSpeed;
+        ssgWalkSpeed = originWalkSpeed * 0.5f;
+        sgWalkSpeed = originWalkSpeed * 0.75f;
+        
+        //action 등록
+        controlSpeedAction -= WalkSpeedState;
+        controlSpeedAction += WalkSpeedState;
+
+
     }
 
     private void Update()

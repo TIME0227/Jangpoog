@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SuperStickyGoo : ItemBase
+public class SuperStickyGoo : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
 
@@ -23,10 +23,8 @@ public class SuperStickyGoo : ItemBase
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
         if (other.CompareTag("Monster"))
         {
-            Debug.Log("공격력, 사이즈 증가");
             other.GetComponent<MonsterController>().stat.currentDamage *= 1.5f;
             other.transform.localScale *= 1.2f;
 
@@ -34,10 +32,8 @@ public class SuperStickyGoo : ItemBase
 
         else if (other.CompareTag("Player"))
         {
-            Debug.Log("플레이어 속도 감소");
-            other.GetComponent<MovementRigidbody2D>().walkSpeed /= 2;
-            
-            
+            MovementRigidbody2D playerMovement = other.GetComponent<MovementRigidbody2D>();
+            playerMovement.IsInSg = true;
         }
     }
 
@@ -45,7 +41,6 @@ public class SuperStickyGoo : ItemBase
     {
         if (other.CompareTag("Monster"))
         {
-            Debug.Log("공격력, 사이즈 원래대로");
             other.GetComponent<MonsterController>().stat.currentDamage /= 1.5f;
             other.transform.localScale /= 1.2f;
 
@@ -53,15 +48,10 @@ public class SuperStickyGoo : ItemBase
 
         else if (other.CompareTag("Player"))
         {
-            other.GetComponent<MovementRigidbody2D>().walkSpeed *= 2;
+            MovementRigidbody2D playerMovement = other.GetComponent<MovementRigidbody2D>();
+            playerMovement.IsInSg = false;
+
         }
     }
-
-    public override void UpdateCollision(Transform target)
-    {
-        // ItemBase 상속 받느라 기능은 없지만 ...
-    }
-
-
 
 }
