@@ -172,7 +172,7 @@ MonoBehaviour:
   manaConsumption: 5
   hp: 10
   maxHp: 10
-  invincibilityDuration: 2
+  invincibilityDuration: 1.5
   spriteRenderer: {fileID: 187112809751830480}
 --- !u!1 &8984064176265936863
 GameObject:

@@ -96,6 +96,11 @@ public class PlayerDataManager : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Color originColor;
     
+    public bool IsInvincibility
+    {
+        get { return isInvincibility; }
+    }
+    
 
     private void Awake()
     {
@@ -148,17 +153,26 @@ public class PlayerDataManager : MonoBehaviour
 
 
     #region HP
-    public void OnAttacked(float damage)
+    public void OnAttacked(float damage, bool invincible = true)
     {
         if (damage <= 0)
         {
             Debug.Log("오류 : 몬스터 공격 데미지가 0 또는 음수입니다!!");
             return;
         }
-        //1. 무적 상태 처리
-        if (isInvincibility) return; //무적 상태에서는 HP 감소 x
 
-        OnInvincibility(invincibilityDuration); //공격 받으면 invincibilityDuration초 동안 무적 상태
+        if (invincible)
+        {
+            //1. 무적 상태 처리
+            if (isInvincibility) return; //무적 상태에서는 HP 감소 x
+
+            OnInvincibility(invincibilityDuration); //공격 받으면 invincibilityDuration초 동안 무적 상태
+        }
+        else
+        {
+            //레이어를 바꾸는지 않고 
+        }
+
 
         //2. 체력 감소 처리
         Hp -= damage;
@@ -193,7 +207,6 @@ public class PlayerDataManager : MonoBehaviour
         
         //3. blink speed
         float blinkSpeed = 10;
-        Debug.Log(invincibilityTime);
         while (invincibilityTime>0)
         {
             invincibilityTime -= Time.deltaTime;

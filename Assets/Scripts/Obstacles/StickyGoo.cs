@@ -8,19 +8,31 @@ public class StickyGoo : MonoBehaviour
 {
     //데미지
     [SerializeField] private float damage = 0.2f;
+    [SerializeField] private float damageDelayTime = 2f;
+
+    
     //속도 회복 딜레이
     [SerializeField] private float delayTime = 10f;
 
     private bool isCoroutineRunning = false;
     private MovementRigidbody2D playerMovement = null;
+    private PlayerDataManager playerData;
     
     //2. 범위 내에서 속도 3/4배로 감소
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            playerMovement = other.GetComponent<MovementRigidbody2D>();
-            playerMovement.IsInSg = true;
+            playerData = other.GetComponent<PlayerDataManager>();
+            Debug.Log("safasfdsaf?????");
+
+
+            if (playerData != null && !playerData.IsInvincibility)
+            {
+                playerMovement = other.GetComponent<MovementRigidbody2D>();
+                playerMovement.IsInSg = true;
+            }
+            
             
         }
     }
@@ -29,7 +41,7 @@ public class StickyGoo : MonoBehaviour
     //1. 데미지 2초당 0.2 hp 감소
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player")&&!isCoroutineRunning)
+        if (other.CompareTag("Player")&&!isCoroutineRunning && !playerData.IsInvincibility)
         {
             isCoroutineRunning = true;
             StartCoroutine(nameof(AttackPlayerOverTime));
@@ -42,7 +54,7 @@ public class StickyGoo : MonoBehaviour
         Managers.PlayerData.OnAttacked(damage);
         
         //delay
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSeconds(damageDelayTime);
         isCoroutineRunning = false;
     }
 

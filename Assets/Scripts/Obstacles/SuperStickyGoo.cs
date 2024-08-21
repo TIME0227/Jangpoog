@@ -33,7 +33,7 @@ public class SuperStickyGoo : MonoBehaviour
         else if (other.CompareTag("Player"))
         {
             MovementRigidbody2D playerMovement = other.GetComponent<MovementRigidbody2D>();
-            playerMovement.IsInSg = true;
+            playerMovement.IsInSsg = true;
         }
     }
 
@@ -49,7 +49,7 @@ public class SuperStickyGoo : MonoBehaviour
         else if (other.CompareTag("Player"))
         {
             MovementRigidbody2D playerMovement = other.GetComponent<MovementRigidbody2D>();
-            playerMovement.IsInSg = false;
+            playerMovement.IsInSsg = false;
 
         }
     }

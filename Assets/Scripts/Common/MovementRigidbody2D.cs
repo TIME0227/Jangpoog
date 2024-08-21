@@ -22,7 +22,7 @@ public class MovementRigidbody2D : MonoBehaviour
     private bool isInSg = false;
 
 
-    public bool IsInSgg
+    public bool IsInSsg
     {
         get { return isInSsg; }
         set
@@ -41,7 +41,7 @@ public class MovementRigidbody2D : MonoBehaviour
         set
         {
             isInSg = value;
-            int state = IsInSg ? 1 : (value ? 2 : 0);
+            int state = isInSsg ? 1 : (value ? 2 : 0);
             controlSpeedAction?.Invoke(state);
         }
     }

@@ -419,6 +419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_Slime_v1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.95214
@@ -3116,11 +3120,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1305247068865435552, guid: f4f687ca5e4774eb9b5ba1b5e81d6676, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -121.427
+      value: -130.99
       objectReference: {fileID: 0}
     - target: {fileID: 1305247068865435552, guid: f4f687ca5e4774eb9b5ba1b5e81d6676, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.964
+      value: -19.99
       objectReference: {fileID: 0}
     - target: {fileID: 1305247068865435552, guid: f4f687ca5e4774eb9b5ba1b5e81d6676, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3153,6 +3157,10 @@ PrefabInstance:
     - target: {fileID: 1305247068865435552, guid: f4f687ca5e4774eb9b5ba1b5e81d6676, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517346413499872642, guid: f4f687ca5e4774eb9b5ba1b5e81d6676, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6996909955919031919, guid: f4f687ca5e4774eb9b5ba1b5e81d6676, type: 3}
       propertyPath: m_Name
@@ -3607,6 +3615,10 @@ PrefabInstance:
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Name
       value: Monster_Slime_v1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4651,6 +4663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_BombSlime
       objectReference: {fileID: 0}
+    - target: {fileID: 990066786842934706, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -110.064285
@@ -4990,6 +5006,10 @@ PrefabInstance:
     - target: {fileID: 990066786842934706, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_Name
       value: Monster_BombSlime (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 990066786842934706, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5602,6 +5622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_Slime_v1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.038192
@@ -5849,6 +5873,10 @@ PrefabInstance:
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Name
       value: Monster_Slime_v1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6113,6 +6141,10 @@ PrefabInstance:
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Name
       value: Monster_Slime_v1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6459,6 +6491,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 331557050696736152, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
   m_PrefabInstance: {fileID: 3340573091509180060}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1590622510 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6944388229652730403, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+  m_PrefabInstance: {fileID: 3340573091509180060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72101e87c36c1bd49a8bc9c889fee912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1659146109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6470,6 +6513,10 @@ PrefabInstance:
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Name
       value: Monster_Slime_v1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9195,6 +9242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_Slime_v1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.82684
@@ -9354,6 +9405,10 @@ PrefabInstance:
     - target: {fileID: 990066786842934706, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_Name
       value: Monster_BombSlime (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 990066786842934706, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9660,6 +9715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_Slime_v1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -79.48325
@@ -9717,6 +9776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_BombSlime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 990066786842934706, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4595950606113137361, guid: 1522d18b275784781b6d17c6f664021c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -81.343765
@@ -9773,6 +9836,10 @@ PrefabInstance:
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Name
       value: Monster_Slime_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9892,6 +9959,10 @@ PrefabInstance:
     - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Name
       value: Monster_Slime_v1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191551650843982732, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10571,22 +10642,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6209429945396007862, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
-      propertyPath: hpText
-      value: 
-      objectReference: {fileID: 1257995098}
-    - target: {fileID: 6209429945396007862, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
-      propertyPath: manaText
-      value: 
-      objectReference: {fileID: 1666561251}
-    - target: {fileID: 6753386744825305097, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
-      propertyPath: hpText
-      value: 
-      objectReference: {fileID: 1257995098}
-    - target: {fileID: 6753386744825305097, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
-      propertyPath: manaText
-      value: 
-      objectReference: {fileID: 1666561251}
     - target: {fileID: 7899691687604606367, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -10623,7 +10678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f2c39921773406485171cbaa590655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 1590622510}
   cameraFollow: {fileID: 1176004160}
   currentStageData: {fileID: 0}
   tempChapter: 1
