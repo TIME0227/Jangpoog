@@ -38,7 +38,6 @@ public class PlayerDataManager : MonoBehaviour
             if (value != mana)
             {
                 mana = Mathf.Clamp(value, 0, maxMana);
-                UpdateManaText();
                 UpdateManaAction?.Invoke(mana);
             }
         }
@@ -96,9 +95,16 @@ public class PlayerDataManager : MonoBehaviour
     [Header("Invincibility")]
     [SerializeField][Tooltip("피격 시 추가되는 무적 지속 시간")] private float invincibilityDuration = 1;//피격시 추가되는 무적 시간
     private float invincibilityTime = 0; //무적 지속 시간
-    private bool isInvincibility = false; //무적 여부
+    private bool isInvincible = false; //무적 여부
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Color originColor;
+
+    [Header("Invisibility")] 
+    public bool isInvisible = false;
+    public bool IsInvisible
+    {
+        get { return isInvisible; }
+    }
 
 
     private void Awake()
@@ -110,10 +116,7 @@ public class PlayerDataManager : MonoBehaviour
 
     private void Update()
     {
-        UpdateManaText();
-        UpdateHpText();
         UpdateLevelUpToken();
-
     }
 
     #region MP
@@ -121,12 +124,6 @@ public class PlayerDataManager : MonoBehaviour
     private void RegenerateMana()
     {
         Mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
-    }
-
-    // 마나 텍스트 업데이트
-    private void UpdateManaText()
-    {
-        manaText.text = $"Mana {mana}/{maxMana}";
     }
     #endregion
 
@@ -158,12 +155,6 @@ public class PlayerDataManager : MonoBehaviour
 
     #region HP
 
-    // 체력 텍스트 업데이트
-    private void UpdateHpText()
-    {
-        hpText.text = $"Hp {hp:F2}/{maxHp:F2}"; //Format the HP text with two decimal places (240807)
-    }
-
     public void OnAttacked(float damage)
     {
         if (damage <= 0)
@@ -172,7 +163,7 @@ public class PlayerDataManager : MonoBehaviour
             return;
         }
         //1. 무적 상태 처리
-        if (isInvincibility) return; //무적 상태에서는 HP 감소 x
+        if (isInvincible) return; //무적 상태에서는 HP 감소 x
 
         OnInvincibility(invincibilityDuration); //공격 받으면 invincibilityDuration초 동안 무적 상태
 
@@ -187,7 +178,7 @@ public class PlayerDataManager : MonoBehaviour
 
     private void OnInvincibility(float time)
     {
-        if (isInvincibility)
+        if (isInvincible)
         {
             invincibilityTime += time;
         }
@@ -203,7 +194,7 @@ public class PlayerDataManager : MonoBehaviour
     IEnumerator Invincibility()
     {
         //1. flag 설정
-        isInvincibility = true;
+        isInvincible = true;
         //2. invincibilityTime 동안 레이어 변경, 깜박이기 효과
         transform.parent.gameObject.layer = (int)Define.Layer.PlayerDamaged; //무적 상태 레이어로 변경
 
@@ -222,7 +213,7 @@ public class PlayerDataManager : MonoBehaviour
 
         spriteRenderer.color = originColor; //alpha 복구
         transform.parent.gameObject.layer = (int)Define.Layer.Player; //원래 레이어로 복구
-        isInvincibility = false;
+        isInvincible = false;
 
     }
 

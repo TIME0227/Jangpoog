@@ -75,12 +75,21 @@ public class Monster : MonoBehaviour
         //이벤트 구독
         //stat.DieAction
         
-        target = GameObject.FindWithTag("Player");
+        
         
     }
 
     private void Update()
     {
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player.GetComponent<PlayerDataManager>().IsInvisible)
+        {
+            target = null;
+        }
+        else
+        {
+            target = player;
+        }
         CalcDirection();
     }
 
