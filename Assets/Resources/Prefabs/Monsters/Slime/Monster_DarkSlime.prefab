@@ -80,6 +80,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6016842671243142753, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016842671243142753, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: statFileName
+      value: Monster_DarkSlime
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016842671243142753, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016842671243142753, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[1].dropChance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093398972416209118, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_Radius
+      value: 0.40280735
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093398972416209118, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093398972416209118, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.52
+      objectReference: {fileID: 0}
     - target: {fileID: 6342380038074297027, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: m_Sprite
       value: 

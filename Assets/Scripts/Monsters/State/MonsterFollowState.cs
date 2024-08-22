@@ -45,20 +45,6 @@ public class MonsterFollowState : StateMachineBehaviour
                     monster.movement2D.MoveTo(monster.direction.normalized.x);
                     break;
             }
-       
-            // //앞으로 이동할 수 없는 영역을 만난 경우(level 2 이상의 플랫폼)
-            // if (Physics2D.Raycast(monsterTransform.position, monster.direction, 1.0f, LayerMask.GetMask("LevelN")))
-            // {
-            //     monster.movement2D.MoveTo(0);
-            // }
-            // //else if 1층인경우 점프
-            //
-            //
-            // //이동
-            // else
-            // {
-            //     monster.movement2D.MoveTo(monster.direction.normalized.x);
-            // }
         }
 
         //사정거리 안에 들어오는 경우 ready state로 가야함

@@ -10,6 +10,7 @@ public class SlimeAttackState : MonsterAttackState
     {
         base.OnStateEnter(animator,stateInfo,layerIndex);
         
+        
         if (!monster.movement2D.isJump)
         {
             monster.StartCoroutine(monster.CoJump(monster.direction)); 

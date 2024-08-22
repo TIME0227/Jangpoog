@@ -43,13 +43,13 @@ public class MonsterIdleState : StateMachineBehaviour
                     monster.ThinkDelay = monster.thinkTime;
                     monster.movement2D.MoveTo(0);
                     
-                    Debug.Log("목적지까지 도착하면 정지합니다.");
+                    //Debug.Log("목적지까지 도착하면 정지합니다.");
                 }
 
                 //목적지까지 이동
                 else
                 {
-                    Debug.Log("목적지까지 이동합니다.");
+                    if (monster.movement2D.isJump) return;
                     switch (monster.Detect(distance))
                     {
                         case -1:

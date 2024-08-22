@@ -232,12 +232,15 @@ public class Monster : MonoBehaviour
     /// <returns></returns>
     public int Detect(Vector3 direction)
     {
-        if (Physics2D.Raycast(transform.position, direction, 1.0f, LayerMask.GetMask("LevelN")))
+        direction.y = 0;
+        direction.z = 0;
+        Debug.DrawRay(transform.position,direction.normalized*1.5f,Color.green);
+        if (Physics2D.Raycast(transform.position, direction, 1.5f, LayerMask.GetMask("LevelN")))
         {
             Debug.Log("올라갈수 없는 곳 감지");
             return -1;
         }
-        else if (Physics2D.Raycast(transform.position, direction, 1.0f, LayerMask.GetMask("Level1")))
+        else if (Physics2D.Raycast(transform.position, direction, 1.5f, LayerMask.GetMask("Level1")))
         {
             Debug.Log("점프 가능");
             return 1;
@@ -276,7 +279,7 @@ public class Monster : MonoBehaviour
         while (true)
         {
             //UpdateDirection();
-            movement2D.MoveTo(dir.normalized.x);
+            movement2D.MoveTo(Mathf.Sign(dir.x));
             //y축 속력에 따라 올라가는 or 내려가는 애니메이션 재생
             anim.SetFloat("velocityY", movement2D.Velocity.y);
          
@@ -287,18 +290,18 @@ public class Monster : MonoBehaviour
                 anim.SetBool("isJump", false);
                 movement2D.MoveTo(0);
                 // //대기 행동 코루틴 호출
-                //yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(0.5f);
                 movement2D.isJump = false;
 
 
-                if (target != null)
-                {
-                    anim.SetBool("isFollow", true);
-                }
-                else
-                {
-                    anim.SetBool("isFollow", false);
-                }
+                // if (target != null)
+                // {
+                //     anim.SetBool("isFollow", true);
+                // }
+                // else
+                // {
+                //     anim.SetBool("isFollow", false);
+                // }
                 yield break;
             }
             yield return null;

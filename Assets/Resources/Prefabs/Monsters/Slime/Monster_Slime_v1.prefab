@@ -201,16 +201,16 @@ MonoBehaviour:
   target: {fileID: 0}
   moveRange: 2
   scanRange: 8
-  attackRange: 1.5
+  attackRange: 2
   minMoveRangeX: 0
   maxMoveRangeX: 0
   thinkTime: 2
   attackCoolTime: 2
   lootTable:
-  - item: 0
-    dropChance: 80
-  - item: 3
-    dropChance: 20
+  - item: 1
+    dropChance: 10
+  - item: 4
+    dropChance: 5
 --- !u!1 &1460995482492397856
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ Animator:
   m_GameObject: {fileID: 1460995482492397856}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1119e5ef322b1482180bbb7a47df6831, type: 2}
+  m_Controller: {fileID: 9100000, guid: 11abb8862b68a4fb48ae7ce59bda283a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

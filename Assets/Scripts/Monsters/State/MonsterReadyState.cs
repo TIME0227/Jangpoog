@@ -18,9 +18,13 @@ public class MonsterReadyState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        monster.Detect(monster.direction);
         //딜레이를 주고, attack trigger 호출
-        if(monster.AttackDelay<=0)
+        if (monster.AttackDelay <= 0 && monster.Detect(monster.direction) != -1)
+        {
             animator.SetTrigger("Attack");
+            
+        }
         
         //그리고 플레이어가 attackRange보다 멀어지면 다시 follow 상태로 가게 한다.
         if (monster.direction.magnitude > monster.attackRange)
