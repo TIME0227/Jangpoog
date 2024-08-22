@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7187684509480775708
+--- !u!1 &675734899963558469
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,30 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6029719137160624781}
-  m_Layer: 16
+  - component: {fileID: 4744803429451767152}
+  m_Layer: 0
   m_Name: ThrowStartPosition
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6029719137160624781
+--- !u!4 &4744803429451767152
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7187684509480775708}
+  m_GameObject: {fileID: 675734899963558469}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.542, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8741587388311543539}
+  m_Father: {fileID: 4795063094132719539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2500750789257659994
+--- !u!1001 &6951083191985396572
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -39,145 +39,104 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1159988736435826498, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_Size.x
-      value: 0.83605003
+    - target: {fileID: 1191551650843982732, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_new
       objectReference: {fileID: 0}
-    - target: {fileID: 1159988736435826498, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_Size.y
-      value: 1.9954406
-      objectReference: {fileID: 0}
-    - target: {fileID: 1159988736435826498, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.018024871
-      objectReference: {fileID: 0}
-    - target: {fileID: 1159988736435826498, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.093803234
-      objectReference: {fileID: 0}
-    - target: {fileID: 2386002734734546565, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -195378213, guid: 391ea985c84044caab7955a31cf91d63, type: 3}
-    - target: {fileID: 2518816302569433890, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.71875
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518816302569433890, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 1.390625
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518816302569433890, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.15625
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518816302569433890, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.609375
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.183
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.057
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7606962654666622922, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      propertyPath: m_Name
-      value: Monster_BatGoblin_v1
-      objectReference: {fileID: 0}
+    - target: {fileID: 6342380038074297027, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -675687143, guid: 391ea985c84044caab7955a31cf91d63, type: 3}
     m_RemovedComponents:
-    - {fileID: 5572394890164846417, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6029719137160624781}
+      addedObject: {fileID: 4744803429451767152}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7606962654666622922, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2371497540007196596}
-  m_SourcePrefab: {fileID: 100100000, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
---- !u!1 &5414786546025496976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7606962654666622922, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-  m_PrefabInstance: {fileID: 2500750789257659994}
+    - targetCorrespondingSourceObject: {fileID: 1191551650843982732, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 5411648145084550166}
+  m_SourcePrefab: {fileID: 100100000, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+--- !u!4 &4795063094132719539 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+  m_PrefabInstance: {fileID: 6951083191985396572}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2371497540007196596
+--- !u!1 &8141954782000554192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1191551650843982732, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+  m_PrefabInstance: {fileID: 6951083191985396572}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5411648145084550166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5414786546025496976}
+  m_GameObject: {fileID: 8141954782000554192}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b6b1ad0f7fa4d049893cff0fe916b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destPos: {x: 0, y: 0, z: 0}
-  state: 3
-  target: {fileID: 0}
+  statFileName: Monster_BatGoblin_v1
   stat: {fileID: 0}
-  moveRange: 2
-  scanRange: 8
-  attackRange: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
-  waitTime: 1.5
-  isJumping: 0
-  dir: {x: 0, y: 0, z: 0}
-  attackDelay: 1.5
+    m_Bits: 192
+  movement2D: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
+  target: {fileID: 0}
+  moveRange: 5
+  scanRange: 8
+  attackRange: 1.5
+  minMoveRangeX: 0
+  maxMoveRangeX: 0
+  thinkTime: 2
+  attackCoolTime: 1.5
   lootTable: []
-  throwStartPosition: {fileID: 6029719137160624781}
---- !u!4 &8741587388311543539 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
-  m_PrefabInstance: {fileID: 2500750789257659994}
-  m_PrefabAsset: {fileID: 0}
+  throwStartPosition: {fileID: 4744803429451767152}
+  batVersion: 1

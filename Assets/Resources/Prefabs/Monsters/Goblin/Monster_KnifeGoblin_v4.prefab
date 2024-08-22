@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1191551650843982732, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_Name
-      value: Monster_KnifeGoblin
+      value: Monster_KnifeGoblin_v4
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: statFileName
+      value: Monster_KnifeGoblin_v4
       objectReference: {fileID: 0}
     - target: {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: lootTable.Array.size
