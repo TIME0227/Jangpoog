@@ -45,7 +45,7 @@ public class UI_HPBar : UI_Base
         Vector2 headPosition = Util.GetOrAddComponent<Mon_MovementRigidbody2D>(parent.gameObject).HeadPosition;
         transform.position = new Vector3(headPosition.x, headPosition.y + offset_y, parent.position.z);
 
-        float value = monster.stat.currentHp;
+        float value = monster.stat.CurrentHp;
         SetHpRatio(value);
     }
 

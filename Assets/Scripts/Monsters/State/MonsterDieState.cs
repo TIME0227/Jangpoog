@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MonsterDieState : StateMachineBehaviour
 {
-    private Monster monster;
-    private Transform monsterTransform;
+    protected Monster monster;
+    protected Transform monsterTransform;
     
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -13,6 +13,7 @@ public class MonsterDieState : StateMachineBehaviour
     {
         monster = animator.GetComponentInParent<Monster>();
         monsterTransform = monster.transform;
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

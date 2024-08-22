@@ -39,9 +39,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 768346453060648080, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a1d4aaea5b848474b9069d6831cc71ec, type: 2}
     - target: {fileID: 1191551650843982732, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_Name
-      value: Monster_BatGoblin_new
+      value: Monster_BatGoblin_v1
       objectReference: {fileID: 0}
     - target: {fileID: 2520970358692504815, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: m_LocalPosition.x

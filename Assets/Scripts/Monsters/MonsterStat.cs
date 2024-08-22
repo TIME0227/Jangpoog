@@ -8,7 +8,21 @@ public class MonsterStat : MonoBehaviour
     public Action DieAction = null;
     
     public MonsterData monsterData;
-    public float currentHp;
+    private float currentHp;
+
+    public float CurrentHp
+    {
+        get { return currentHp; }
+        set
+        {
+            value = Mathf.Clamp(value, 0, monsterData.MaxHp);
+            if (value != currentHp)
+            {
+                currentHp = value;
+                if(currentHp==0) DieAction?.Invoke();
+            }
+        }
+    }
     public float currentDamage;
 
     public void Init(MonsterData monsterData)
@@ -31,14 +45,9 @@ public class MonsterStat : MonoBehaviour
         {
             GetComponentInChildren<SpriteRenderer>().color = Color.red;
             StartCoroutine(CoChangeColorWithDelay(Color.white, 0.5f));
-        } 
-        currentHp = Mathf.Clamp(currentHp - damage, 0, currentHp);
-        
-        if (currentHp == 0)
-        {
-            DieAction?.Invoke();
-
         }
+
+        CurrentHp = CurrentHp - damage;
     }
     
     /// <summary>
