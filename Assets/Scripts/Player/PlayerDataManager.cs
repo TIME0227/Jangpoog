@@ -22,8 +22,6 @@ public class PlayerDataManager : MonoBehaviour
 
     [Header("Mana")]
     // 마나 데이터 설정
-    [SerializeField] private TextMeshProUGUI manaText;
-
     // mana int로 변경
     [SerializeField] private int mana = 100;
     [SerializeField] private int maxMana = 100;
@@ -59,8 +57,6 @@ public class PlayerDataManager : MonoBehaviour
 
     // 체력 데이터 설정
     [Header("Hp")]
-    [SerializeField] private TextMeshProUGUI hpText;
-
     [SerializeField] private float hp = 10.0f; //HP private로 변경, 프로퍼티 생성
 
     [SerializeField] public float maxHp = 10.0f;
@@ -93,13 +89,13 @@ public class PlayerDataManager : MonoBehaviour
 
     //Invincibility
     [Header("Invincibility")]
-    [SerializeField][Tooltip("피격 시 추가되는 무적 지속 시간")] private float invincibilityDuration = 1;//피격시 추가되는 무적 시간
+    [SerializeField][Tooltip("피격 시 추가되는 무적 지속 시간")] private float invincibilityDuration = 2;//피격시 추가되는 무적 시간
     private float invincibilityTime = 0; //무적 지속 시간
     private bool isInvincible = false; //무적 여부
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Color originColor;
 
-    [Header("Invisibility")] 
+    [Header("Invisibility")]
     public bool isInvisible = false;
     public bool IsInvisible
     {
@@ -116,6 +112,8 @@ public class PlayerDataManager : MonoBehaviour
 
     private void Update()
     {
+
+
         UpdateLevelUpToken();
     }
 
@@ -125,6 +123,7 @@ public class PlayerDataManager : MonoBehaviour
     {
         Mana = Mathf.Min(mana + manaRegenerationRate, maxMana);
     }
+
     #endregion
 
 
@@ -154,7 +153,6 @@ public class PlayerDataManager : MonoBehaviour
 
 
     #region HP
-
     public void OnAttacked(float damage)
     {
         if (damage <= 0)
@@ -191,12 +189,12 @@ public class PlayerDataManager : MonoBehaviour
 
     }
 
-    IEnumerator Invincibility()
+    private IEnumerator Invincibility()
     {
         //1. flag 설정
         isInvincible = true;
         //2. invincibilityTime 동안 레이어 변경, 깜박이기 효과
-        transform.parent.gameObject.layer = (int)Define.Layer.PlayerDamaged; //무적 상태 레이어로 변경
+        gameObject.layer = (int)Define.Layer.PlayerDamaged; //무적 상태 레이어로 변경
 
         //3. blink speed
         float blinkSpeed = 10;
@@ -204,6 +202,7 @@ public class PlayerDataManager : MonoBehaviour
         {
             invincibilityTime -= Time.deltaTime;
             Color color = spriteRenderer.color;
+            Debug.Log("a;lfdjas;lfja;lf");
             color.a = Mathf.SmoothStep(0, 1, Mathf.PingPong(Time.time * blinkSpeed, 1));
             //PingPong : 0~1 사이를 왕복
             //SmoothStep : 두 값 사이의 부드러운 전환(보간) 효과
@@ -212,8 +211,8 @@ public class PlayerDataManager : MonoBehaviour
         }
 
         spriteRenderer.color = originColor; //alpha 복구
-        transform.parent.gameObject.layer = (int)Define.Layer.Player; //원래 레이어로 복구
-        isInvincible = false;
+        gameObject.layer = (int)Define.Layer.Player; //원래 레이어로 복구
+        isInvincibility = false;
 
     }
 

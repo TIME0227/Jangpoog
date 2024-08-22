@@ -138,14 +138,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72101e87c36c1bd49a8bc9c889fee912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpKeyCode: 119
-  slideKeyCode: 115
-  runKeyCode: 304
   slideDistance: 3
   slideSpeed: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 448
+  speedMultiplier: 2
 --- !u!114 &6753386744825305097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,15 +166,13 @@ MonoBehaviour:
   jangPoongLevel: 1
   jangPoongDamage: 0.5
   levelUpToken: 0
-  manaText: {fileID: 0}
   mana: 100
   maxMana: 100
   manaRegenerationRate: 3
   manaConsumption: 5
-  hpText: {fileID: 0}
   hp: 10
   maxHp: 10
-  invincibilityDuration: 1.5
+  invincibilityDuration: 2
   spriteRenderer: {fileID: 187112809751830480}
 --- !u!1 &8984064176265936863
 GameObject:

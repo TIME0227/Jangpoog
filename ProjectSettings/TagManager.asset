@@ -19,12 +19,12 @@ TagManager:
   - SuperStickyGoo
   - Items_Player
   - Player_Weapon
-  - 
+  - NPC
   - Monster_Weapon
   - Player
   - Monster
   - Item
-  - Wall
+  - BackGround
   - 
   - 
   - 
