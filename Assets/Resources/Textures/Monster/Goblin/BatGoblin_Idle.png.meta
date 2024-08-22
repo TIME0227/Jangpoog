@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BatGoblin_Idle_0
+      name: BatGoblin_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44babd73617c94bfca11f85558702981
-      internalID: -195378213
+      spriteID: f285f1083280946b399f11c4eaddc8ab
+      internalID: -675687143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BatGoblin_Idle_1
+      name: BatGoblin_idle_1
       rect:
         serializedVersion: 2
         x: 640
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c370846756004313821d3c03c34aa4a
-      internalID: -579615494
+      spriteID: d308f57d360534b708c7d6e751bb5cb2
+      internalID: 26113439
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BatGoblin_Idle_0: -195378213
-      BatGoblin_Idle_1: -579615494
+      BatGoblin_idle_0: -675687143
+      BatGoblin_idle_1: 26113439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

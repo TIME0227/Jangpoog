@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterBatGoblin : MonsterGoblin
+public class MonsterBatGoblin : Monster
 {
     [SerializeField] private Transform throwStartPosition;
     

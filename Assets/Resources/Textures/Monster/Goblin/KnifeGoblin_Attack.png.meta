@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c8da75a2528d4b23a1c322c9f8c7984
+guid: f631f454c04c04213b68ce5ba922df40
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnifeGoblin_Idle_0
+      name: KnifeGoblin_Attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 640
-        height: 900
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccae2dcb733bd4f87b20b99422aec8cf
-      internalID: -1781371302
+      spriteID: 54125900188d0492199dd5e355bc9fad
+      internalID: 1445144072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnifeGoblin_Idle_1
+      name: KnifeGoblin_Attack_1
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 640
-        height: 900
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec0de207b8730457c922a04a21d1ab8c
-      internalID: -1349036397
+      spriteID: 6ccd7c36a2d4c4618a8a098b3a7a52ea
+      internalID: 1569952495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnifeGoblin_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15be8177cef2446ba58b4b6c421c41d
+      internalID: -1721048977
       vertices: []
       indices: 
       edges: []
@@ -162,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      KnifeGoblin_Idle_0: -1781371302
-      KnifeGoblin_Idle_1: -1349036397
+      KnifeGoblin_Attack_0: 1445144072
+      KnifeGoblin_Attack_1: 1569952495
+      KnifeGoblin_Attack_2: -1721048977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

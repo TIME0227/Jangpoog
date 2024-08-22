@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c8da75a2528d4b23a1c322c9f8c7984
+guid: 81f23858c6f774543813a8d77122f670
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnifeGoblin_Idle_0
+      name: KnifeGoblin_Dead_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 900
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccae2dcb733bd4f87b20b99422aec8cf
-      internalID: -1781371302
+      spriteID: ed0cf302f03d44793b3c413cf9d48fa9
+      internalID: -1687635119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnifeGoblin_Idle_1
+      name: KnifeGoblin_Dead_1
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1000
         y: 0
-        width: 640
-        height: 900
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec0de207b8730457c922a04a21d1ab8c
-      internalID: -1349036397
+      spriteID: 6ece5925456ad4806a9eb2075e8cfbb3
+      internalID: 2059927521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnifeGoblin_Dead_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e46fd1cc616741e2afe336b37ad9e83
+      internalID: 1634383548
       vertices: []
       indices: 
       edges: []
@@ -162,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      KnifeGoblin_Idle_0: -1781371302
-      KnifeGoblin_Idle_1: -1349036397
+      KnifeGoblin_Dead_0: -1687635119
+      KnifeGoblin_Dead_1: 2059927521
+      KnifeGoblin_Dead_2: 1634383548
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
