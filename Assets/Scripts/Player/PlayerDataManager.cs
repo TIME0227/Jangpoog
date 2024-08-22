@@ -202,7 +202,6 @@ public class PlayerDataManager : MonoBehaviour
         {
             invincibilityTime -= Time.deltaTime;
             Color color = spriteRenderer.color;
-            Debug.Log("a;lfdjas;lfja;lf");
             color.a = Mathf.SmoothStep(0, 1, Mathf.PingPong(Time.time * blinkSpeed, 1));
             //PingPong : 0~1 사이를 왕복
             //SmoothStep : 두 값 사이의 부드러운 전환(보간) 효과
@@ -212,7 +211,7 @@ public class PlayerDataManager : MonoBehaviour
 
         spriteRenderer.color = originColor; //alpha 복구
         gameObject.layer = (int)Define.Layer.Player; //원래 레이어로 복구
-        isInvincibility = false;
+        isInvincible = false;
 
     }
 

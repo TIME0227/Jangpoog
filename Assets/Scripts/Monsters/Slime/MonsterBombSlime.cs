@@ -16,10 +16,4 @@ public class MonsterBombSlime : MonsterSlime
         GameObject ssg = Managers.Resource.Instantiate("Items/Items_Both/SuperStickyGoo");
         ssg.transform.position = movement2D.FootPosition;
     }
-
-    protected override void UpdateAttack()
-    {
-        attackDelay = 3.0f;
-        State = Define.State.Moving;
-    }
 }

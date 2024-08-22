@@ -18,6 +18,8 @@ public class MonsterFollowState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Debug.DrawRay(monsterTransform.position,monster.direction.normalized,Color.green);
+        
         //타겟이 없어지면 back state로 가야함
         if (monster.target == null)
         {
@@ -25,26 +27,50 @@ public class MonsterFollowState : StateMachineBehaviour
             animator.SetBool("isFollow", false);
         }
         
-        //타겟이 있는 경우 타겟을 쫓아가야함
-        
-        
-        
+        //타겟이 있고, 사정거리보다 먼 경우 타겟을 쫓아가야함
+        else if(monster.direction.magnitude>monster.attackRange)
+        {
+            switch (monster.Detect(monster.direction))
+            {
+                case -1:
+                    monster.movement2D.MoveTo(0);
+                    break;
+                case 1:
+                    if (!monster.movement2D.isJump)
+                    {
+                        monster.StartCoroutine(monster.CoJump(monster.direction)); 
+                    }
+                    break;
+                case 0:
+                    monster.movement2D.MoveTo(monster.direction.normalized.x);
+                    break;
+            }
+       
+            // //앞으로 이동할 수 없는 영역을 만난 경우(level 2 이상의 플랫폼)
+            // if (Physics2D.Raycast(monsterTransform.position, monster.direction, 1.0f, LayerMask.GetMask("LevelN")))
+            // {
+            //     monster.movement2D.MoveTo(0);
+            // }
+            // //else if 1층인경우 점프
+            //
+            //
+            // //이동
+            // else
+            // {
+            //     monster.movement2D.MoveTo(monster.direction.normalized.x);
+            // }
+        }
+
         //사정거리 안에 들어오는 경우 ready state로 가야함
+        else
+        {
+            monster.movement2D.MoveTo(0);
+            animator.SetBool("isBack",false);
+            animator.SetBool("isFollow",false);
+        }
         
-        // if(monster)
-        // monsterTransform.position = Vector2.MoveTowards(monsterTransform.position, monster.target.transform.position,
-        //     Time.deltaTime * monster.GetComponent<Mon_MovementRigidbody2D>().WalkSpeed);
-
-        // //사정 거리보다 가까우면 공격
-        // if (monster.direction.x >= -monster.attackRange && monster.direction.x <= monster.attackRange)
-        // {
-        //     
-        // }
-        // else
-        // {
-        //     
-        // }
-
+        //sprite flip
+        monster.FlipSprite();
 
     }
 

@@ -7,7 +7,6 @@ public class MonsterGoblin : MonsterController
     public override void Init()
     {
         base.Init();
-        WorldObjectType = Define.WorldObject.Goblin;
         //ResetSize();
     }
     

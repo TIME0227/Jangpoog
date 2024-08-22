@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2520970358692504815}
   - component: {fileID: 7356894523071311427}
   - component: {fileID: 261952960578330749}
-  - component: {fileID: 8675729229114381373}
   - component: {fileID: 1582441881594047105}
   - component: {fileID: 6093398972416209118}
   - component: {fileID: 7090912312003108852}
+  - component: {fileID: 6016842671243142753}
   m_Layer: 16
   m_Name: Monster_Slime_v1
   m_TagString: Monster
@@ -90,40 +90,9 @@ MonoBehaviour:
   walkSpeed: 4
   runSpeed: 4
   jumpForce: 11
-  lowGravityScale: 2
   highGravityScale: 3.5
+  isJump: 0
   isGrounded: 0
---- !u!114 &8675729229114381373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191551650843982732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 945f455c96c4349b6b116fc706cbcd01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destPos: {x: 0, y: 0, z: 0}
-  state: 3
-  target: {fileID: 0}
-  stat: {fileID: 0}
-  moveRange: 2
-  scanRange: 8
-  attackRange: 2
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 384
-  waitTime: 1.5
-  isJumping: 0
-  dir: {x: 0, y: 0, z: 0}
-  attackDelay: 3
-  lootTable:
-  - item: 1
-    dropChance: 2
-  - item: 4
-    dropChance: 1
 --- !u!70 &1582441881594047105
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -156,8 +125,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01676139, y: -0.28036264}
-  m_Size: {x: 2.9438992, y: 1.645864}
+  m_Offset: {x: 0.04081633, y: -0.335919}
+  m_Size: {x: 2.7163353, y: 1.5622562}
   m_Direction: 1
 --- !u!58 &6093398972416209118
 CircleCollider2D:
@@ -206,9 +175,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd3a8538ff56437491576cdf0178e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterData: {fileID: 11400000, guid: 61021b9dde2674198acca4e318b85caa, type: 2}
+  monsterData: {fileID: 0}
   currentHp: 2.5
   currentDamage: 0.4
+--- !u!114 &6016842671243142753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191551650843982732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4fd15c6f099b4102a0d3059a15ccfd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statFileName: Monster_Slime_v1
+  stat: {fileID: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 384
+  movement2D: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
+  target: {fileID: 0}
+  moveRange: 2
+  scanRange: 8
+  attackRange: 1.5
+  minMoveRangeX: 0
+  maxMoveRangeX: 0
+  thinkTime: 2
+  attackCoolTime: 2
+  lootTable:
+  - item: 0
+    dropChance: 80
+  - item: 3
+    dropChance: 20
 --- !u!1 &1460995482492397856
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +222,6 @@ GameObject:
   - component: {fileID: 6614612098860732944}
   - component: {fileID: 6342380038074297027}
   - component: {fileID: 768346453060648080}
-  - component: {fileID: 1516735110387147205}
   m_Layer: 16
   m_Name: Renderer
   m_TagString: Untagged
@@ -317,18 +318,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1516735110387147205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460995482492397856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24c072ec21102428492ca1178eff2fe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2601874532076664223
 GameObject:
   m_ObjectHideFlags: 0

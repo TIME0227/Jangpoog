@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Mon_MovementRigidbody2D : MonoBehaviour
@@ -24,9 +25,9 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     [SerializeField]
     private float jumpForce = 13; // 점프 힘
     [SerializeField]
-    private float lowGravityScale = 2; // 점프 키를 오래 누르고 있을 때 적용되는 중력 (높은 점프)
-    [SerializeField]
     private float highGravityScale = 3.5f; // 일반적으로 적용되는 중력 (낮은 점프)
+
+    public bool isJump = false;
 
     private float moveSpeed; // 이동 속도
 
@@ -61,6 +62,9 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
 
     public Vector2 Velocity => rigid2D.velocity; // rigid2D.velocity를 반환하는 GET만 가능한 프로퍼티 Velocity 정의
 
+
+    private Animator anim;
+
     private void Awake()
     {
         moveSpeed = walkSpeed;
@@ -68,6 +72,8 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
         rigid2D = GetComponent<Rigidbody2D>();
         collider2D = GetComponent<Collider2D>();
         if (collider2D == null) collider2D = GetComponentInChildren<Collider2D>();
+
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -82,6 +88,8 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     {
         // x축 방향 속력을 x * moveSpeed로 설정
         rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
+        anim.SetFloat("velocityX",Mathf.Abs(x));
+        
     }
 
     private void UpdateCollision()
@@ -130,14 +138,8 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     {
         // 낮은 점프, 높은 점프 구현을 위한 중력 계수(gravityScale) 조절 (Jump Up일 때만 적용된다)
         // 중력 계수가 낮은 if문은 높은 점프가 되고, 중력 계수가 높은 else 문은 낮은 점프가 된다
-        if (IsLongJump && rigid2D.velocity.y > 0)
-        {
-            rigid2D.gravityScale = lowGravityScale;
-        }
-        else
-        {
             rigid2D.gravityScale = highGravityScale;
-        }
+        
     }
 
     private void JumpAdditive()

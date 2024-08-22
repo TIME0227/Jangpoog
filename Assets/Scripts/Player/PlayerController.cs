@@ -225,7 +225,6 @@ public class PlayerController : MonoBehaviour
                 Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
                 jangPoongRb.velocity = jangPoongDirection * playerDataManager.jangPoongSpeed;
                 jangPoong.transform.localScale = new Vector3((jangPoongDirection.x > 0 ? 0.5f : -0.5f), 0.5f, 0.5f); //수정
-                Debug.Log(jangPoong.transform.localScale);
 
                 playerAnimator.JangPoongShooting();
 

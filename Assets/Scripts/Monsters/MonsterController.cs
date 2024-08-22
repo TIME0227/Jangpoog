@@ -100,10 +100,7 @@ public abstract class MonsterController : BaseController
 
         
         //아이템 드랍 (사망 애니메이션 후 보이도록 0.9f 딜레이)
-        Invoke(nameof(SpawnItem), 0.9f);
-        
-        //게임 관리 매니져로 수정할 예정
-        Destroy(gameObject, 1f); //1초 후에 사라지기
+       
     }
     protected override void UpdateIdle()
     {
