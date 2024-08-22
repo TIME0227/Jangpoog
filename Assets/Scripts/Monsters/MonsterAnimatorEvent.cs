@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterAnimatorEvent : MonoBehaviour
 {
-    private MonsterWeaponCollider weaponCollider;
+    [SerializeField] private MonsterWeaponCollider weaponCollider;
     // Start is called before the first frame update
     void Start()
     {

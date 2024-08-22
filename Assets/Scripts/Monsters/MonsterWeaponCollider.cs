@@ -41,15 +41,13 @@ public class MonsterWeaponCollider : MonoBehaviour
 
     public void AttackPlayerByWeapon()
     {
+        Debug.Log("무기 공격 호출함");
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(transform.position, boxSize, 0);
         foreach (Collider2D collider in collider2Ds)
         {
-            Debug.Log(collider.name);
             if (collider.CompareTag("Player"))
             {
                 Debug.Log("몬스터가 플레이어를 공격합니다.");
-                // PlayerDataManager playerDataManager = Util.FindChild<PlayerDataManager>(collider.gameObject, null, true);
-                
                 Managers.PlayerData.OnAttacked(GetComponentInParent<MonsterStat>().monsterData.Damage);
                 // playerDataManager.OnAttacked(GetComponentInParent<MonsterStat>().monsterData.Damage);
                 return;
