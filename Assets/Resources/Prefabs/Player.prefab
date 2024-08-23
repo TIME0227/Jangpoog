@@ -144,6 +144,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 448
   speedMultiplier: 2
+  gameOver: {fileID: 0}
+  gameOverFlag: 0
 --- !u!114 &6753386744825305097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,8 +160,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jangPoongPrefabs:
   - {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
-  - {fileID: 3139336975419484278, guid: b23b47d27b47f405f95f5aa7b244dcd3, type: 3}
-  - {fileID: 3139336975419484278, guid: f15e0ca70240741bd8b65aaa2d2a74a6, type: 3}
+  - {fileID: 1796551531270458315, guid: 6314b03ae3e4ab34a87f9855c003a763, type: 3}
+  - {fileID: 1796551531270458315, guid: d626acc340430994face41f3298177e4, type: 3}
+  - {fileID: 1796551531270458315, guid: f5dbe407d01d78643a2461cfc6e2c6e2, type: 3}
+  - {fileID: 1796551531270458315, guid: 0090138bb934bce42a02872b0e72f008, type: 3}
+  - {fileID: 1796551531270458315, guid: b6043b489661f1646b5b16ee4004e72e, type: 3}
+  - {fileID: 1796551531270458315, guid: 4aaded2d3de56ac4fbcfc83bc526f699, type: 3}
+  - {fileID: 1796551531270458315, guid: 6e69ac87758590f46a5b96e1715b220e, type: 3}
+  - {fileID: 1796551531270458315, guid: aca31b052c8a90d4b878453f10c458d8, type: 3}
   jangPoongPrefab: {fileID: 1796551531270458315, guid: 04c5ba4cb9a36134a9f3d3b16649b7dc, type: 3}
   jangPoongSpeed: 10
   jangPoongDistance: 7
