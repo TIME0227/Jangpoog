@@ -141,6 +141,8 @@ MonoBehaviour:
   maxMoveRangeX: 0
   thinkTime: 2
   attackCoolTime: 1.5
-  lootTable: []
+  lootTable:
+  - item: 1
+    dropChance: 5
   throwStartPosition: {fileID: 4744803429451767152}
   batVersion: 1

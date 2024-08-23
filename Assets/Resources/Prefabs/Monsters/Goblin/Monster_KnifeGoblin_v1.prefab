@@ -122,7 +122,9 @@ MonoBehaviour:
   maxMoveRangeX: 0
   thinkTime: 2
   attackCoolTime: 2
-  lootTable: []
+  lootTable:
+  - item: 4
+    dropChance: 5
 --- !u!114 &7090912312003108852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterData: {fileID: 0}
-  currentHp: 0
   currentDamage: 0
 --- !u!70 &7566463327903339268
 CapsuleCollider2D:

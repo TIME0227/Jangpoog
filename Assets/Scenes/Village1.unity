@@ -211,6 +211,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1715444918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &24807449
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 71.8871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7685175
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!1 &40542027
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +715,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
   m_PrefabInstance: {fileID: 74654693}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &231652546
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 31.302214
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.193901
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439308411435693758, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v2 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
 --- !u!1 &237742069
 GameObject:
   m_ObjectHideFlags: 0
@@ -28456,6 +28570,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &298681736
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 73.20012
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.4767358
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!1001 &316414073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28803,6 +28974,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 045341f78fe1b4453b08e88f70b46470, type: 3}
+--- !u!1001 &461280291
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 53.650753
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.352081
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!1001 &464317600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28865,6 +29093,120 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8741587388311543539, guid: 045341f78fe1b4453b08e88f70b46470, type: 3}
   m_PrefabInstance: {fileID: 1624195922}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &507264293
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.990174
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.4992046
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+--- !u!1001 &523947133
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.647293
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.613099
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439308411435693758, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v2 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
 --- !u!1 &552734815
 GameObject:
   m_ObjectHideFlags: 0
@@ -29301,6 +29643,120 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1715444918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &744174014
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.56857
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6226268
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+--- !u!1001 &788730404
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 67.94805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.0390635
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!4 &792476806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8741587388311543539, guid: 045341f78fe1b4453b08e88f70b46470, type: 3}
@@ -29374,6 +29830,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &819359662
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 51.754173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.20619
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!1001 &839374897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29830,6 +30343,63 @@ RectTransform:
   m_AnchoredPosition: {x: 82.65, y: -3.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &972220830
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.27548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.0541687
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!1 &980958583
 GameObject:
   m_ObjectHideFlags: 0
@@ -32234,6 +32804,63 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1001 &1386161033
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 65.90558
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6226268
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!1001 &1427997510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32480,6 +33107,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee7e6a68c8c61465782424d5ff4d4d32, type: 3}
+--- !u!1001 &1501595657
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.89152
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.193901
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105352679860701, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439308411435693758, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7214e4e1d90b24e9999eb9ae1adc7de4, type: 3}
 --- !u!1001 &1508388669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32732,6 +33416,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
   m_PrefabInstance: {fileID: 350761086}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1620050015
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 55.1965
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.8925643
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!1001 &1624195922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32922,6 +33663,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627971901}
   m_CullTransparentMesh: 1
+--- !u!1001 &1668916687
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 74.764046
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.425561
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!1001 &1683438481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35357,6 +36155,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
   m_PrefabInstance: {fileID: 839374897}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1797203769
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.709644
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!4 &1811713114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
@@ -35481,6 +36336,181 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+--- !u!1001 &1902857574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4304570421193345356, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 71.30354
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.2274256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+--- !u!1001 &1905032525
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 62.043396
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.613099
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+--- !u!1001 &1915017165
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 43.598686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.8925643
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!4 &1916464305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8741587388311543539, guid: 045341f78fe1b4453b08e88f70b46470, type: 3}
@@ -36037,6 +37067,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
+--- !u!1001 &2033468609
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 62.695984
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7685175
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795063094132719539, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: m_Name
+      value: Monster_BatGoblin_v1 (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
 --- !u!4 &2049820215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6621462422658160809, guid: 5004917dfcf2f4de5b28e4d3ac2ca660, type: 3}
@@ -36213,3 +37300,22 @@ SceneRoots:
   - {fileID: 797688096}
   - {fileID: 1722634296}
   - {fileID: 953419855}
+  - {fileID: 972220830}
+  - {fileID: 1501595657}
+  - {fileID: 231652546}
+  - {fileID: 523947133}
+  - {fileID: 1620050015}
+  - {fileID: 1915017165}
+  - {fileID: 1905032525}
+  - {fileID: 507264293}
+  - {fileID: 1797203769}
+  - {fileID: 819359662}
+  - {fileID: 461280291}
+  - {fileID: 744174014}
+  - {fileID: 2033468609}
+  - {fileID: 1386161033}
+  - {fileID: 788730404}
+  - {fileID: 24807449}
+  - {fileID: 1902857574}
+  - {fileID: 298681736}
+  - {fileID: 1668916687}
