@@ -8,6 +8,7 @@ public class UI_Buttons: MonoBehaviour
     public void OnClickNewGame()
     {
         Debug.Log("새 게임");
+        Managers.RestPlayData();
         Managers.Scene.LoadScene("1-1 tutorial");
 
     }
@@ -74,9 +75,7 @@ public class UI_Buttons: MonoBehaviour
         Time.timeScale = 1;
         Debug.Log("세이브 후 메인 화면으로 이동");
         //여기에 파일 세이브 코드 넣기
-
         Managers.Scene.LoadScene("Main");
-
     }
 
     public void OnClickExit2Windows()

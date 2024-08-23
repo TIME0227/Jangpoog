@@ -12,24 +12,42 @@ public class TutorialEnter : MonoBehaviour
 
     public int EnterCnt = 0;
 
+
+    private bool isTutorialEnd = false;
     // Start is called before the first frame update
     void Start()
     {
-        TutorialObject.SetActive(true);
-        PlayerUI.SetActive(false);
-        Player.SetActive(false);
-        MoveExplain.SetActive(true);
-        ItemExlplain.SetActive(false);
 
-        EnterCnt = 0;
+        if (PlayerPrefs.HasKey(Define.SaveKey.tutorialDone.ToString()) &&
+            PlayerPrefs.GetInt(Define.SaveKey.tutorialDone.ToString()) == 1)
+        {
+            TutorialObject.SetActive(false);
+            MoveExplain.SetActive(false);
+            ItemExlplain.SetActive(false);
+            PlayerUI.SetActive(true);
+            Player.SetActive(true);
+            EnterCnt = 2;
+
+        }
+        else
+        {
+            TutorialObject.SetActive(true);
+            PlayerUI.SetActive(false);
+            Player.SetActive(false);
+            MoveExplain.SetActive(true);
+            ItemExlplain.SetActive(false);
+
+            EnterCnt = 0;
+        }
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {   
-        // ¿£ÅÍ Å° ´©¸£¸é Æ©Åä¸®¾ó »ç¶óÁö°í °ÔÀÓ ½ÃÀÛ
-        if (Input.GetKeyDown(KeyCode.Return))
+        // ï¿½ï¿½ï¿½ï¿½ Å° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Æ©ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        if (!isTutorialEnd && Input.GetKeyDown(KeyCode.Return))
         {
 
             EnterCnt++;
@@ -44,9 +62,14 @@ public class TutorialEnter : MonoBehaviour
                 TutorialObject.SetActive(false);
                 PlayerUI.SetActive(true);
                 Player.SetActive(true);
+
+                
+                PlayerPrefs.SetInt(Define.SaveKey.tutorialDone.ToString(), 1);
+                isTutorialEnd = true;
             }
 
 
         }
     }
+    
 }

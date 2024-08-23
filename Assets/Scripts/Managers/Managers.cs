@@ -116,5 +116,16 @@ public class Managers : MonoBehaviour
    }
 
 
+    public static void RestPlayData()
+    {
+        string[] dataKeys = Enum.GetNames(typeof(Define.SaveKey));
+
+        foreach (string key in dataKeys)
+        {
+            if(PlayerPrefs.HasKey(key)) PlayerPrefs.DeleteKey(key);
+        }
+    }
+
+
     
 }

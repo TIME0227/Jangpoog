@@ -61,6 +61,13 @@
             invisibility,
             none,
         }
+        public enum SaveKey
+        {
+            tutorialDone,
+            playerHp,
+            playerMana,
+            levelToken,
+        }
 
         
     }
