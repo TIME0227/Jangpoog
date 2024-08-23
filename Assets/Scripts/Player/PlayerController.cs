@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     private float lastClickTime = -1.0f;
     private KeyCode lastKeyPressed;*/
 
-    private KeyBindingManager keyBindingManager;
+    // private KeyBindingManager keyBindingManager;
 
     private void Awake()
     {
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         playerDataManager = GetComponentInChildren<PlayerDataManager>();
-        keyBindingManager = KeyBindingManager.Instance;
+        // keyBindingManager = KeyBindingManager.Instance;
 
         originalColliderSize = capsuleCollider.size;
         originalColliderOffset = capsuleCollider.offset;
@@ -250,6 +250,8 @@ public class PlayerController : MonoBehaviour
             if (playerDataManager.Mana >= playerDataManager.manaConsumption)
             {
                 playerDataManager.Mana -= playerDataManager.manaConsumption;
+
+                Managers.Sound.Play("56_Attack_03");
 
                 Vector3 spawnPosition = transform.position;
                 spawnPosition.y += isSliding ? -0.38f : -0.08f;     // 슬라이딩 시에는 y값 -0.08f에서 장풍 발사되도록
