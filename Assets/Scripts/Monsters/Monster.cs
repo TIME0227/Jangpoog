@@ -124,6 +124,8 @@ public class Monster : MonoBehaviour
     protected virtual void OnDie()
     {
         anim.SetTrigger("Die");
+        Managers.Sound.Play("77_flesh_02");
+        Debug.Log("쥬금");
         movement2D.MoveTo(0);
         StopAllCoroutines();
         

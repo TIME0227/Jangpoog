@@ -48,6 +48,7 @@ public class MonsterStat : MonoBehaviour
         }
 
         CurrentHp = CurrentHp - damage;
+        Managers.Sound.Play("61_Hit_03");
     }
     
     /// <summary>
