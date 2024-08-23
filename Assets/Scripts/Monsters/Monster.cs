@@ -165,16 +165,24 @@ public class Monster : MonoBehaviour
     // spriteRenderer의 flipX를 사용하지 않고 localScale 값 조정으로 구현
     public void FlipSprite()
     {
+        GameObject hpBar = GetComponentInChildren<UI_HPBar>(true).gameObject;
         Vector3 scale = transform.localScale;
+        Vector3 hpBarScale = hpBar.transform.localScale;
         if (direction.x> 0)
         {
             scale.x = - Mathf.Abs(scale.x);
             transform.localScale = scale;
+            hpBarScale.x = Mathf.Abs(hpBarScale.x);
+            hpBar.transform.localScale = hpBarScale;
         }
         else if (direction.x< 0)
         {
             scale.x = Mathf.Abs(scale.x);
             transform.localScale = scale;
+            hpBarScale.x = -Mathf.Abs(hpBarScale.x);
+            hpBar.transform.localScale = hpBarScale;
+
+
         }
 
     }

@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114396298}
   - component: {fileID: 114396299}
+  - component: {fileID: 114396300}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -168,6 +169,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmAudioClip: {fileID: 8300000, guid: 6c7402b6b3095464d9db850885c4d565, type: 3}
+--- !u!114 &114396300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114396296}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ea6d53d06aa403a9ae55eb7b23836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &154199759
 GameObject:
   m_ObjectHideFlags: 0
