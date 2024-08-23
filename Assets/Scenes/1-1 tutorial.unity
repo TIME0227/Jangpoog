@@ -5318,6 +5318,52 @@ Transform:
   - {fileID: 831553622}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1095032488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1095032490}
+  - component: {fileID: 1095032489}
+  m_Layer: 0
+  m_Name: TutorialController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1095032489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095032488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20ab796a0b1bd24bb8396a718861bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TutorialObject: {fileID: 1598985763}
+  PlayerUI: {fileID: 106985683}
+--- !u!4 &1095032490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095032488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1286.9213, y: 228.23642, z: -1.709327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1109254357
 GameObject:
   m_ObjectHideFlags: 0
@@ -9503,3 +9549,4 @@ SceneRoots:
   - {fileID: 106985689}
   - {fileID: 1109254363}
   - {fileID: 1598985768}
+  - {fileID: 1095032490}
