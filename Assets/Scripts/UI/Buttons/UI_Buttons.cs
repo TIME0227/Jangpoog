@@ -21,7 +21,7 @@ public class UI_Buttons : MonoBehaviour
     public void OnClickNewGame()
     {
         Debug.Log("새 게임");
-        SceneManager.LoadScene("Difficulty");
+        SceneManager.LoadScene("1-1 tutorial");
 
     }
 
@@ -34,7 +34,7 @@ public class UI_Buttons : MonoBehaviour
     public void OnClickSettings()
     {
         Debug.Log("설정");
-        SceneManager.LoadScene("SettingsHome");
+        SceneManager.LoadScene("Scenes/UI/SettingsHome");
     }
 
     public void OnClickExit()
@@ -60,11 +60,7 @@ public class UI_Buttons : MonoBehaviour
     {
         Debug.Log("불가능 레벨");
     }
-    public void OnClickPlayerSettings()
-    {
-        Debug.Log("설정으로 이동");
-        SceneManager.LoadScene("SettingsPlay");
-    }
+    
 
     public void OnClickChapters()
     {
@@ -77,6 +73,8 @@ public class UI_Buttons : MonoBehaviour
         Debug.Log("게임 멈춤");
         SceneManager.LoadScene("Pause");
     }
+
+
 
     public void OnClick2ExitScene()
     {

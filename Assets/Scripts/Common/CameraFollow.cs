@@ -20,13 +20,14 @@ public class CameraFollow : MonoBehaviour
         }
         //offsetY 값 설정
         //target과 카메라의 y 거리 = |(카메라의 y 위치) - (tartget의 y 위치)|
-        offsetY = Mathf.Abs(transform.position.y - target.position.y);
+       
     }
 
     public void SetUp(StageData stageData)
     {
         this.stageData = stageData;
         transform.position = new Vector3(stageData.CameraPosition.x, stageData.CameraPosition.y, -10);
+        offsetY = Mathf.Abs(transform.position.y - target.position.y);
     }
 
     private void LateUpdate()

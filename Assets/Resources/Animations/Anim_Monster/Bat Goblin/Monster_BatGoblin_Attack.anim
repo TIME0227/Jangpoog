@@ -21,13 +21,23 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1445144072, guid: f631f454c04c04213b68ce5ba922df40, type: 3}
+      value: {fileID: -3168487, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
     - time: 0.125
-      value: {fileID: 1569952495, guid: f631f454c04c04213b68ce5ba922df40, type: 3}
+      value: {fileID: -402298561, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - time: 0.25
+      value: {fileID: 1179315845, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - time: 0.375
+      value: {fileID: -1937274994, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
     - time: 0.5
-      value: {fileID: -1721048977, guid: f631f454c04c04213b68ce5ba922df40, type: 3}
+      value: {fileID: 1086266431, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
     - time: 0.625
-      value: {fileID: 1569952495, guid: f631f454c04c04213b68ce5ba922df40, type: 3}
+      value: {fileID: 246213407, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - time: 0.75
+      value: {fileID: -893822498, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - time: 0.875
+      value: {fileID: 353429989, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - time: 1
+      value: {fileID: 671469664, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,16 +60,21 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1445144072, guid: f631f454c04c04213b68ce5ba922df40, type: 3}
-    - {fileID: 1569952495, guid: f631f454c04c04213b68ce5ba922df40, type: 3}
-    - {fileID: -1721048977, guid: f631f454c04c04213b68ce5ba922df40, type: 3}
-    - {fileID: 1569952495, guid: f631f454c04c04213b68ce5ba922df40, type: 3}
+    - {fileID: -3168487, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - {fileID: -402298561, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - {fileID: 1179315845, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - {fileID: -1937274994, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - {fileID: 1086266431, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - {fileID: 246213407, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - {fileID: -893822498, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - {fileID: 353429989, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
+    - {fileID: 671469664, guid: fde28003b1c564363a89da8dee4dd57d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.75
+    m_StopTime: 1.125
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -79,7 +94,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0.625
     functionName: WeaponAttack
     data: 
     objectReferenceParameter: {fileID: 0}
