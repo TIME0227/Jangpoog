@@ -48,3 +48,6 @@ TagManager:
   - name: Weapon
     uniqueID: 3585608045
     locked: 0
+  - name: item
+    uniqueID: 1576567303
+    locked: 0
