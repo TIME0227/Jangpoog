@@ -122,9 +122,9 @@ MonoBehaviour:
     m_Bits: 448
   originWalkSpeed: 10
   runSpeed: 10
-  jumpForce: 12
-  lowGravityScale: 1
-  highGravityScale: 2
+  jumpForce: 10
+  lowGravityScale: 1.5
+  highGravityScale: 2.5
   moveSpeed: 0
 --- !u!114 &6944388229652730403
 MonoBehaviour:
