@@ -66,13 +66,14 @@ public class PlayerDataManager : MonoBehaviour
         get { return hp; }
         set
         {
+            if (value == hp)
+            {
+                Debug.Log("value == hp");
+            }
             if (value != hp)
             {
                 hp = Mathf.Clamp(value, 0, maxHp);
-                if (maxHp <= hp)
-                {
-                    hp = maxHp;
-                }
+               
                 //UpdateHpText();
                 UpdateHpAction?.Invoke(hp);
 
@@ -114,6 +115,11 @@ public class PlayerDataManager : MonoBehaviour
         InvokeRepeating("RegenerateMana", 1f, 1f); // 1초마다 RegenerateMana 메소드 호출
         if (spriteRenderer == null) spriteRenderer = transform.parent.GetComponentInChildren<SpriteRenderer>();
         originColor = spriteRenderer.color;
+    }
+
+    private void Start()
+    {
+        Managers.Data.GetData();
     }
 
     private void Update()

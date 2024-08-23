@@ -34,9 +34,11 @@ public class SceneManagerEx
       }
       else
       {
+         Debug.Log("alallalalalaaaaaaasaa");
          Managers.Clear();
          if (!sceneName.Equals(GetActiveScene()))
          {
+            Debug.Log("ddasl;fjsalf;asjl;fsajflasjflasfjlasjf");
             Managers.Data.SaveData();
          }
          SceneManager.LoadScene(sceneName);
@@ -66,11 +68,11 @@ public class SceneManagerEx
    //    SceneManager.LoadScene(SceneName);
    // }
 
-   public IEnumerator LoadSceneAfterDelay(string SceneName, float delayTime)
+   public IEnumerator LoadSceneAfterDelay(string sceneName, float delayTime)
    {
       yield return new WaitForSeconds(delayTime);
       
-      SceneManager.LoadScene(SceneName);
+      this.LoadScene(sceneName);
    }
 
 }

@@ -12,7 +12,7 @@ public class UI_PlayerHp : MonoBehaviour
     
 
 
-    private void Start()
+    private void Awake()
     {
         Managers.PlayerData.UpdateHpAction += SetUIHp;
     }
