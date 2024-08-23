@@ -65,8 +65,6 @@ public class PlayerController : MonoBehaviour
     public GameObject gameOver;
     public bool gameOverFlag = false; // true면 게임 오버 상태
 
-    public GameObject TutorialObject;
-
     // 더블 클릭 (달리기) 데이터 설정
     /*private float doubleClickTimeLimit = 0.25f;
     private float lastClickTime = -1.0f;
@@ -399,7 +397,6 @@ public class PlayerController : MonoBehaviour
     public void OnButtonClick_Restart()
     {
         SceneManager.LoadScene("1-1 tutorial");
-        TutorialObject.SetActive(false);
     }
     public void OnButtonClick_Exit()
     {
