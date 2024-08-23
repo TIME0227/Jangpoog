@@ -34,7 +34,6 @@ public class Goblin_BatController : MonoBehaviour
         
         //목표점 설정
         SetDest();
-        Debug.Log(destination);   
         //초기 속도 계산 및 물리 처리 시작
         //SetInitialVelocity();
     }

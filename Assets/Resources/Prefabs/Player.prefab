@@ -120,7 +120,7 @@ MonoBehaviour:
   belowColiisionLayer:
     serializedVersion: 2
     m_Bits: 448
-  walkSpeed: 10
+  originWalkSpeed: 10
   runSpeed: 10
   jumpForce: 10
   lowGravityScale: 2
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slideDistance: 3
-  slideSpeed: 10
+  originSlideSpeed: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 448
@@ -172,7 +172,7 @@ MonoBehaviour:
   manaConsumption: 5
   hp: 10
   maxHp: 10
-  invincibilityDuration: 2
+  invincibilityDuration: 1.5
   spriteRenderer: {fileID: 187112809751830480}
 --- !u!1 &8984064176265936863
 GameObject:

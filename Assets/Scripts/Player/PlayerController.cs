@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using System.Collections;
@@ -9,8 +10,39 @@ public class PlayerController : MonoBehaviour
     // 슬라이딩 데이터 설정
     [SerializeField]
     private float slideDistance = 3.0f;                                    // 슬라이딩 거리
-    [SerializeField]
-    private float slideSpeed = 10.0f;                                       // 슬라이딩 속도
+
+
+    #region Move Speed Control Variables / Methods
+    [SerializeField] private float originSlideSpeed = 10.0f;
+    [NonSerialized] public float slideSpeed;
+
+    [NonSerialized] public float ssgSlideSpeed;
+
+    [NonSerialized] public float sgSlideSpeed;
+    
+    private void WalkSpeedState(int state)
+    {
+        switch (state)
+        {
+            case 0:
+                //원래 속도대로
+                slideSpeed = originSlideSpeed;
+                break;
+            case 1:
+                //ssg
+                slideSpeed = ssgSlideSpeed;
+                break;
+            case 2:
+                //sg
+                slideSpeed = sgSlideSpeed;
+                break;
+        }
+        Debug.Log($"state : {state} / slidespeed : {slideSpeed}");
+    }
+
+    #endregion
+   
+    // 슬라이딩 속도
     [SerializeField]
     private LayerMask groundLayer;                                    // 슬라이딩 시 바닥/장애물 레이어
 
@@ -47,6 +79,16 @@ public class PlayerController : MonoBehaviour
 
         originalColliderSize = capsuleCollider.size;
         originalColliderOffset = capsuleCollider.offset;
+        
+        //speed 설정
+        slideSpeed = originSlideSpeed;
+        ssgSlideSpeed = originSlideSpeed * 0.5f;
+        sgSlideSpeed = originSlideSpeed * 0.75f;
+        
+        //action 등록
+        movement.controlSpeedAction -= WalkSpeedState;
+        movement.controlSpeedAction += WalkSpeedState;
+
     }
 
     public void SetUp(StageData stageData)
@@ -225,7 +267,6 @@ public class PlayerController : MonoBehaviour
                 Vector2 jangPoongDirection = new Vector2(transform.localScale.x, 0).normalized;
                 jangPoongRb.velocity = jangPoongDirection * playerDataManager.jangPoongSpeed;
                 jangPoong.transform.localScale = new Vector3((jangPoongDirection.x > 0 ? 0.5f : -0.5f), 0.5f, 0.5f); //수정
-                Debug.Log(jangPoong.transform.localScale);
 
                 playerAnimator.JangPoongShooting();
 

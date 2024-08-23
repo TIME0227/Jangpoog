@@ -10,7 +10,7 @@ public class UI_HPBar : UI_Base
     private float offset_y = 0.2f;
 
 
-    [SerializeField] MonsterController monsterController;
+    [SerializeField] Monster monster;
 
     private float max; //slider max
     private float min; //slider min
@@ -25,8 +25,8 @@ public class UI_HPBar : UI_Base
         //bind로 자동화로 수정예정
         HP_Bar = Util.FindChild(gameObject, "HP_Bar");
         //체력 스탯 가져오기
-        monsterController = transform.parent.GetComponent<MonsterController>();
-        max = monsterController.stat.monsterData.MaxHp;
+        monster = transform.parent.GetComponent<Monster>();
+        max = monster.stat.monsterData.MaxHp;
         min = 0f;
         HP_Bar.GetComponent<Slider>().maxValue = max;
         HP_Bar.GetComponent<Slider>().minValue = min;
@@ -45,7 +45,7 @@ public class UI_HPBar : UI_Base
         Vector2 headPosition = Util.GetOrAddComponent<Mon_MovementRigidbody2D>(parent.gameObject).HeadPosition;
         transform.position = new Vector3(headPosition.x, headPosition.y + offset_y, parent.position.z);
 
-        float value = monsterController.stat.currentHp;
+        float value = monster.stat.CurrentHp;
         SetHpRatio(value);
     }
 
