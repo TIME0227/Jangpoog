@@ -11,6 +11,8 @@ public abstract class ItemBase : MonoBehaviour
 
     private bool allowCollect = true;                           // 아이템 획득 가능 여부
 
+    public Define.Item itemType; // 아이템 타입
+
     public void Setup()                                                    
     {
         // 아이템 생성 코루틴 메소드 호출
@@ -45,6 +47,7 @@ public abstract class ItemBase : MonoBehaviour
         if (allowCollect && collision.CompareTag("Player"))
         {
             UpdateCollision(collision.transform);
+            Managers.Inventory.InventoryItem(itemType, 1);
             Destroy(gameObject);
         }
     }

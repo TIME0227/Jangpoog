@@ -167,3 +167,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnForce: {x: 1, y: 7}
   aliveTImeAfterSpwn: 5
+  itemType: 5

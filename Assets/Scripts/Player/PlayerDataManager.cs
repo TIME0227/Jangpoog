@@ -108,7 +108,6 @@ public class PlayerDataManager : MonoBehaviour
         get { return isInvisible; }
     }
 
-
     private void Awake()
     {
         InvokeRepeating("RegenerateMana", 1f, 1f); // 1초마다 RegenerateMana 메소드 호출
@@ -118,7 +117,6 @@ public class PlayerDataManager : MonoBehaviour
 
     private void Update()
     {
-
 
         UpdateLevelUpToken();
     }

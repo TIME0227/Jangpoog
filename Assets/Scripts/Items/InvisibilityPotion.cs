@@ -8,13 +8,13 @@ public class InvisibilityPotion : ItemBase
         if (playerDataManager != null)
         {
             // 코루틴을 PlayerDataManager에서 실행
-            playerDataManager.StartCoroutine(StartInvisibilityAfterDelay(playerDataManager));
+            // playerDataManager.StartCoroutine(StartInvisibilityAfterDelay(playerDataManager));
 
             Destroy(gameObject);
         }
     }
 
-    private System.Collections.IEnumerator StartInvisibilityAfterDelay(PlayerDataManager playerDataManager)
+/*    private System.Collections.IEnumerator StartInvisibilityAfterDelay(PlayerDataManager playerDataManager)
     {
         // 포션 마시는 시간
         yield return new WaitForSeconds(2f);
@@ -48,5 +48,5 @@ public class InvisibilityPotion : ItemBase
 
         // 원래 색상으로 복원
         renderer.material.color = originalColor;
-    }
+    }*/
 }
