@@ -11,9 +11,14 @@ public class UI_GameOverButtons : MonoBehaviour
 
     private void Start()
     {
-        throw new NotImplementedException();
+        exitButton.onClick.AddListener(Exit);
+        restartButton.onClick.AddListener(Restart);
     }
 
+    public void Exit()
+    {
+        Managers.Scene.LoadScene("Main");
+    }
 
     public void Restart()
     {
