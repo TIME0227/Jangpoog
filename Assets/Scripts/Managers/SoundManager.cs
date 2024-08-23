@@ -93,12 +93,12 @@ public class SoundManager
 
    public void Clear()
    {
-      //audioSource 모두 stop & audioClip 빼기
-      foreach (AudioSource audioSource in audioSources)
-      {
-         audioSource.clip = null;
-         audioSource.Stop();
-      }
+      // //audioSource 모두 stop & audioClip 빼기
+      // foreach (AudioSource audioSource in audioSources)
+      // {
+      //    audioSource.clip = null;
+      //    audioSource.Stop();
+      // }
       
       //audioClip Dictionary 비우기
       sfxAudioClips.Clear();

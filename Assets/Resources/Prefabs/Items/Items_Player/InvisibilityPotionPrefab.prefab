@@ -133,3 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf147cf8e54eeb64f82af2c5485df775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnForce: {x: 1, y: 7}
+  aliveTImeAfterSpwn: 5
+  itemType: 4

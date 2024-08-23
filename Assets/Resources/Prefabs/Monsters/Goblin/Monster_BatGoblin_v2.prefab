@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: statFileName
       value: Monster_BatGoblin_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 5411648145084550166, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8141954782000554192, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
       propertyPath: m_Name
       value: Monster_BatGoblin_v2

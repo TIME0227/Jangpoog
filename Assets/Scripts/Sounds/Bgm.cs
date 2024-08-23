@@ -17,4 +17,6 @@ public class Bgm : MonoBehaviour
         }
         Managers.Sound.Play(bgmAudioClip, Define.Sound.Bgm);
     }
+    
+    
 }

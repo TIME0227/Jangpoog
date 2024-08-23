@@ -51,8 +51,17 @@
             Sfx,
             MaxCount,
         }
-        
-        
+
+        public enum Item
+        {
+            hpSmall,
+            hpLarge,
+            mpSmall,
+            mpLarge,
+            invisibility,
+            none,
+        }
+
         
     }
 

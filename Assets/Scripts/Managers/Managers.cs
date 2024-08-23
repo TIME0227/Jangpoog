@@ -25,6 +25,7 @@ public class Managers : MonoBehaviour
     private PlayerDataManager _playerData;
 
     private KeyBindingManager _keyBind = new KeyBindingManager();
+    private InventoryManager _inventory = new InventoryManager();
     
     
     public static DataManager Data { get { return Instance._data; } }
@@ -59,6 +60,14 @@ public class Managers : MonoBehaviour
         get
         {
             return Instance._keyBind;
+        }
+    }
+
+    public static InventoryManager Inventory
+    {
+        get
+        {
+            return Instance._inventory;
         }
     }
     
@@ -101,10 +110,11 @@ public class Managers : MonoBehaviour
 
     public static void Clear()
     {
-        Input.Clear();
+        // Input.Clear();
         Sound.Clear();
         //추가 예정
    }
+
 
     
 }

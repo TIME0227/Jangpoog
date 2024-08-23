@@ -11,6 +11,8 @@ public abstract class ItemBase : MonoBehaviour
 
     private bool allowCollect = true; // ������ ȹ�� ���� ����
 
+    public Define.Item itemType; // ������ Ÿ��
+
     public void Setup()                                                    
     {
         // ������ ���� �ڷ�ƾ �޼ҵ� ȣ��
@@ -45,6 +47,7 @@ public abstract class ItemBase : MonoBehaviour
         if (allowCollect && collision.CompareTag("Player"))
         {
             UpdateCollision(collision.transform);
+            Managers.Inventory.InventoryItem(itemType, 1);
             Destroy(gameObject);
         }
     }
@@ -59,6 +62,6 @@ public abstract class ItemBase : MonoBehaviour
         }
     }
 
-    // ItemBase�� ��ӹ޴� ��� Ŭ�������� �Ʒ� �޼ҵ� ���� ������ �ʼ�
+    // ItemBase�� ��ӹ޴�?���?Ŭ�������� �Ʒ� �޼ҵ� ���� ������ �ʼ�
     public abstract void UpdateCollision(Transform target);
 }

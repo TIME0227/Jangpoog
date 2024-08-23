@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerEx
 {
+   public string BeforeScene;
    
    //오타 방지를 위해 열거형으로 SceneName 관리
    public enum SceneNames
@@ -25,14 +26,15 @@ public class SceneManagerEx
    /// <param name="sceneName"></param>
    public void LoadScene(string sceneName = "")
    {
+      BeforeScene = GetActiveScene();
       if (string.IsNullOrEmpty(sceneName))
       {
-         //Clear 로직 추가 예정
+         Managers.Clear();
          SceneManager.LoadScene(GetActiveScene());
       }
       else
       {
-         //Clear 로직 추가 예정
+         Managers.Clear();
          SceneManager.LoadScene(sceneName);
       }
    }
@@ -46,6 +48,25 @@ public class SceneManagerEx
    {
       //Clear 로직 추가 예정
       SceneManager.LoadScene(sceneName.ToString());
+   }
+
+
+   // public void LoadSceneAfterDelay(string SceneName, float delayTime)
+   // {
+   //    float time = 0f;
+   //    while (time<delayTime)
+   //    {
+   //       time += Time.deltaTime;
+   //    }
+   //
+   //    SceneManager.LoadScene(SceneName);
+   // }
+
+   public IEnumerator LoadSceneAfterDelay(string SceneName, float delayTime)
+   {
+      yield return new WaitForSeconds(delayTime);
+      
+      SceneManager.LoadScene(SceneName);
    }
 
 }
