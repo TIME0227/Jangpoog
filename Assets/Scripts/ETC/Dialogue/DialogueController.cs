@@ -12,7 +12,10 @@ public class DialogueController : MonoBehaviour
 
   private bool conversationEnded;
   private bool isTyping;
+  private bool dialoguePlayed;
 
+  private int num = 0;
+  
   private string p;
 
   private Coroutine typeDialogueCoroutine;
@@ -22,22 +25,31 @@ public class DialogueController : MonoBehaviour
   
   public void DisplayNextParagraph(DialogueText dialogueText)
   {
-    //if there is nothing in the queue
-    if (paragraphs.Count == 0)
+    if (dialoguePlayed)
     {
-      if (!conversationEnded)
-      {
-        //start a conversation
-        StartConversation(dialogueText);
-      }
-
-      else if (conversationEnded && !isTyping)
-      {
-        //end a conversation
-        EndConversation();
-        return;
-      }
+      gameObject.SetActive(false);
+      return;
     }
+      //if there is nothing in the queue
+          if (paragraphs.Count == 0)
+          {
+            if (!conversationEnded)
+            {
+              //start a conversation
+              StartConversation(dialogueText);
+            }
+      
+            else if (conversationEnded && !isTyping)
+            {
+              //end a conversation
+              EndConversation();
+              return;
+            }
+          }
+
+          
+
+    
     
     //If there is something in the queue
     if (!isTyping)
@@ -57,6 +69,7 @@ public class DialogueController : MonoBehaviour
     if (paragraphs.Count == 0)
     {
       conversationEnded = true;
+      dialoguePlayed = true;
     }
 
   }
