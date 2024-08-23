@@ -155,7 +155,7 @@ MonoBehaviour:
   target: {fileID: 0}
   moveRange: 5
   scanRange: 8
-  attackRange: 1.5
+  attackRange: 1
   minMoveRangeX: 0
   maxMoveRangeX: 0
   thinkTime: 2
