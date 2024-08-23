@@ -30984,6 +30984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Game_Root
       objectReference: {fileID: 0}
+    - target: {fileID: 5072110050546012083, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
+      propertyPath: PlayerDataManager
+      value: 
+      objectReference: {fileID: 1459148640}
     - target: {fileID: 5256627909914273373, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -33043,6 +33047,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72101e87c36c1bd49a8bc9c889fee912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1459148640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6753386744825305097, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+  m_PrefabInstance: {fileID: 1459148637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd354c9d2b5220540a40de4e03336f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1607568231 stripped
