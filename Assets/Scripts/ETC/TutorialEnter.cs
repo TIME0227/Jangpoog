@@ -28,6 +28,8 @@ public class TutorialEnter : MonoBehaviour
             Player.SetActive(true);
             EnterCnt = 2;
 
+            Time.timeScale = 1;
+
         }
         else
         {
@@ -38,6 +40,8 @@ public class TutorialEnter : MonoBehaviour
             ItemExlplain.SetActive(false);
 
             EnterCnt = 0;
+            
+            Time.timeScale = 0;
         }
         
 
@@ -66,6 +70,7 @@ public class TutorialEnter : MonoBehaviour
                 
                 PlayerPrefs.SetInt(Define.SaveKey.tutorialDone.ToString(), 1);
                 isTutorialEnd = true;
+                Time.timeScale = 1;
             }
 
 

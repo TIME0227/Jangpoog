@@ -38,7 +38,6 @@ public class DataManager
     {
         if (Managers.PlayerData == null)
         {
-            Debug.Log("안될줄알았다 Managers.PlayerData = null");
             return;
         }
         PlayerPrefs.SetFloat(Define.SaveKey.playerHp.ToString(),Managers.PlayerData.Hp);

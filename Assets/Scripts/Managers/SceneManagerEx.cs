@@ -34,11 +34,9 @@ public class SceneManagerEx
       }
       else
       {
-         Debug.Log("alallalalalaaaaaaasaa");
          Managers.Clear();
          if (!sceneName.Equals(GetActiveScene()))
          {
-            Debug.Log("ddasl;fjsalf;asjl;fsajflasjflasfjlasjf");
             Managers.Data.SaveData();
          }
          SceneManager.LoadScene(sceneName);
