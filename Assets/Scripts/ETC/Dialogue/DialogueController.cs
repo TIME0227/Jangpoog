@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class DialogueController : MonoBehaviour
 {
   [SerializeField] private TextMeshProUGUI NPCNameText;
@@ -27,7 +29,7 @@ public class DialogueController : MonoBehaviour
   {
     if (dialoguePlayed)
     {
-      gameObject.SetActive(false);
+      // gameObject.SetActive(false);
       return;
     }
       //if there is nothing in the queue
@@ -70,7 +72,8 @@ public class DialogueController : MonoBehaviour
     {
       conversationEnded = true;
       dialoguePlayed = true;
-    }
+            EndConversation();
+        }
 
   }
 
@@ -100,13 +103,20 @@ public class DialogueController : MonoBehaviour
     paragraphs.Clear();
     //return bool to false
     conversationEnded = false;
-    
-    //deactivate gameobject
-    if (gameObject.activeSelf)
+
+        // 투명 물약 2개 주는 실반 아저씨
+        Managers.Inventory.invinsibilityCnt += 2;
+        Debug.Log(Managers.Inventory.invinsibilityCnt + "개");
+        
+
+        //deactivate gameobject
+        if (gameObject.activeSelf)
     {
       gameObject.SetActive(false);
     }
-  }
+
+        SceneManager.LoadScene("2-1");
+    }
 
   private IEnumerator TypeDialogueText(string p)
   {
