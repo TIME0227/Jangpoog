@@ -16,4 +16,9 @@ public class UI_SettingScene : MonoBehaviour
             Managers.Scene.LoadScene(Managers.Scene.BeforeScene);
         }
     }
+
+    public void SetTimeScale(int scale)
+    {
+        Time.timeScale = scale;
+    }
 }

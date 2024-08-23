@@ -7,10 +7,13 @@ public class UI_GamePopUp : MonoBehaviour
 {
     [SerializeField] private GameObject playerUI;
     [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject settingUI;
+    
 
     private void Start()
     {
         pauseUI.SetActive(false);
+        settingUI.SetActive(false);
     }
 
 

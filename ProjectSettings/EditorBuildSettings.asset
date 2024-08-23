@@ -45,6 +45,6 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/Chapters.unity
     guid: b14e577c33084ea4ca9a04c1190a3bd8
   - enabled: 1
-    path: Assets/Scenes/Village_1.unity
+    path: Assets/Scenes/Village1.unity
     guid: c85a9568c86ce46b492428e6ab97d145
   m_configObjects: {}
