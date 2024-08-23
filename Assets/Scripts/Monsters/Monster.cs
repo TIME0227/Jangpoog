@@ -72,6 +72,8 @@ public class Monster : MonoBehaviour
     {
         CalcDirection();
         SetTarget();
+        
+        if(player==null) player = GameObject.FindWithTag("Player");
 
         if (attackDelay >= 0)
         {
@@ -143,7 +145,7 @@ public class Monster : MonoBehaviour
     //타겟 검사
     void SetTarget()
     {
-        if (direction.magnitude <= scanRange)
+        if (player!=null && direction.magnitude <= scanRange)
         {
             if (player.GetComponent<PlayerDataManager>().IsInvisible)
             {
