@@ -10,5 +10,12 @@ public class DataManager
     {
         
     }
+
+    public void SaveData()
+    {
+        PlayerPrefs.SetFloat(Define.SaveKey.playerHp.ToString(),Managers.PlayerData.Hp);
+        PlayerPrefs.SetFloat(Define.SaveKey.playerMana.ToString(),Managers.PlayerData.Mana);
+        PlayerPrefs.SetInt(Define.SaveKey.levelToken.ToString(),Managers.PlayerData.LevelUpToken);
+    }
     
 }

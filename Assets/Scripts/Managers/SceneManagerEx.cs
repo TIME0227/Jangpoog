@@ -35,6 +35,10 @@ public class SceneManagerEx
       else
       {
          Managers.Clear();
+         if (!sceneName.Equals(GetActiveScene()))
+         {
+            Managers.Data.SaveData();
+         }
          SceneManager.LoadScene(sceneName);
       }
    }
