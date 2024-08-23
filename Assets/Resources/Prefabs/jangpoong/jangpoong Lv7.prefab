@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4626774199168933010}
   - component: {fileID: 4548064933645919560}
   m_Layer: 12
-  m_Name: jangpoong Lv2
+  m_Name: jangpoong Lv7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,4 +183,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388e4c18cbce5492a918af615cf224fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.7
+  damage: 3.5
