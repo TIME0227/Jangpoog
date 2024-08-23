@@ -36,8 +36,7 @@ public class PlayerController : MonoBehaviour
                 //sg
                 slideSpeed = sgSlideSpeed;
                 break;
-        }
-        Debug.Log($"state : {state} / slidespeed : {slideSpeed}");
+        } 
     }
 
     #endregion

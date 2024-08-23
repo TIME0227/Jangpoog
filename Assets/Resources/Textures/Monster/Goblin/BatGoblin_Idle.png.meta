@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 391ea985c84044caab7955a31cf91d63
+guid: 75b2fe250833849e5972d7520530afde
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f285f1083280946b399f11c4eaddc8ab
-      internalID: -675687143
+      spriteID: fb63a180a428c44cfa0ffdaab7ce3bf8
+      internalID: 858271481
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d308f57d360534b708c7d6e751bb5cb2
-      internalID: 26113439
+      spriteID: a65bdfe3db3124fdd83465a3cb521caf
+      internalID: 1649197178
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BatGoblin_idle_0: -675687143
-      BatGoblin_idle_1: 26113439
+      BatGoblin_idle_0: 858271481
+      BatGoblin_idle_1: 1649197178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

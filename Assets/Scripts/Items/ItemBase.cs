@@ -5,19 +5,19 @@ using UnityEngine;
 public abstract class ItemBase : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 spawnForce = new Vector2(1, 7); // ¾ÆÀÌÅÛ »ý¼º ½Ã ÀÌµ¿ Èû
+    private Vector2 spawnForce = new Vector2(1, 7); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½
     [SerializeField]
-    private float aliveTImeAfterSpwn = 5;                   // ¾ÆÀÌÅÛ »ý¼º ÈÄ ½ºÆù ½Ã°£
+    private float aliveTImeAfterSpwn = 5;                   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
 
-    private bool allowCollect = true;                           // ¾ÆÀÌÅÛ È¹µæ °¡´É ¿©ºÎ
+    private bool allowCollect = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     public void Setup()                                                    
     {
-        // ¾ÆÀÌÅÛ »ý¼º ÄÚ·çÆ¾ ¸Þ¼Òµå È£Ãâ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½Æ¾ ï¿½Þ¼Òµï¿½ È£ï¿½ï¿½
         StartCoroutine(nameof(SpawnItemProcess));
     }
 
-    // ¾ÆÀÌÅÛ »ý¼º
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private IEnumerator SpawnItemProcess()
     {
         allowCollect = false;
@@ -26,7 +26,7 @@ public abstract class ItemBase : MonoBehaviour
         rigid.freezeRotation = true;
         rigid.velocity = new Vector2(Random.Range(-spawnForce.x, spawnForce.x), spawnForce.y);
 
-        while (rigid.velocity.y > 0) // ÃÖ°íÁ¡ µµ´Þ ½Ã while¹® Á¾·á
+        while (rigid.velocity.y > 0) // ï¿½Ö°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ whileï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         {
             yield return null;
         }
@@ -39,7 +39,7 @@ public abstract class ItemBase : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // ¹Ì¸® ¹èÄ¡ÇØµÐ ¾ÆÀÌÅÛÀ» ¸ÔÀ» ¶§
+    // ï¿½Ì¸ï¿½ ï¿½ï¿½Ä¡ï¿½Øµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (allowCollect && collision.CompareTag("Player"))
@@ -49,7 +49,7 @@ public abstract class ItemBase : MonoBehaviour
         }
     }
 
-    // »ý¼ºµÈ ¾ÆÀÌÅÛ ¸ÔÀ» ¶§
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (allowCollect && collision.transform.CompareTag("Player")) ;
@@ -59,6 +59,6 @@ public abstract class ItemBase : MonoBehaviour
         }
     }
 
-    // ItemBase¸¦ »ó¼Ó¹Þ´Â ¸ðµç Å¬·¡½ºµéÀº ¾Æ·¡ ¸Þ¼Òµå ³»¿ë ÀçÁ¤ÀÇ ÇÊ¼ö
+    // ItemBaseï¿½ï¿½ ï¿½ï¿½Ó¹Þ´ï¿½ ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Þ¼Òµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¼ï¿½
     public abstract void UpdateCollision(Transform target);
 }

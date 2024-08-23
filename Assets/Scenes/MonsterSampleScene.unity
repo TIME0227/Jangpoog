@@ -1175,6 +1175,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341011768}
   m_CullTransparentMesh: 1
+--- !u!114 &392717825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3819921005863100851, guid: 89993bc24b62b4197ab5fda14b78b045, type: 3}
+  m_PrefabInstance: {fileID: 1078138662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955d8c11a23cb481db711232f28d6b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &712348771 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2129893604694417917, guid: ee7e6a68c8c61465782424d5ff4d4d32, type: 3}
@@ -4380,8 +4391,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MonsterBatGoblin, Assembly-CSharp
+      - m_Target: {fileID: 392717825}
+        m_TargetAssemblyTypeName: Goblin_DieController, Assembly-CSharp
         m_MethodName: ThrowBat
         m_Mode: 1
         m_Arguments:
