@@ -237,7 +237,7 @@ public class Monster : MonoBehaviour
         Debug.DrawRay(transform.position,direction.normalized*1.5f,Color.green);
         if (Physics2D.Raycast(transform.position, direction, 1.5f, LayerMask.GetMask("LevelN")))
         {
-            Debug.Log("올라갈수 없는 곳 감지");
+            // Debug.Log("올라갈수 없는 곳 감지");
             return -1;
         }
         else if (Physics2D.Raycast(transform.position, direction, 1.5f, LayerMask.GetMask("Level1")))

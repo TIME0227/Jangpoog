@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SuperStickyGoo : MonoBehaviour
+public class SuperStickyGoo: MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
 

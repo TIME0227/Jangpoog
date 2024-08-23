@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 public class MovementRigidbody2D : MonoBehaviour
 {
@@ -72,6 +73,7 @@ public class MovementRigidbody2D : MonoBehaviour
                 walkSpeed = sgWalkSpeed;
                 break;
         }
+        PrintSpeed();
         Debug.Log($"state : {state} / walkspeed : {walkSpeed}");
 
     }
@@ -230,6 +232,15 @@ public class MovementRigidbody2D : MonoBehaviour
     public void ResetVelocityY()
     {
         rigid2D.velocity = new Vector2(rigid2D.velocity.x, 0);
+    }
+    
+    
+    public TextMeshProUGUI speedTmpro;
+
+
+    public void PrintSpeed()
+    {
+        speedTmpro.text = $"Player Speed : {walkSpeed}";
     }
 }
 

@@ -24,10 +24,8 @@ public class StickyGoo : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerData = other.GetComponent<PlayerDataManager>();
-            Debug.Log("safasfdsaf?????");
 
-
-            if (playerData != null && !playerData.IsInvincibility)
+            if (playerData != null)
             {
                 playerMovement = other.GetComponent<MovementRigidbody2D>();
                 playerMovement.IsInSg = true;
@@ -41,7 +39,7 @@ public class StickyGoo : MonoBehaviour
     //1. 데미지 2초당 0.2 hp 감소
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player")&&!isCoroutineRunning && !playerData.IsInvincibility)
+        if (other.CompareTag("Player")&&!isCoroutineRunning && !playerData.IsInvincible)
         {
             isCoroutineRunning = true;
             StartCoroutine(nameof(AttackPlayerOverTime));

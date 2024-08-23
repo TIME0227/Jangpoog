@@ -92,6 +92,12 @@ public class PlayerDataManager : MonoBehaviour
     [SerializeField][Tooltip("피격 시 추가되는 무적 지속 시간")] private float invincibilityDuration = 2;//피격시 추가되는 무적 시간
     private float invincibilityTime = 0; //무적 지속 시간
     private bool isInvincible = false; //무적 여부
+
+    public bool IsInvincible
+    {
+        get => isInvincible;
+        set => isInvincible = value;
+    }
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Color originColor;
 
@@ -164,7 +170,7 @@ public class PlayerDataManager : MonoBehaviour
         if (invincible)
         {
             //1. 무적 상태 처리
-            if (isInvincible) return; //무적 상태에서는 HP 감소 x
+            if (IsInvincible) return; //무적 상태에서는 HP 감소 x
 
             OnInvincibility(invincibilityDuration); //공격 받으면 invincibilityDuration초 동안 무적 상태
         }
@@ -185,7 +191,7 @@ public class PlayerDataManager : MonoBehaviour
 
     private void OnInvincibility(float time)
     {
-        if (isInvincible)
+        if (IsInvincible)
         {
             invincibilityTime += time;
         }
@@ -201,7 +207,7 @@ public class PlayerDataManager : MonoBehaviour
     private IEnumerator Invincibility()
     {
         //1. flag 설정
-        isInvincible = true;
+        IsInvincible = true;
         //2. invincibilityTime 동안 레이어 변경, 깜박이기 효과
         gameObject.layer = (int)Define.Layer.PlayerDamaged; //무적 상태 레이어로 변경
 
@@ -220,9 +226,10 @@ public class PlayerDataManager : MonoBehaviour
 
         spriteRenderer.color = originColor; //alpha 복구
         gameObject.layer = (int)Define.Layer.Player; //원래 레이어로 복구
-        isInvincible = false;
+        IsInvincible = false;
 
     }
 
     #endregion
+    
 }
