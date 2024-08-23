@@ -10,7 +10,7 @@ public abstract class NPC : MonoBehaviour, IInteractable
 {
     [SerializeField] private SpriteRenderer _interactSprite;
 
-    private Transform _playerTransform;
+    [SerializeField]private Transform _playerTransform;
 
     private const float INTERACTIVE_DISTANCE = 4F;
     private void Start()

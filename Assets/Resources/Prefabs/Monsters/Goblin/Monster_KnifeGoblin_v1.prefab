@@ -88,8 +88,8 @@ MonoBehaviour:
   belowColiisionLayer:
     serializedVersion: 2
     m_Bits: 192
-  walkSpeed: 5.6
-  runSpeed: 5.6
+  walkSpeed: 4
+  runSpeed: 4
   jumpForce: 11
   highGravityScale: 3.5
   isJump: 0
@@ -539,4 +539,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb03928a6ad64de1a7a5ddf620b52a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 0.6, y: 1}
+  boxSize: {x: 1, y: 1}
