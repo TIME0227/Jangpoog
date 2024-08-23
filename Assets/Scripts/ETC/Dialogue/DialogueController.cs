@@ -11,8 +11,14 @@ public class DialogueController : MonoBehaviour
   [SerializeField] private float typeSpeed = 15;
   private Queue<string> paragraphs = new Queue<string>();
 
+    public GameObject playerUI;
 
-  private bool conversationEnded;
+    public void Start()
+    {
+        playerUI.SetActive(false);
+    }
+
+    private bool conversationEnded;
   private bool isTyping;
   private bool dialoguePlayed;
 
