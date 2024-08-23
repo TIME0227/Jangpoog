@@ -90,6 +90,12 @@ public class PlayerAnimator : MonoBehaviour
         animator.speed = multiplier;
     }
 
+    // 플레이어 죽었을 때
+    public void PlayerDead()
+    {
+        animator.SetBool("Dead", true);
+        // Debug.Log("플레이어 쥬금");
+    }
 }
 
 

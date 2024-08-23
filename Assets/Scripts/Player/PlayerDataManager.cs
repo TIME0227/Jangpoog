@@ -68,7 +68,7 @@ public class PlayerDataManager : MonoBehaviour
         {
             if (value != hp)
             {
-                hp = value;
+                hp = Mathf.Clamp(value, 0, maxHp);
                 if (maxHp <= hp)
                 {
                     hp = maxHp;
@@ -78,6 +78,7 @@ public class PlayerDataManager : MonoBehaviour
 
                 if (hp == 0)
                     DieAction?.Invoke();
+                    
             }
         }
     }

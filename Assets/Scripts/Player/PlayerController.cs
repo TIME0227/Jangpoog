@@ -3,6 +3,8 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -60,6 +62,11 @@ public class PlayerController : MonoBehaviour
     public float speedMultiplier = 2.0f;                                // 달리기할 때 속도 배속
     private bool isRunning = false;                                        // 달리기 중이면 true
 
+    public GameObject gameOver;
+    public bool gameOverFlag = false; // true면 게임 오버 상태
+
+    public GameObject TutorialObject;
+
     // 더블 클릭 (달리기) 데이터 설정
     /*private float doubleClickTimeLimit = 0.25f;
     private float lastClickTime = -1.0f;
@@ -88,6 +95,13 @@ public class PlayerController : MonoBehaviour
         movement.controlSpeedAction -= WalkSpeedState;
         movement.controlSpeedAction += WalkSpeedState;
 
+        // GAMEOVER 비활성화
+        gameOver.SetActive(false);
+
+        // 플레이어 DieAction 등록
+        Managers.PlayerData.DieAction -= SetPlayerDead;
+        Managers.PlayerData.DieAction += SetPlayerDead;
+
     }
 
     public void SetUp(StageData stageData)
@@ -102,12 +116,16 @@ public class PlayerController : MonoBehaviour
         float offset = 0.5f + Input.GetAxisRaw("Sprint") * 0.5f;
         x *= offset;
 
-        UpdateMove(x);
-        UpdateJump();
-        UpdateSlide();
-        UpdateRun();
-        UpdateJangPoong();
+        if (gameOverFlag == false)
+        {
+            UpdateMove(x);
+            UpdateJump();
+            UpdateSlide();
+            UpdateRun();
+            UpdateJangPoong();
+        }
         playerAnimator.UpdateAnimation(x);
+
     }
 
     private float GetHorizontalInput()
@@ -367,5 +385,26 @@ public class PlayerController : MonoBehaviour
            yield return new WaitForSeconds(0.5f);
            isDoubleClicking = false;
        }*/
+    #endregion
+
+    #region 사망
+    private void SetPlayerDead()
+    {
+        movement.MoveTo(0);
+        gameOverFlag = true;
+        playerAnimator.PlayerDead();
+        Debug.Log("플레이어 죽음");
+        gameOver.SetActive(true);
+    }
+    public void OnButtonClick_Restart()
+    {
+        SceneManager.LoadScene("1-1 tutorial");
+        TutorialObject.SetActive(false);
+    }
+    public void OnButtonClick_Exit()
+    {
+        SceneManager.LoadScene("Exit");
+    }
+
     #endregion
 }
