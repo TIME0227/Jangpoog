@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Monster
+    uniqueID: 2176216491
+    locked: 0
+  - name: Weapon
+    uniqueID: 3585608045
+    locked: 0

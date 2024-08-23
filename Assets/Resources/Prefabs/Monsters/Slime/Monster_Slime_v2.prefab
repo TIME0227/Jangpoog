@@ -52,6 +52,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6016842671243142753, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: statFileName
+      value: Monster_Slime_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016842671243142753, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[1].item
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016842671243142753, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[0].dropChance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016842671243142753, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
+      propertyPath: lootTable.Array.data[1].dropChance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8675729229114381373, guid: 6c4f3d4828c3e41fdb4978368a0d21d7, type: 3}
       propertyPath: stat
       value: 

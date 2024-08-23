@@ -49,7 +49,6 @@ public class UI_PlayerHp : MonoBehaviour
         {
             hpHeartList[integerPart].value = decimalPart;
         }
-        Debug.Log("UI 반영 완료");
     }
 
     private void InitUIHp()

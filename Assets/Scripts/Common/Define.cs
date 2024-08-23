@@ -5,8 +5,8 @@
         {
             Unknown,
             Player,
-            Slime,
-            Goblin,
+            Monster,
+            
         }
 
         public enum Layer
