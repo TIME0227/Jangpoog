@@ -21,7 +21,7 @@ public class UI_Buttons : MonoBehaviour
     public void OnClickNewGame()
     {
         Debug.Log("새 게임");
-        SceneManager.LoadScene("Difficulty");
+        SceneManager.LoadScene("1-1 tutorial");
 
     }
 
