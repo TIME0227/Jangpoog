@@ -710,6 +710,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
+--- !u!1 &55025089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6524858663461264794, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
+  m_PrefabInstance: {fileID: 55025088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &55483099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5369,11 +5374,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117929504}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1118829932 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8072479866916052756, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
-  m_PrefabInstance: {fileID: 55025088}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1124756930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10390,7 +10390,7 @@ PrefabInstance:
     - target: {fileID: 6944388229652730403, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: gameOver
       value: 
-      objectReference: {fileID: 1118829932}
+      objectReference: {fileID: 55025089}
     - target: {fileID: 7899691687604606367, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: m_Name
       value: Player

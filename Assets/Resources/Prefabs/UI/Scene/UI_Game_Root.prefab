@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6253192789742444598, guid: 159dca54338a34584994d9bd2f70df21, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9200197277258341812, guid: 159dca54338a34584994d9bd2f70df21, type: 3}
       propertyPath: PlayerUI
@@ -435,6 +435,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7717852424032840452}
     m_Modifications:
+    - target: {fileID: 489831244782748928, guid: 1fd486b46ca5d4e629608d858ac510bb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1092776484796498950, guid: 1fd486b46ca5d4e629608d858ac510bb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
