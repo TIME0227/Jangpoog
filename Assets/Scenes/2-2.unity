@@ -34064,6 +34064,10 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1792443377}
+    - target: {fileID: 7190888457531995727, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
+      propertyPath: jumpForce
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7307564857670681611, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: runSpeed
       value: 10
