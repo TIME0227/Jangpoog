@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class InventoryManager
 {
-    public int hpPotion_Small_cnt = 0;
-    public int hpPotion_Large_cnt = 0;
-    public int mpPotion_Small_cnt = 0;
-    public int mpPotion_Large_cnt = 0;
-    public int invisibilityPotion_cnt = 0;
+    public int hpPotion_Small_cnt;
+    public int hpPotion_Large_cnt;
+    public int mpPotion_Small_cnt;
+    public int mpPotion_Large_cnt;
+    public int invisibilityPotion_cnt;
 
     public InventoryUI inventoryUI;
 

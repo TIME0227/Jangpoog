@@ -19,11 +19,11 @@ public class KeyBindingManager
     //     }
     // }
 
-    public KeyCode jumpKeyCode = KeyCode.W;
-    public KeyCode slideKeyCode = KeyCode.S;
+    public KeyCode jumpKeyCode = KeyCode.UpArrow;
+    public KeyCode slideKeyCode = KeyCode.DownArrow;
     public KeyCode runKeyCode = KeyCode.LeftShift;
-    public KeyCode leftKeyCode = KeyCode.A;
-    public KeyCode rightKeyCode = KeyCode.D;
+    public KeyCode leftKeyCode = KeyCode.LeftArrow;
+    public KeyCode rightKeyCode = KeyCode.RightArrow;
 
     // private void Start()
     // {

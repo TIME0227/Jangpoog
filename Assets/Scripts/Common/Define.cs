@@ -67,7 +67,12 @@
             playerHp,
             playerMana,
             levelToken,
-        }
+            hpPotionSmallCnt,
+            hpPotionLargeCnt,
+            mpPotionSmallCnt,
+            mpPotionLargeCnt,
+            invisibilityPotionCnt
+    }
 
         
     }

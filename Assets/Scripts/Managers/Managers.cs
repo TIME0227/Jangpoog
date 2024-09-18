@@ -124,6 +124,9 @@ public class Managers : MonoBehaviour
         {
             if(PlayerPrefs.HasKey(key)) PlayerPrefs.DeleteKey(key);
         }
+
+        // 인벤토리 아이템 개수를 0으로 초기화
+        Instance._data.ResetInventory();
     }
 
 

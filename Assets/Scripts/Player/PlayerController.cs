@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
 
     #region Move Speed Control Variables / Methods
-    [SerializeField] private float originSlideSpeed = 10.0f;
+    [SerializeField] private float originSlideSpeed = 7.0f;
     [NonSerialized] public float slideSpeed;
 
     [NonSerialized] public float ssgSlideSpeed;
@@ -166,13 +166,18 @@ public class PlayerController : MonoBehaviour
     #region 달리기
     private void UpdateRun()
     {
-        if (Input.GetKeyDown(Managers.KeyBind.runKeyCode))
+        /*if (Input.GetKeyDown(Managers.KeyBind.runKeyCode))
         {
             isRunning = true;
         }
         else if (Input.GetKeyUp(Managers.KeyBind.runKeyCode))
         {
             isRunning = false;
+        }*/
+
+        if (Input.GetKeyDown(Managers.KeyBind.runKeyCode))
+        {
+            isRunning = !isRunning; // 달리기 상태 토글
         }
     }
     #endregion
@@ -261,7 +266,7 @@ public class PlayerController : MonoBehaviour
         {
             return;  ////UI 클릭시는 장풍 발사가 되지 않도록 처리 (240802 도현)
         }
-        if (Input.GetMouseButtonDown(0))    // 마우스 좌클릭으로 장풍 발사
+        if (Input.GetKeyDown(KeyCode.Space))    // 스페이스 바로 장풍 발사
         {
             if (playerDataManager.Mana >= playerDataManager.manaConsumption)
             {
