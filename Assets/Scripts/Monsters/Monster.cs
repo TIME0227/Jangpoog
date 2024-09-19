@@ -125,12 +125,21 @@ public class Monster : MonoBehaviour
 
     protected virtual void OnDie()
     {
-        anim.SetTrigger("Die");
-        Managers.Sound.Play("77_flesh_02");
         Debug.Log("쥬금");
-        movement2D.MoveTo(0);
-        StopAllCoroutines();
         
+        //레이어 변경
+        gameObject.layer = (int)Define.Layer.MonsterDie;
+        
+        //애니메이션
+        anim.SetTrigger("Die");
+        //사운드
+        Managers.Sound.Play("77_flesh_02");
+        //코루틴 정지
+        StopAllCoroutines();
+        //이동 정지
+        movement2D.MoveTo(0);
+        
+        //아이템 드랍
         Invoke(nameof(SpawnItem), 0.9f);
         
         //게임 관리 매니져로 수정할 예정

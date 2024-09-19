@@ -41,6 +41,7 @@ public class JangpoongController : MonoBehaviour
 
         if (other.gameObject.layer == (int)Define.Layer.Monster)
         {
+            Debug.Log("몬스터 공격받음");
             other.GetComponent<MonsterStat>().OnAttacked(damage);
         }
     }

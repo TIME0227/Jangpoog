@@ -20,6 +20,7 @@
             
             Player = 15,
             Monster = 16,
+            MonsterDie = 19,
             
         }
         public enum State

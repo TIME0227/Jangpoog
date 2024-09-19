@@ -19,7 +19,10 @@ public class MonsterStat : MonoBehaviour
             if (value != currentHp)
             {
                 currentHp = value;
-                if(currentHp==0) DieAction?.Invoke();
+                if (currentHp == 0)
+                {
+                    DieAction?.Invoke();
+                }
             }
         }
     }
