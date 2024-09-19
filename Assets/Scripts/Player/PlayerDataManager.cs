@@ -70,9 +70,11 @@ public class PlayerDataManager : MonoBehaviour
             {
                 Debug.Log("value == hp");
             }
-            if (value != hp)
+            else
             {
                 hp = Mathf.Clamp(value, 0, maxHp);
+                //소수점 아래 2자리까지만 저장
+                hp = Mathf.Round(hp * 100) / 100f;
                
                 //UpdateHpText();
                 UpdateHpAction?.Invoke(hp);
@@ -120,6 +122,8 @@ public class PlayerDataManager : MonoBehaviour
     private void Start()
     {
         Managers.Data.GetData();
+        UpdateHpAction?.Invoke(Hp);
+        UpdateManaAction?.Invoke(Mana);
     }
 
     private void Update()

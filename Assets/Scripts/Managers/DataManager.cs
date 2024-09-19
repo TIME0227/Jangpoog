@@ -20,12 +20,18 @@ public class DataManager
         }
         else
         {
-            Debug.Log("playerHp playerprefs 키 없음");
+            Debug.Log("playerHp playerprefs 키 없음.");
+            // Managers.PlayerData.Hp = 10;
         }
 
         if (PlayerPrefs.HasKey(Define.SaveKey.playerMana.ToString()))
         {
             Managers.PlayerData.Mana = PlayerPrefs.GetInt(Define.SaveKey.playerMana.ToString());
+        }
+        else
+        {
+            Debug.Log("playerMana playerprefs 키 없음.");
+            // Managers.PlayerData.Mana = 100;
         }
 
         if (PlayerPrefs.HasKey(Define.SaveKey.levelToken.ToString()))
