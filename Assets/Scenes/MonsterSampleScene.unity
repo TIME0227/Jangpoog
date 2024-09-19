@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &184893055 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8072479866916052756, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
-  m_PrefabInstance: {fileID: 2007184420}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &186123928
 GameObject:
   m_ObjectHideFlags: 0
@@ -4635,7 +4630,7 @@ PrefabInstance:
     - target: {fileID: 6944388229652730403, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: gameOver
       value: 
-      objectReference: {fileID: 184893055}
+      objectReference: {fileID: 1968503924}
     - target: {fileID: 7190888457531995727, guid: e8aadfafab9a34a9398e8b9ced5a9eb5, type: 3}
       propertyPath: speedTmpro
       value: 
@@ -4848,6 +4843,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932280757}
   m_CullTransparentMesh: 1
+--- !u!1 &1968503924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6524858663461264794, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
+  m_PrefabInstance: {fileID: 2007184420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2007184420
 PrefabInstance:
   m_ObjectHideFlags: 0

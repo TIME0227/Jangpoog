@@ -86,7 +86,6 @@ public class Mon_MovementRigidbody2D : MonoBehaviour
     // x축 속력(velocity) 설정, 외부 클래스에서 호출
     public void MoveTo(float x)
     {
-        Debug.Log(Mathf.Abs(x));
         // x축 방향 속력을 x * moveSpeed로 설정
         rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
         anim.SetFloat("velocityX",Mathf.Abs(x));

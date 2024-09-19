@@ -6,20 +6,34 @@ using UnityEngine;
 
 public class MonsterWeaponCollider : MonoBehaviour
 {
+    //무기 컨트롤
     public Vector2 boxSize;
     private float damage;
+    private Collider2D weaponCollider;
+    
+    //사망 action 구독
+    private MonsterStat stat;
 
-    void Awake()
+    private void Awake()
     {
+        weaponCollider = GetComponent<Collider2D>();
     }
+
 
     private void Start()
     {
+        stat = GetComponentInParent<MonsterStat>();
+        stat.DieAction -= InactiveWeapon;
+        stat.DieAction += InactiveWeapon;
     }
 
-    private void Update()
+    private void InactiveWeapon()
     {
-        
+        if (weaponCollider)
+        {
+            weaponCollider.enabled = false;
+            Debug.Log($"weapon collider : {weaponCollider.enabled}");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -41,7 +55,7 @@ public class MonsterWeaponCollider : MonoBehaviour
 
     public void AttackPlayerByWeapon()
     {
-        Debug.Log("무기 공격 호출함");
+        // Debug.Log("무기 공격 호출함");
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(transform.position, boxSize, 0);
         foreach (Collider2D collider in collider2Ds)
         {
