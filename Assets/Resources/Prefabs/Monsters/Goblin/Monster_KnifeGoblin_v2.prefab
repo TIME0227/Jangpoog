@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2601874532076664223, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3768807491463201559, guid: 7f366805fbc5b4c7883b2919d690d112, type: 3}
       propertyPath: statFileName
       value: Monster_KnifeGoblin_v2

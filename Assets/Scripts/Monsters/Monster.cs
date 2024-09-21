@@ -64,6 +64,7 @@ public class Monster : MonoBehaviour
         //UI hp bar 설정
         if (gameObject.GetComponentInChildren<UI_HPBar>() == null)
         {
+            
             Managers.UI.MakeWorldSpaceUI<UI_HPBar>(transform).gameObject.SetActive(false);
         }
     }

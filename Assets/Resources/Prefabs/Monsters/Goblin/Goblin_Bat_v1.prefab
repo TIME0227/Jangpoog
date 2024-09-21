@@ -134,13 +134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7901dfe33c720456abc07f46f3232ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   rotationSpeed: 540
   damage: 1
   rangeMinX: 3
   rangeMaxX: 4.2
   target: {fileID: 0}
-  heightArc: 1
+  heightArc: 2
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &6547440131421448788
 Rigidbody2D:
