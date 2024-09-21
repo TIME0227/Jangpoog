@@ -31,6 +31,7 @@ public class Monster : MonoBehaviour
 
     public float thinkTime = 2f;
     private float thinkDelay;
+    public float targetTime = 1f;
 
     public float ThinkDelay
     {
@@ -49,8 +50,6 @@ public class Monster : MonoBehaviour
         }
         set => attackDelay = value;
     }
-
-    private float targettingTime = 1.5f; //타겟팅 대기 시간
     
     [Header("Loot")] public List<LootItem> lootTable = new();
 
@@ -122,6 +121,8 @@ public class Monster : MonoBehaviour
         
         
         player = GameObject.FindWithTag("Player");
+        
+        SetDelayTime(); //타겟팅 딜레이 시간, 공격 딜레이 시간 랜덤하게 설정
     }
 
     protected virtual void OnDie()
@@ -272,6 +273,12 @@ public class Monster : MonoBehaviour
             return 0;
         }
     }
+
+    private void SetDelayTime()
+    {
+        thinkTime = Mathf.Round(Random.Range(1.5f, 2.0f) * 10) / 10;
+        attackCoolTime = Mathf.Round(Random.Range(1.0f, 1.5f) * 10) / 10;
+    }
     
 
     #endregion
@@ -282,7 +289,7 @@ public class Monster : MonoBehaviour
     {
         movement2D.MoveTo(0); //움직임 정지 처리
         
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(targetTime);
         
         anim.SetBool("isFollow", true);
     }
