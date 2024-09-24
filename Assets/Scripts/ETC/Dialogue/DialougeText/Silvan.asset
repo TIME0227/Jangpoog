@@ -12,7 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b3f46a70ba6468a8c9e521d3e4b2a7, type: 3}
   m_Name: Silvan
   m_EditorClassIdentifier: 
-  speakerName: Silvan
+  speakers:
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
   paragraphs:
   - "\uAC10\uC0AC\uD569\uB2C8\uB2E4...! \uAC10\uC0AC\uD569\uB2C8\uB2E4..! \n\uC800\uD76C
     \uB9C8\uC744\uC744 \uAD6C\uD574\uC8FC\uC154\uC11C \uAC10\uC0AC\uD569\uB2C8\uB2E4..!"
@@ -38,3 +54,4 @@ MonoBehaviour:
   - "\uAC04\uACE1\uD788 \uBD80\uD0C1\uB4DC\uB9BD\uB2C8\uB2E4..."
   - "\uADF8\uB7FC \uC774\uB9CC..."
   - "\uBB34\uC6B4\uC744 \uBE55\uB2C8\uB2E4."
+  - "(\uB300\uD654 \uC885\uB8CC - \uCD9C\uB825 X)"
