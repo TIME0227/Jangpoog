@@ -5763,7 +5763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1598985764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6075,11 +6075,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 637696360955021061, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 637696360955021061, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 645365801299321616, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6205,13 +6205,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Game_Root
       objectReference: {fileID: 0}
-    - target: {fileID: 4870807934051463396, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 3434804663096475363, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4870807934051463396, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870807934051463396, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5072110050546012083, guid: 59a9ebde221b047c38db217e49c37f57, type: 3}
       propertyPath: PlayerDataManager
