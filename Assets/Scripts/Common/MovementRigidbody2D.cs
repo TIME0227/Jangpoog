@@ -162,7 +162,7 @@ public class MovementRigidbody2D : MonoBehaviour
         Bounds bounds = collider2D.bounds;
 
         // 플레이어 발에 생성하는 충돌 범위
-        collisionSize = new Vector2((bounds.max.x - bounds.min.x) * 0.5f, 0.1f);
+        collisionSize = new Vector2((bounds.max.x - bounds.min.x) * 0.8f, 0.1f);
 
         // 플레이어의 머리/발 위치
         headPosition = new Vector2(bounds.center.x, bounds.max.y);
@@ -178,6 +178,13 @@ public class MovementRigidbody2D : MonoBehaviour
         HitAboveObject = Physics2D.OverlapBox(headPosition, collisionSize, 0, aboveColiisionLayer);
         HitBelowObject = Physics2D.OverlapBox(footPosition, collisionSize, 0, belowColiisionLayer);
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(footPosition,collisionSize);
+    }
+
 
     // 다른 클래스에서 호출하는 점프 메소드
     // y축 점프

@@ -21,6 +21,11 @@ public class Destination : MonoBehaviour
             }
             //keyInfo 활성화
             keyInfo.SetActive(true);
+
+            if (Input.GetKey(KeyCode.F))
+            {
+                GoToNextState();
+            }
             
         }
     }
@@ -29,15 +34,7 @@ public class Destination : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKey(KeyCode.F))
         {
-            //파티클 뿌리고
-            Instantiate(flagEffect, transform.position, Quaternion.identity);
-            
-            //효과음 빰빠밤
-            Managers.Sound.Play(audioClip);
-            
-            //씬 이동
-            //Managers.Scene.LoadSceneAfterDelay(NextSceneName,1f);
-            StartCoroutine(Managers.Scene.LoadSceneAfterDelay(NextSceneName, 0.5f));
+            GoToNextState();
         }
     }
 
@@ -50,5 +47,19 @@ public class Destination : MonoBehaviour
                 keyInfo.SetActive(false);
             }
         }
+    }
+
+
+    private void GoToNextState()
+    {
+        //파티클 뿌리고
+        Instantiate(flagEffect, transform.position, Quaternion.identity);
+            
+        //효과음 빰빠밤
+        Managers.Sound.Play(audioClip);
+            
+        //씬 이동
+        //Managers.Scene.LoadSceneAfterDelay(NextSceneName,1f);
+        StartCoroutine(Managers.Scene.LoadSceneAfterDelay(NextSceneName, 0.5f));
     }
 }
