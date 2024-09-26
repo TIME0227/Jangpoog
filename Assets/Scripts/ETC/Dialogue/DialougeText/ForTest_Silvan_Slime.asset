@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b3f46a70ba6468a8c9e521d3e4b2a7, type: 3}
+  m_Name: ForTest_Silvan_Slime
+  m_EditorClassIdentifier: 
+  speakers:
+  - {fileID: 11400000, guid: e7aa7aa687607ec4ebda2f5fa1ecfbcc, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e7aa7aa687607ec4ebda2f5fa1ecfbcc, type: 2}
+  - {fileID: 11400000, guid: e7aa7aa687607ec4ebda2f5fa1ecfbcc, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  - {fileID: 11400000, guid: e99ee9f3587a3e84b96384956f0455e9, type: 2}
+  paragraphs:
+  - "\uBC0D\uAE30\uC801"
+  - "\uC2E4\uAE30\uC801"
+  - "\uBB50\uD558\uB0D0?"
+  - "\uBB49\uAE30\uC801"
+  - "\uBCF4\uBA74 \uBAB0\uB77C? \uAE30\uC5B4\uB2E4\uB2C8\uC796\uC544"
+  - "\uADF8\uB807\uAD6C\uB098!"
+  - "\uB05D"
