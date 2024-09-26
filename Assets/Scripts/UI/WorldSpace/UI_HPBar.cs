@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UI_HPBar : UI_Base
 {
     [SerializeField] private GameObject HP_Bar;
-    private float offset_y = 0.2f;
+    private float offset_y = 0.4f;
 
 
     [SerializeField] Monster monster;
